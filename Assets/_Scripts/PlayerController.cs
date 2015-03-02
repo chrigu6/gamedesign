@@ -7,7 +7,8 @@ public class PlayerController : MonoBehaviour {
 	public Camera aboveCamera;
 	// Use this for initialization
 	void Start () {
-	
+		frontCamera.enabled = true;
+		aboveCamera.enabled = false;
 	}
 	
 	// Update is called once per frame
