@@ -3,8 +3,10 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour {
 	public float speed;
+	public float jumpSpeed;
 	public Camera frontCamera;
 	public Camera aboveCamera;
+
 	// Use this for initialization
 	void Start () {
 		frontCamera.enabled = true;
@@ -19,8 +21,10 @@ public class PlayerController : MonoBehaviour {
 		}
 
 		float moveHorizontal = Input.GetAxis ("Horizontal");
-		Vector3 movement = new Vector3 (moveHorizontal, 0f, 0f);
-		
+		float moveVertical = Input.GetAxis ("Vertical") * jumpSpeed;
+
+		Vector3 movement = new Vector3 (moveHorizontal, moveVertical, 0f);
+
 		rigidbody.AddForce (movement * speed * Time.deltaTime);
 	}
 }
