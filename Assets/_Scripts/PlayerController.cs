@@ -11,11 +11,15 @@ public class PlayerController : MonoBehaviour {
 	public Camera aboveCamera;
 
 	bool changeLane;
+	bool lane1Visible = true;
+	bool lane2Visible = false;
+	bool lane3Visibile = false;
 
 	// Use this for initialization
 	void Start () {
 		frontCamera.enabled = true;
 		aboveCamera.enabled = false;
+		frontCamera.cullingMask = ((1 << LayerMask.NameToLayer("1stLane") | 1 << LayerMask.NameToLayer("Default") | 1 << LayerMask.NameToLayer("Player1")));
 	}
 	
 	// Update is called once per frame
@@ -58,8 +62,10 @@ public class PlayerController : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other)
 	{
-		if (other.gameObject.tag == "enemy") {
-			Destroy (other.gameObject);
+		if (other.gameObject.tag == "intersection" && aboveCamera.enabled == true) {
+			changeLane = !changeLane;
+			grounded=true;
+
 		}
 	}
 
@@ -69,14 +75,11 @@ public class PlayerController : MonoBehaviour {
 			grounded = true;
 		}
 
-		if (colide.gameObject.tag == "intersection" && aboveCamera.enabled == true) {
-			changeLane = !changeLane;
-		}
 	}
 
 	void OnCollisionExit(Collision colide)
 	{
-		if (colide.gameObject.tag == "floor" || colide.gameObject.tag == "intersection") {
+		if (colide.gameObject.tag == "floor") {
 			grounded = false;
 		}
 	}
