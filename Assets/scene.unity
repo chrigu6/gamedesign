@@ -272,7 +272,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 500
-  jumpSpeed: 1.5
+  jumpForce: 200
   frontCamera: {fileID: 1682162101}
   aboveCamera: {fileID: 796962387}
 --- !u!23 &440376247
@@ -432,7 +432,7 @@ GameObject:
   - 23: {fileID: 640465571}
   m_Layer: 13
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -573,7 +573,7 @@ GameObject:
   - 23: {fileID: 686441975}
   m_Layer: 10
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -883,7 +883,7 @@ GameObject:
   - 23: {fileID: 1073393212}
   m_Layer: 10
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -952,7 +952,7 @@ GameObject:
   - 4: {fileID: 1267205197}
   m_Layer: 13
   m_Name: 1stTo2ndLane
-  m_TagString: Untagged
+  m_TagString: floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1156,7 +1156,7 @@ GameObject:
   - 23: {fileID: 1862868041}
   m_Layer: 10
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1253,6 +1253,10 @@ Prefab:
     - target: {fileID: 134742, guid: 6f347ea80f31ce44baed1eb071243269, type: 2}
       propertyPath: m_Layer
       value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 134742, guid: 6f347ea80f31ce44baed1eb071243269, type: 2}
+      propertyPath: m_TagString
+      value: floor
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6f347ea80f31ce44baed1eb071243269, type: 2}
