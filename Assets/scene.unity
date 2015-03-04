@@ -1709,6 +1709,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 500
   jumpForce: 350
+  deathParticles: {fileID: 110578, guid: 64be425dfc9f54723b0b72ad94aba7e4, type: 2}
   frontCamera: {fileID: 1682162101}
   aboveCamera: {fileID: 796962387}
 --- !u!23 &1235047370

@@ -4,6 +4,9 @@ using System.Collections;
 public class PlayerController : MonoBehaviour {
 	public float speed;
 	public float jumpForce;
+	public GameObject deathParticles;
+
+	private Vector3 spawn;
 
 	bool grounded = true;
 
@@ -22,6 +25,7 @@ public class PlayerController : MonoBehaviour {
 		frontCamera.cullingMask = ((1 << LayerMask.NameToLayer("1stLane") | 1 << LayerMask.NameToLayer("Default") | 1 << LayerMask.NameToLayer("Player1")));
 		(frontCamera.GetComponent(typeof(AudioListener)) as AudioListener).enabled = true;
 		(aboveCamera.GetComponent(typeof(AudioListener)) as AudioListener).enabled = false;
+		spawn = transform.position;
 
 	}
 	
@@ -63,6 +67,10 @@ public class PlayerController : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.Space) && grounded) {
 			rigidbody.AddForce(new Vector3(0, jumpForce, 0));
 		}
+		if (transform.position.y < -2) {
+			Die();
+		}
+
 	}
 
 	void OnTriggerEnter(Collider other)
@@ -79,7 +87,9 @@ public class PlayerController : MonoBehaviour {
 		if (colide.gameObject.tag == "floor" || colide.gameObject.tag == "intersection") {
 			grounded = true;
 		}
-
+		if (colide.gameObject.tag == "enemy") {
+			Die();
+		}
 	}
 
 	void OnCollisionExit(Collision colide)
@@ -87,5 +97,11 @@ public class PlayerController : MonoBehaviour {
 		if (colide.gameObject.tag == "floor") {
 			grounded = false;
 		}
+	}
+
+	void Die()
+	{
+		transform.position = spawn;
+		Instantiate(deathParticles, transform.position, Quaternion.identity);
 	}
 }
