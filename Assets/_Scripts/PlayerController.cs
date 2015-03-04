@@ -45,6 +45,28 @@ public class PlayerController : MonoBehaviour {
 			Vector3 movement = new Vector3 (0, 0, moveVertical);
 			
 			rigidbody.AddForce (movement * speed * Time.deltaTime);
+
+			if (transform.position.z < 9){
+				frontCamera.cullingMask = ((1 << LayerMask.NameToLayer("1stLane") | 0 << LayerMask.NameToLayer("2ndLane") | 1 << LayerMask.NameToLayer("Player1")));
+				bool lane1Visible = true;
+				bool lane2Visible = false;
+				bool lane3Visible = false;
+			}
+			if (transform.position.z > 9){
+				frontCamera.cullingMask = ((0 << LayerMask.NameToLayer("1stLane") | 1 << LayerMask.NameToLayer("2ndLane") | 1 << LayerMask.NameToLayer("Player1")));
+				bool lane1Visible = false;
+				bool lane2Visible = true;
+				bool lane3Visible = false;
+			}
+			if (transform.position.z > 19){
+				frontCamera.cullingMask = ((0 << LayerMask.NameToLayer("2ndLane") | 1 << LayerMask.NameToLayer("3rdLane") | 1 << LayerMask.NameToLayer("Player1")));
+				bool lane1Visible = false;
+				bool lane2Visible = false;
+				bool lane3Visible = true;
+			}
+
+
+
 		} else {
 			rigidbody.constraints = RigidbodyConstraints.FreezePositionZ|RigidbodyConstraints.FreezeRotationZ;
 			float moveHorizontal = Input.GetAxis ("Horizontal");
