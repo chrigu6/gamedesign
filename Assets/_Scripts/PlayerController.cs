@@ -20,6 +20,9 @@ public class PlayerController : MonoBehaviour {
 		frontCamera.enabled = true;
 		aboveCamera.enabled = false;
 		frontCamera.cullingMask = ((1 << LayerMask.NameToLayer("1stLane") | 1 << LayerMask.NameToLayer("Default") | 1 << LayerMask.NameToLayer("Player1")));
+		(frontCamera.GetComponent(typeof(AudioListener)) as AudioListener).enabled = true;
+		(aboveCamera.GetComponent(typeof(AudioListener)) as AudioListener).enabled = false;
+
 	}
 	
 	// Update is called once per frame
@@ -28,6 +31,8 @@ public class PlayerController : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.Tab) && changeLane == false) {
 			frontCamera.enabled = !frontCamera.enabled;
 			aboveCamera.enabled = !frontCamera.enabled;
+			(frontCamera.GetComponent(typeof(AudioListener)) as AudioListener).enabled = frontCamera.enabled;
+			(aboveCamera.GetComponent(typeof(AudioListener)) as AudioListener).enabled = aboveCamera.enabled;
 		}
 
 		if (changeLane) {
