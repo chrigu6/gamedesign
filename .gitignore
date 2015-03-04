@@ -2,7 +2,8 @@
 # Unity generated #
 # =============== #
 Temp/
-Library/
+Library/*
+Library/ScriptAssemblies/*
 
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
