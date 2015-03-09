@@ -31,13 +31,6 @@ public class CameraController : MonoBehaviour {
 
 
 	void FixedUpdate(){
-		if (Input.GetKeyDown (KeyCode.Tab) && activePlayer.GetComponent<PlayerController>().changeLane == false) {
-			frontCamera.enabled = !frontCamera.enabled;
-			aboveCamera.enabled = !frontCamera.enabled;
-			(frontCamera.GetComponent(typeof(AudioListener)) as AudioListener).enabled = frontCamera.enabled;
-			(aboveCamera.GetComponent(typeof(AudioListener)) as AudioListener).enabled = aboveCamera.enabled;
-		}
-
 		if (activePlayer.transform.position.z < 9){
 			frontCamera.cullingMask = ((1 << LayerMask.NameToLayer("1stLane") | 0 << LayerMask.NameToLayer("2ndLane") | 1 << LayerMask.NameToLayer(activePlayer.tag)));
 			lane1Visible = true;
@@ -57,7 +50,20 @@ public class CameraController : MonoBehaviour {
 			lane3Visible = true;
 		}
 
-		if (Input.GetKey(KeyCode.C)) {
+
+		transform.position = activePlayer.transform.position + offset;
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		if (Input.GetButtonDown ("ChangeCamera") && activePlayer.GetComponent<PlayerController>().changeLane == false) {
+			frontCamera.enabled = !frontCamera.enabled;
+			aboveCamera.enabled = !frontCamera.enabled;
+			(frontCamera.GetComponent(typeof(AudioListener)) as AudioListener).enabled = frontCamera.enabled;
+			(aboveCamera.GetComponent(typeof(AudioListener)) as AudioListener).enabled = aboveCamera.enabled;
+		}
+
+		if (Input.GetButtonDown("SwitchPlayer")) {
 			if (activePlayer == player1)
 			{
 				activePlayer.GetComponent<PlayerController>().changeState();
@@ -71,11 +77,6 @@ public class CameraController : MonoBehaviour {
 				activePlayer.GetComponent<PlayerController>().changeState();
 			}
 		}
-		transform.position = activePlayer.transform.position + offset;
-	}
-	
-	// Update is called once per frame
-	void Update () {
 
 	}
 }
