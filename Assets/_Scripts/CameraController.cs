@@ -24,7 +24,7 @@ public class CameraController : MonoBehaviour {
 		lane3Visible = false;
 		frontCamera.enabled = true;
 		aboveCamera.enabled = false;
-		frontCamera.cullingMask = ((1 << LayerMask.NameToLayer("1stLane") | 1 << LayerMask.NameToLayer("Default") | 1 << LayerMask.NameToLayer(activePlayer.tag)));
+		frontCamera.cullingMask = ((1 << LayerMask.NameToLayer("Default") | 1 << LayerMask.NameToLayer("1stLane") | 1 << LayerMask.NameToLayer("Default") | 1 << LayerMask.NameToLayer(activePlayer.tag)));
 		(frontCamera.GetComponent(typeof(AudioListener)) as AudioListener).enabled = true;
 		(aboveCamera.GetComponent(typeof(AudioListener)) as AudioListener).enabled = false;
 	}
@@ -32,19 +32,19 @@ public class CameraController : MonoBehaviour {
 
 	void FixedUpdate(){
 		if (activePlayer.transform.position.z < 9){
-			frontCamera.cullingMask = ((1 << LayerMask.NameToLayer("1stLane") | 0 << LayerMask.NameToLayer("2ndLane") | 1 << LayerMask.NameToLayer(activePlayer.tag)));
+			frontCamera.cullingMask = ((1 << LayerMask.NameToLayer("Default") | 1 << LayerMask.NameToLayer("1stLane") | 0 << LayerMask.NameToLayer("2ndLane") | 1 << LayerMask.NameToLayer(activePlayer.tag)));
 			lane1Visible = true;
 			lane2Visible = false;
 			lane3Visible = false;
 		}
 		if (activePlayer.transform.position.z > 9){
-			frontCamera.cullingMask = ((0 << LayerMask.NameToLayer("1stLane") | 1 << LayerMask.NameToLayer("2ndLane") | 1 << LayerMask.NameToLayer(activePlayer.tag)));
+			frontCamera.cullingMask = ((1 << LayerMask.NameToLayer("Default") | 0 << LayerMask.NameToLayer("1stLane") | 1 << LayerMask.NameToLayer("2ndLane") | 1 << LayerMask.NameToLayer(activePlayer.tag)));
 			lane1Visible = false;
 			lane2Visible = true;
 			lane3Visible = false;
 		}
 		if (activePlayer.transform.position.z > 19){
-			frontCamera.cullingMask = ((0 << LayerMask.NameToLayer("2ndLane") | 1 << LayerMask.NameToLayer("3rdLane") | 1 << LayerMask.NameToLayer(activePlayer.tag)));
+			frontCamera.cullingMask = ((1 << LayerMask.NameToLayer("Default") | 0 << LayerMask.NameToLayer("2ndLane") | 1 << LayerMask.NameToLayer("3rdLane") | 1 << LayerMask.NameToLayer(activePlayer.tag)));
 			lane1Visible = false;
 			lane2Visible = false;
 			lane3Visible = true;
