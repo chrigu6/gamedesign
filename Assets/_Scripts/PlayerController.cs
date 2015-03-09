@@ -9,6 +9,9 @@ public class PlayerController : MonoBehaviour {
 	private Vector3 spawn;
 
 	bool grounded = true;
+	public Transform groundCheck;
+	float groundRadius = 0.2f;
+	public LayerMask whatIsGround;
 
 	public bool changeLane;
 
@@ -23,6 +26,15 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+
+		Collider[] ground = Physics.OverlapSphere (groundCheck.position, groundRadius, whatIsGround);
+		if (ground.Length > 0) {
+			grounded = true;
+		} else {
+			grounded = false;
+		}
+		
+
 		if (isActive) {
 			float moveVertical = Input.GetAxis ("Vertical");
 			float moveHorizontal = Input.GetAxis ("Horizontal");
@@ -30,21 +42,20 @@ public class PlayerController : MonoBehaviour {
 			GetComponent<Rigidbody> ().AddForce (movement * speed * Time.deltaTime);
 			}
 
-		if (isActive) {
-			if (Input.GetKeyDown (KeyCode.Space) && grounded) {
-				GetComponent<Rigidbody> ().AddForce (new Vector3 (0, jumpForce, 0));
-			}
-			if (transform.position.y < -2) {
-				Die ();
-			}
+		if (transform.position.y < -2) {
+			Die ();
 		}
 		}
 		
 
 	void Update()
 	{
+		if (isActive) {
+			if (Input.GetKeyDown (KeyCode.Space) && grounded) {
+				GetComponent<Rigidbody> ().AddForce (new Vector3 (0, jumpForce, 0));
+			}
 
-
+		}
 	}
 
 	void OnTriggerEnter(Collider other)
@@ -52,8 +63,6 @@ public class PlayerController : MonoBehaviour {
 		if (isActive) {
 			if (other.gameObject.tag == "intersection" ) {
 				changeLane = !changeLane;
-				grounded = true;
-
 			}
 		}
 	}
@@ -61,20 +70,8 @@ public class PlayerController : MonoBehaviour {
 	void OnCollisionEnter(Collision colide)
 	{
 		if (isActive) {
-			if (colide.gameObject.tag == "floor" || colide.gameObject.tag == "intersection") {
-				grounded = true;
-			}
 			if (colide.gameObject.tag == "enemy") {
 				Die ();
-			}
-		}
-	}
-
-	void OnCollisionExit(Collision colide)
-	{
-		if (isActive) {
-			if (colide.gameObject.tag == "floor") {
-				grounded = false;
 			}
 		}
 	}
