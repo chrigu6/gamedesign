@@ -17,6 +17,7 @@ public class CameraController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		activePlayer.GetComponent<PlayerController> ().changeState();
 		offset = transform.position;
 		lane1Visible = true;
 		lane2Visible = false;
@@ -26,7 +27,6 @@ public class CameraController : MonoBehaviour {
 		frontCamera.cullingMask = ((1 << LayerMask.NameToLayer("1stLane") | 1 << LayerMask.NameToLayer("Default") | 1 << LayerMask.NameToLayer(activePlayer.tag)));
 		(frontCamera.GetComponent(typeof(AudioListener)) as AudioListener).enabled = true;
 		(aboveCamera.GetComponent(typeof(AudioListener)) as AudioListener).enabled = false;
-		activePlayer.GetComponent<PlayerController> ().changeState();
 	}
 
 
@@ -56,22 +56,26 @@ public class CameraController : MonoBehaviour {
 			lane2Visible = false;
 			lane3Visible = true;
 		}
-	}
-	
-	// Update is called once per frame
-	void Update () {
+
 		if (Input.GetKey(KeyCode.C)) {
 			if (activePlayer == player1)
 			{
+				activePlayer.GetComponent<PlayerController>().changeState();
 				activePlayer = player2;
 				activePlayer.GetComponent<PlayerController>().changeState();
 			}
 			else
 			{
+				activePlayer.GetComponent<PlayerController>().changeState();
 				activePlayer = player1;
 				activePlayer.GetComponent<PlayerController>().changeState();
 			}
 		}
 		transform.position = activePlayer.transform.position + offset;
+	}
+	
+	// Update is called once per frame
+	void Update () {
+
 	}
 }
