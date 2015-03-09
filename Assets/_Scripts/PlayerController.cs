@@ -23,18 +23,13 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-
 		if (isActive) {
 			float moveVertical = Input.GetAxis ("Vertical");
 			float moveHorizontal = Input.GetAxis ("Horizontal");
 			Vector3 movement = new Vector3 (moveHorizontal, 0, moveVertical);
 			GetComponent<Rigidbody> ().AddForce (movement * speed * Time.deltaTime);
 			}
-		}
-		
 
-	void Update()
-	{
 		if (isActive) {
 			if (Input.GetKeyDown (KeyCode.Space) && grounded) {
 				GetComponent<Rigidbody> ().AddForce (new Vector3 (0, jumpForce, 0));
@@ -43,6 +38,12 @@ public class PlayerController : MonoBehaviour {
 				Die ();
 			}
 		}
+		}
+		
+
+	void Update()
+	{
+
 
 	}
 
