@@ -17,6 +17,12 @@ public class PlayerController : MonoBehaviour {
 
 	bool isActive;
 
+	public GameObject shot;
+	public Transform shotSpawn;
+	public float fireRate;
+	public float bulletSpeed;
+	private float nextFire;
+
 
 	// Use this for initialization
 	void Start () {
@@ -54,7 +60,19 @@ public class PlayerController : MonoBehaviour {
 			if (Input.GetButtonDown("Jump") && grounded) {
 				GetComponent<Rigidbody> ().AddForce (new Vector3 (0, jumpForce, 0));
 			}
-
+			Ray ray = Camera.current.ScreenPointToRay(Input.mousePosition);
+			transform.LookAt(ray.GetPoint(0), Vector3.up);
+		}
+		if (Input.GetButton("Fire2") && Time.time > nextFire)
+		{
+			Vector3 shootDirection;
+			shootDirection = Input.mousePosition;
+			shootDirection.z = 0.0f;
+			shootDirection = Camera.current.ScreenToWorldPoint(shootDirection) - transform.position;
+			
+			nextFire = Time.time + fireRate;
+			Rigidbody2D bullet = Instantiate(shot, shotSpawn.position, shotSpawn.rotation) as Rigidbody2D;
+			bullet.velocity = new Vector2(shootDirection.x * bulletSpeed, shootDirection.y * bulletSpeed );
 		}
 	}
 
