@@ -42,9 +42,9 @@ public class PlayerController : MonoBehaviour {
 			GetComponent<Rigidbody> ().AddForce (movement * speed * Time.deltaTime);
 			}
 
-		if (transform.position.y < -2) {
-			Die ();
-		}
+//		if (transform.position.y < -2) {
+//			Die ();
+//		}
 		}
 		
 
@@ -67,21 +67,21 @@ public class PlayerController : MonoBehaviour {
 		}
 	}
 
-	void OnCollisionEnter(Collision colide)
-	{
-		if (isActive) {
-			if (colide.gameObject.tag == "enemy") {
-				Die ();
-			}
-		}
-	}
-
-	void Die()
-	{
-		transform.position = spawn;
-		Instantiate(deathParticles, transform.position, Quaternion.identity);
-	}
-
+//	void OnCollisionEnter(Collision colide)
+//	{
+//		if (isActive) {
+//			if (colide.gameObject.tag == "enemy") {
+//				Die ();
+//			}
+//		}
+//	}
+//
+//	void Die()
+//	{
+//		transform.position = spawn;
+//		Instantiate(deathParticles, transform.position, Quaternion.identity);
+//	}
+//
 	public void changeState(){
 		this.isActive = !this.isActive;
 	}
