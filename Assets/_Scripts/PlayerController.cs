@@ -8,6 +8,9 @@ public class PlayerController : MonoBehaviour {
 
 	private Vector3 spawn;
 
+	public Camera frontCamera;
+	public Camera aboveCamera;
+
 	bool grounded = true;
 	public Transform groundCheck;
 	float groundRadius = 0.2f;
@@ -46,12 +49,20 @@ public class PlayerController : MonoBehaviour {
 			float moveHorizontal = Input.GetAxis ("Horizontal");
 			Vector3 movement = new Vector3 (moveHorizontal, 0, moveVertical);
 			GetComponent<Rigidbody> ().AddForce (movement * speed * Time.deltaTime);
+			if (frontCamera.enabled)
+			{
+				Vector3 mousePos = Input.mousePosition;
+				Vector3 lookAt = Camera.current.WorldToScreenPoint (transform.position);
+				mousePos.x -= lookAt.x;
+				mousePos.y -= lookAt.y + 135;
+				float rotationAngle = Mathf.Atan2 (mousePos.y, mousePos.x) * Mathf.Rad2Deg;
+				transform.rotation = Quaternion.Euler (new Vector3 (0, 0, rotationAngle));
 			}
-
+		}
 //		if (transform.position.y < -2) {
 //			Die ();
 //		}
-		}
+	}
 		
 
 	void Update()
@@ -60,14 +71,12 @@ public class PlayerController : MonoBehaviour {
 			if (Input.GetButtonDown("Jump") && grounded) {
 				GetComponent<Rigidbody> ().AddForce (new Vector3 (0, jumpForce, 0));
 			}
-			Ray ray = Camera.current.ScreenPointToRay(Input.mousePosition);
-			transform.LookAt(ray.GetPoint(0), Vector3.up);
 		}
 		if (Input.GetButton("Fire2") && Time.time > nextFire)
 		{
 			Vector3 shootDirection;
 			shootDirection = Input.mousePosition;
-			shootDirection.z = 0.0f;
+			shootDirection.x = 0.0f;
 			shootDirection = Camera.current.ScreenToWorldPoint(shootDirection) - transform.position;
 			
 			nextFire = Time.time + fireRate;
