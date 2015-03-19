@@ -52,9 +52,9 @@ public class PlayerController : MonoBehaviour {
 			if (frontCamera.enabled)
 			{
 				Vector3 mousePos = Input.mousePosition;
-				Vector3 lookAt = Camera.current.WorldToScreenPoint (transform.position);
+				Vector3 lookAt = frontCamera.WorldToScreenPoint (transform.position);
 				mousePos.x -= lookAt.x;
-				mousePos.y -= lookAt.y + 135;
+				mousePos.y -= lookAt.y;
 				float rotationAngle = Mathf.Atan2 (mousePos.y, mousePos.x) * Mathf.Rad2Deg;
 				transform.rotation = Quaternion.Euler (new Vector3 (0, 0, rotationAngle));
 			}
@@ -72,11 +72,10 @@ public class PlayerController : MonoBehaviour {
 				GetComponent<Rigidbody> ().AddForce (new Vector3 (0, jumpForce, 0));
 			}
 		}
-		if (Input.GetButton("Fire2") && Time.time > nextFire)
+		if (frontCamera.enabled && Input.GetButton("Fire2") && Time.time > nextFire)
 		{
-			Vector3 shootDirection;
-			shootDirection = Input.mousePosition;
-			shootDirection.x = 0.0f;
+			Vector3 shootDirection = Input.mousePosition;
+			shootDirection.y = 0.0f;
 			shootDirection = Camera.current.ScreenToWorldPoint(shootDirection) - transform.position;
 			
 			nextFire = Time.time + fireRate;

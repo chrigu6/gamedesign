@@ -3331,6 +3331,14 @@ Prefab:
       propertyPath: m_UseGravity
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2367448, guid: a5c6fb85760e24837a7564fc6cebbff6, type: 2}
+      propertyPath: m_ReflectionProbeUsage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2367448, guid: a5c6fb85760e24837a7564fc6cebbff6, type: 2}
+      propertyPath: m_ReceiveShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a5c6fb85760e24837a7564fc6cebbff6, type: 2}
   m_IsPrefabParent: 0
@@ -3355,7 +3363,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2078680555}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: .707106829, y: 0, z: 0, w: .707106709}
   m_LocalPosition: {x: .842000008, y: -.134000003, z: -.00100000005}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
