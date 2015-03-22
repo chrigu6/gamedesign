@@ -5,6 +5,7 @@ public class CameraController : MonoBehaviour {
 	public GameObject player1;
 	public GameObject player2;
 	public GameObject activePlayer;
+	public GameObject startArea;
 
 	public Vector3	offset;
 
@@ -14,6 +15,8 @@ public class CameraController : MonoBehaviour {
 	bool lane1Visible;
 	bool lane2Visible;
 	bool lane3Visible;
+	
+	bool playerInStartArea;
 
 	// Use this for initialization
 	void Start () {
@@ -22,6 +25,7 @@ public class CameraController : MonoBehaviour {
 		lane1Visible = true;
 		lane2Visible = false;
 		lane3Visible = false;
+		playerInStartArea = true;
 		frontCamera.enabled = true;
 		aboveCamera.enabled = false;
 		frontCamera.cullingMask = ((1 << LayerMask.NameToLayer("Default") | 1 << LayerMask.NameToLayer("1stLane") | 1 << LayerMask.NameToLayer(activePlayer.tag)));
@@ -50,10 +54,23 @@ public class CameraController : MonoBehaviour {
 			lane3Visible = true;
 		}
 
+//		if (activePlayer.transform.position 10) {
+//			transform.position = Vector3(-3.32, 1, -32);
+//		}
 
 		transform.position = activePlayer.transform.position + offset;
 	}
-	
+
+		void OnTriggerEnter (Collider other) {
+		if (other.gameObject == startArea) {
+			playerInStartArea = true;
+		}
+	}
+	void OnTriggerExit (Collider other) {
+		if (other.gameObject == startArea) {
+			playerInStartArea = false;
+		}
+	}
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetButtonDown ("ChangeCamera") && activePlayer.GetComponent<PlayerController>().changeLane == false) {
@@ -79,4 +96,5 @@ public class CameraController : MonoBehaviour {
 		}
 
 	}
+
 }

@@ -45,19 +45,29 @@ public class PlayerController : MonoBehaviour {
 		
 
 		if (isActive) {
-			float moveVertical = Input.GetAxis ("Vertical");
-			float moveHorizontal = Input.GetAxis ("Horizontal");
-			Vector3 movement = new Vector3 (moveHorizontal, 0, moveVertical);
-			GetComponent<Rigidbody> ().AddForce (movement * speed * Time.deltaTime);
-			if (frontCamera.enabled)
-			{
-				Vector3 mousePos = Input.mousePosition;
-				Vector3 lookAt = frontCamera.WorldToScreenPoint (transform.position);
-				mousePos.x -= lookAt.x;
-				mousePos.y -= lookAt.y;
-				float rotationAngle = Mathf.Atan2 (mousePos.y, mousePos.x) * Mathf.Rad2Deg;
-				transform.rotation = Quaternion.Euler (new Vector3 (0, 0, rotationAngle));
+			if (frontCamera.enabled){
+				GetComponent<Rigidbody> ().constraints = RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
+				float moveVertical = Input.GetAxis ("Vertical");
+				float moveHorizontal = Input.GetAxis ("Horizontal");
+				Vector3 movement = new Vector3 (moveHorizontal, 0, moveVertical);
+				GetComponent<Rigidbody> ().AddForce (movement * speed * Time.deltaTime);
 			}
+			else {
+				GetComponent<Rigidbody> ().constraints &= ~RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotation;
+				float moveVertical = -Input.GetAxis ("Horizontal");
+				float moveHorizontal = Input.GetAxis ("Vertical");
+				Vector3 movement = new Vector3 (moveHorizontal, 0, moveVertical);
+				GetComponent<Rigidbody> ().AddForce (movement * speed * Time.deltaTime);
+			}
+				if (frontCamera.enabled)
+				{
+				Vector3 mousePos = Input.mousePosition;
+					Vector3 lookAt = frontCamera.WorldToScreenPoint (transform.position);
+					mousePos.x -= lookAt.x;
+					mousePos.y -= lookAt.y;
+					float rotationAngle = Mathf.Atan2 (mousePos.y, mousePos.x) * Mathf.Rad2Deg;
+					transform.rotation = Quaternion.Euler (new Vector3 (0, 0, rotationAngle));
+				}
 		}
 //		if (transform.position.y < -2) {
 //			Die ();
