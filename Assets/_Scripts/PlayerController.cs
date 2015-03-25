@@ -2,11 +2,16 @@
 using System.Collections;
 
 public class PlayerController : MonoBehaviour {
+	Rigidbody playerRigidbody;
+
+
 	public float speed;
 	public float jumpForce;
 	public GameObject deathParticles;
 
 	private Vector3 spawn;
+	Vector3 movement;
+
 
 	public Camera frontCamera;
 	public Camera aboveCamera;
@@ -31,10 +36,15 @@ public class PlayerController : MonoBehaviour {
 	void Start () {
 		spawn = transform.position;
 		isActive = false;
+		playerRigidbody = GetComponent<Rigidbody> ();
+
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+		float h = Input.GetAxisRaw ("Horizontal");
+		float v = Input.GetAxisRaw("Vertical");
+		Move (h, v);
 
 		Collider[] ground = Physics.OverlapSphere (groundCheck.position, groundRadius, whatIsGround);
 		if (ground.Length > 0) {
@@ -47,17 +57,17 @@ public class PlayerController : MonoBehaviour {
 		if (isActive) {
 			if (frontCamera.enabled){
 				GetComponent<Rigidbody> ().constraints = RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
-				float moveVertical = Input.GetAxis ("Vertical");
-				float moveHorizontal = Input.GetAxis ("Horizontal");
-				Vector3 movement = new Vector3 (moveHorizontal, 0, moveVertical);
-				GetComponent<Rigidbody> ().AddForce (movement * speed * Time.deltaTime);
+//				float moveVertical = Input.GetAxis ("Vertical");
+//				float moveHorizontal = Input.GetAxis ("Horizontal");
+//				Vector3 movement = new Vector3 (moveHorizontal, 0, moveVertical);
+//				GetComponent<Rigidbody> ().AddForce (movement * speed * Time.deltaTime);
 			}
 			else {
 				GetComponent<Rigidbody> ().constraints &= ~RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotation;
-				float moveVertical = -Input.GetAxis ("Horizontal");
-				float moveHorizontal = Input.GetAxis ("Vertical");
-				Vector3 movement = new Vector3 (moveHorizontal, 0, moveVertical);
-				GetComponent<Rigidbody> ().AddForce (movement * speed * Time.deltaTime);
+//				float moveVertical = -Input.GetAxis ("Horizontal");
+//				float moveHorizontal = Input.GetAxis ("Vertical");
+//				Vector3 movement = new Vector3 (moveHorizontal, 0, moveVertical);
+//				GetComponent<Rigidbody> ().AddForce (movement * speed * Time.deltaTime);
 			}
 				if (frontCamera.enabled)
 				{
@@ -92,6 +102,19 @@ public class PlayerController : MonoBehaviour {
 			Rigidbody2D bullet = Instantiate(shot, shotSpawn.position, shotSpawn.rotation) as Rigidbody2D;
 			bullet.velocity = new Vector2(shootDirection.x * bulletSpeed, shootDirection.y * bulletSpeed );
 		}
+	}
+
+	void Move (float h, float v)
+	{
+		if (frontCamera.enabled) {
+			movement.Set (h, 0f, v);
+		} else {
+			movement.Set (v, 0f, -h);
+		}
+		
+		movement = movement.normalized * speed * Time.deltaTime;
+		
+		playerRigidbody.MovePosition (transform.position + movement);
 	}
 
 	void OnTriggerEnter(Collider other)
