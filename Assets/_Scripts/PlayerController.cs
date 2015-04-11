@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour {
 	public Camera frontCamera;
 	public Camera aboveCamera;
 
+	bool facingRight = true;
+	bool facingCamera = true;
 	bool grounded = true;
 	public Transform groundCheck;
 	float groundRadius = 0.2f;
@@ -43,64 +45,55 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
 		float h = Input.GetAxisRaw ("Horizontal");
+	
 		float v = Input.GetAxisRaw("Vertical");
-		Move (h, v);
-
-		Collider[] ground = Physics.OverlapSphere (groundCheck.position, groundRadius, whatIsGround);
-		if (ground.Length > 0) {
-			grounded = true;
-		} else {
-			grounded = false;
-		}
-		
-
 		if (isActive) {
-			if (frontCamera.enabled){
-				GetComponent<Rigidbody> ().constraints = RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
-//				float moveVertical = Input.GetAxis ("Vertical");
-//				float moveHorizontal = Input.GetAxis ("Horizontal");
-//				Vector3 movement = new Vector3 (moveHorizontal, 0, moveVertical);
-//				GetComponent<Rigidbody> ().AddForce (movement * speed * Time.deltaTime);
-			}
-			else {
-				GetComponent<Rigidbody> ().constraints &= ~RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotation;
-//				float moveVertical = -Input.GetAxis ("Horizontal");
-//				float moveHorizontal = Input.GetAxis ("Vertical");
-//				Vector3 movement = new Vector3 (moveHorizontal, 0, moveVertical);
-//				GetComponent<Rigidbody> ().AddForce (movement * speed * Time.deltaTime);
-			}
-				if (frontCamera.enabled)
-				{
-				Vector3 mousePos = Input.mousePosition;
-					Vector3 lookAt = frontCamera.WorldToScreenPoint (transform.position);
-					mousePos.x -= lookAt.x;
-					mousePos.y -= lookAt.y;
-					float rotationAngle = Mathf.Atan2 (mousePos.y, mousePos.x) * Mathf.Rad2Deg;
-					transform.rotation = Quaternion.Euler (new Vector3 (0, 0, rotationAngle));
-				}
+			Move (h, v);
 		}
-//		if (transform.position.y < -2) {
-//			Die ();
-//		}
+
+		/*
+		if (frontCamera.enabled)
+		{
+			Vector3 mousePos = Input.mousePosition;
+			Vector3 lookAt = frontCamera.WorldToScreenPoint (transform.position);
+			mousePos.x -= lookAt.x;
+			mousePos.y -= lookAt.y;
+			float rotationAngle = Mathf.Atan2 (mousePos.y, mousePos.x) * Mathf.Rad2Deg;
+			transform.rotation = Quaternion.Euler (new Vector3 (0, 0, rotationAngle));
+		}
+		*/
+
+
 	}
 		
 
 	void Update()
 	{
+		Collider[] ground = Physics.OverlapSphere (groundCheck.position, groundRadius, whatIsGround);
+		if (ground.Length > 0) {
+			this.grounded = true;
+		} else {
+			this.grounded = false;
+		}
+		if (transform.position.y < -9) {
+			Die ();
+		}
+
 		if (isActive) {
-			if (Input.GetButtonDown("Jump") && grounded) {
+
+			if (Input.GetButtonDown ("Jump") && this.grounded) {
 				GetComponent<Rigidbody> ().AddForce (new Vector3 (0, jumpForce, 0));
 			}
-		}
-		if (frontCamera.enabled && Input.GetButton("Fire2") && Time.time > nextFire)
-		{
-			Vector3 shootDirection = Input.mousePosition;
-			shootDirection.y = 0.0f;
-			shootDirection = Camera.current.ScreenToWorldPoint(shootDirection) - transform.position;
-			
-			nextFire = Time.time + fireRate;
-			Rigidbody2D bullet = Instantiate(shot, shotSpawn.position, shotSpawn.rotation) as Rigidbody2D;
-			bullet.velocity = new Vector2(shootDirection.x * bulletSpeed, shootDirection.y * bulletSpeed );
+
+			if (frontCamera.enabled && Input.GetButton ("Fire2") && Time.time > nextFire) {
+				Vector3 shootDirection = Input.mousePosition;
+				shootDirection.y = 0.0f;
+				shootDirection = Camera.current.ScreenToWorldPoint (shootDirection) - transform.position;
+				
+				nextFire = Time.time + fireRate;
+				Rigidbody2D bullet = Instantiate (shot, shotSpawn.position, shotSpawn.rotation) as Rigidbody2D;
+				bullet.velocity = new Vector2 (shootDirection.x * bulletSpeed, shootDirection.y * bulletSpeed);
+			}
 		}
 	}
 
@@ -135,13 +128,18 @@ public class PlayerController : MonoBehaviour {
 //		}
 //	}
 //
-//	void Die()
-//	{
-//		transform.position = spawn;
-//		Instantiate(deathParticles, transform.position, Quaternion.identity);
-//	}
-//
+	void Die()
+	{
+		transform.position = spawn;
+		Instantiate(deathParticles, transform.position, Quaternion.identity);
+	}
+
 	public void changeState(){
 		this.isActive = !this.isActive;
+	}
+
+	public void FlipHorizontaly()
+	{
+
 	}
 }
