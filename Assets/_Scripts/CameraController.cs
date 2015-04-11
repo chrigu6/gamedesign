@@ -20,7 +20,8 @@ public class CameraController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		activePlayer.GetComponent<PlayerController> ().changeState();
+		Debug.Log ("Start!");
+		player1.GetComponent<PlayerController> ().changeState();
 		offset = transform.position;
 		lane1Visible = true;
 		lane2Visible = false;
@@ -81,18 +82,18 @@ public class CameraController : MonoBehaviour {
 		}
 
 		if (Input.GetButtonDown("SwitchPlayer")) {
+			player1.GetComponent<PlayerController>().changeState();
+			player2.GetComponent<PlayerController>().changeState();
+
 			if (activePlayer == player1)
 			{
-				activePlayer.GetComponent<PlayerController>().changeState();
 				activePlayer = player2;
-				activePlayer.GetComponent<PlayerController>().changeState();
 			}
 			else
 			{
-				activePlayer.GetComponent<PlayerController>().changeState();
 				activePlayer = player1;
-				activePlayer.GetComponent<PlayerController>().changeState();
 			}
+			Debug.Log (activePlayer.name);
 		}
 
 	}

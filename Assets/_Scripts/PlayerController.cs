@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour {
 
 	public bool changeLane;
 
-	bool isActive;
+	bool isActive = false;
 
 	public GameObject shot;
 	public Transform shotSpawn;
@@ -42,7 +42,6 @@ public class PlayerController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		spawn = transform.position;
-		isActive = false;
 		playerRigidbody = GetComponent<Rigidbody> ();
 		playerRigidbody.transform.Rotate (0, 270, 0);
 
@@ -56,6 +55,7 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+		Debug.Log (this.name + " : " + this.isActive);
 		float h = Input.GetAxisRaw ("Horizontal");
 	
 		float v = Input.GetAxisRaw("Vertical");
@@ -162,6 +162,7 @@ public class PlayerController : MonoBehaviour {
 
 	public void changeState(){
 		this.isActive = !this.isActive;
+		Debug.Log ("Activated :" + this.name);
 	}
 
 	public void FlipHorizontaly()
