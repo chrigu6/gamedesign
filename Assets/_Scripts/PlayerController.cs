@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour {
 
 	public float speed;
 	public float jumpForce;
+	public float turnSmoothing = 15f;
+	public float speedDampTime = 0.1f;
 	public GameObject deathParticles;
 
 	private Vector3 spawn;
@@ -33,14 +35,24 @@ public class PlayerController : MonoBehaviour {
 	public float bulletSpeed;
 	private float nextFire;
 
+	private Animator anim;
+	private HashIDs hash;
+
 
 	// Use this for initialization
 	void Start () {
 		spawn = transform.position;
 		isActive = false;
 		playerRigidbody = GetComponent<Rigidbody> ();
+		playerRigidbody.transform.Rotate (0, 270, 0);
 
 	}
+
+	void Awake() {
+		anim = GetComponent<Animator> ();
+		hash = GameObject.FindGameObjectWithTag ("GameController").GetComponent<HashIDs> ();
+	}
+
 	
 	// Update is called once per frame
 	void FixedUpdate () {
@@ -85,7 +97,7 @@ public class PlayerController : MonoBehaviour {
 				GetComponent<Rigidbody> ().AddForce (new Vector3 (0, jumpForce, 0));
 			}
 
-			if (frontCamera.enabled && Input.GetButton ("Fire2") && Time.time > nextFire) {
+			/*if (frontCamera.enabled && Input.GetButton ("Fire2") && Time.time > nextFire) {
 				Vector3 shootDirection = Input.mousePosition;
 				shootDirection.y = 0.0f;
 				shootDirection = Camera.current.ScreenToWorldPoint (shootDirection) - transform.position;
@@ -93,22 +105,28 @@ public class PlayerController : MonoBehaviour {
 				nextFire = Time.time + fireRate;
 				Rigidbody2D bullet = Instantiate (shot, shotSpawn.position, shotSpawn.rotation) as Rigidbody2D;
 				bullet.velocity = new Vector2 (shootDirection.x * bulletSpeed, shootDirection.y * bulletSpeed);
-			}
+			}*/
 		}
 	}
 
 	void Move (float h, float v)
 	{
-		if (frontCamera.enabled) {
-			movement.Set (h, 0f, v);
+		if (h != 0f || v != 0f) {
+			anim.SetFloat (hash.speedFloat, 5.5f, speedDampTime, Time.deltaTime);
+			if (frontCamera.enabled) {
+				Rotating (h, v);
+
+			} else {
+				Rotating (v, -h);
+			}
+
+
 		} else {
-			movement.Set (v, 0f, -h);
-		}
-		
-		movement = movement.normalized * speed * Time.deltaTime;
-		
-		playerRigidbody.MovePosition (transform.position + movement);
+			anim.SetFloat(hash.speedFloat, 0f);
+		} 
 	}
+
+
 
 	void OnTriggerEnter(Collider other)
 	{
@@ -127,6 +145,14 @@ public class PlayerController : MonoBehaviour {
 //			}
 //		}
 //	}
+
+	void Rotating(float horizontal, float vertical)
+	{
+		Vector3 targetDirection = new Vector3 (horizontal, 0f, vertical);
+		Quaternion targetRotation = Quaternion.LookRotation (targetDirection, Vector3.up);
+		Quaternion newRotation = Quaternion.Lerp (playerRigidbody.rotation, targetRotation, turnSmoothing * Time.deltaTime);
+		playerRigidbody.MoveRotation (newRotation); 
+	}
 //
 	void Die()
 	{
