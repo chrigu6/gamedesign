@@ -18,8 +18,6 @@ public class PlayerController : MonoBehaviour {
 	public Camera frontCamera;
 	public Camera aboveCamera;
 
-	bool facingRight = true;
-	bool facingCamera = true;
 	bool grounded = true;
 	public Transform groundCheck;
 	float groundRadius = 0.2f;
@@ -38,6 +36,14 @@ public class PlayerController : MonoBehaviour {
 	private Animator anim;
 	private HashIDs hash;
 
+	public AudioClip shotClip;
+	public float flashIntensity = 3f;
+	public float fadeSpeed = 10f;
+	private LineRenderer laserShotLine;
+	private Light laserShotLight;
+	private bool shooting;
+	private Vector3 shotPosition;
+
 
 	// Use this for initialization
 	void Start () {
@@ -50,12 +56,19 @@ public class PlayerController : MonoBehaviour {
 	void Awake() {
 		anim = GetComponent<Animator> ();
 		hash = GameObject.FindGameObjectWithTag ("GameController").GetComponent<HashIDs> ();
+		laserShotLine = GetComponentInChildren<LineRenderer> ();
+		if (laserShotLine == null) {
+			Debug.Log (GetComponentInChildren<LineRenderer> ());
+		}
+		laserShotLight = GetComponentInChildren<Light> ();
+
+		laserShotLine.enabled = false;
+		laserShotLight.intensity = 0f;
 	}
 
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		Debug.Log (this.name + " : " + this.isActive);
 		float h = Input.GetAxisRaw ("Horizontal");
 	
 		float v = Input.GetAxisRaw("Vertical");
@@ -81,6 +94,8 @@ public class PlayerController : MonoBehaviour {
 
 	void Update()
 	{
+		
+
 		Collider[] ground = Physics.OverlapSphere (groundCheck.position, groundRadius, whatIsGround);
 		if (ground.Length > 0) {
 			this.grounded = true;
@@ -97,16 +112,44 @@ public class PlayerController : MonoBehaviour {
 				GetComponent<Rigidbody> ().AddForce (new Vector3 (0, jumpForce, 0));
 			}
 
-			/*if (frontCamera.enabled && Input.GetButton ("Fire2") && Time.time > nextFire) {
-				Vector3 shootDirection = Input.mousePosition;
-				shootDirection.y = 0.0f;
-				shootDirection = Camera.current.ScreenToWorldPoint (shootDirection) - transform.position;
-				
+			if (frontCamera.enabled && Input.GetButton ("Fire2") && Time.time > nextFire) {
+				Debug.Log ("shoot!");
+				//Vector3 shootDirection = Input.mousePosition;
+				//shootDirection.y = 0.0f;
+				//shootDirection = Camera.current.ScreenToWorldPoint (shootDirection) - transform.position;
+				anim.SetBool(hash.shotClicked, true);
 				nextFire = Time.time + fireRate;
-				Rigidbody2D bullet = Instantiate (shot, shotSpawn.position, shotSpawn.rotation) as Rigidbody2D;
-				bullet.velocity = new Vector2 (shootDirection.x * bulletSpeed, shootDirection.y * bulletSpeed);
-			}*/
+				//Rigidbody2D bullet = Instantiate (shot, shotSpawn.position, shotSpawn.rotation) as Rigidbody2D;
+				//bullet.velocity = new Vector2 (shootDirection.x * bulletSpeed, shootDirection.y * bulletSpeed);
+				this.ShotEffects();
+			}
 		}
+
+		laserShotLight.intensity = Mathf.Lerp (laserShotLight.intensity, 0f, fadeSpeed * Time.deltaTime);
+	}
+
+	void OnAnimatorIK (int layerIndex)
+	{
+		// Cache the current value of the AimWeight curve.
+		float aimWeight = anim.GetFloat(hash.aimWeightFloat);
+		
+		// Set the IK position of the right hand to the player's centre.
+		anim.SetIKPosition(AvatarIKGoal.RightHand, this.shotPosition);
+		
+		// Set the weight of the IK compared to animation to that of the curve.
+		anim.SetIKPositionWeight(AvatarIKGoal.RightHand, aimWeight);
+	}
+
+	void ShotEffects(){
+		shotPosition = Input.mousePosition;
+		shotPosition.y = 0.0f;
+		shotPosition = frontCamera.ScreenToWorldPoint (shotPosition) - transform.position;
+
+
+		laserShotLine.SetPosition (0, laserShotLine.transform.position);
+		laserShotLine.SetPosition (1, shotPosition);
+		laserShotLight.intensity = flashIntensity;
+		AudioSource.PlayClipAtPoint (shotClip, laserShotLight.transform.position);
 	}
 
 	void Move (float h, float v)
@@ -162,7 +205,6 @@ public class PlayerController : MonoBehaviour {
 
 	public void changeState(){
 		this.isActive = !this.isActive;
-		Debug.Log ("Activated :" + this.name);
 	}
 
 	public void FlipHorizontaly()
