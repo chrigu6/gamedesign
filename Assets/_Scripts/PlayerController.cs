@@ -57,9 +57,6 @@ public class PlayerController : MonoBehaviour {
 		anim = GetComponent<Animator> ();
 		hash = GameObject.FindGameObjectWithTag ("GameController").GetComponent<HashIDs> ();
 		laserShotLine = GetComponentInChildren<LineRenderer> ();
-		if (laserShotLine == null) {
-			Debug.Log (GetComponentInChildren<LineRenderer> ());
-		}
 		laserShotLight = GetComponentInChildren<Light> ();
 
 		laserShotLine.enabled = false;
@@ -87,13 +84,16 @@ public class PlayerController : MonoBehaviour {
 			transform.rotation = Quaternion.Euler (new Vector3 (0, 0, rotationAngle));
 		}
 		*/
-
-
 	}
 		
 
 	void Update()
 	{
+		float shot = anim.GetFloat (hash.shotFloat);
+
+		if (shot < 0.5f) {
+			laserShotLine.enabled = false;
+		}
 		
 
 		Collider[] ground = Physics.OverlapSphere (groundCheck.position, groundRadius, whatIsGround);
@@ -113,15 +113,10 @@ public class PlayerController : MonoBehaviour {
 			}
 
 			if (frontCamera.enabled && Input.GetButton ("Fire2") && Time.time > nextFire) {
-				Debug.Log ("shoot!");
-				//Vector3 shootDirection = Input.mousePosition;
-				//shootDirection.y = 0.0f;
-				//shootDirection = Camera.current.ScreenToWorldPoint (shootDirection) - transform.position;
 				anim.SetBool(hash.shotClicked, true);
 				nextFire = Time.time + fireRate;
-				//Rigidbody2D bullet = Instantiate (shot, shotSpawn.position, shotSpawn.rotation) as Rigidbody2D;
-				//bullet.velocity = new Vector2 (shootDirection.x * bulletSpeed, shootDirection.y * bulletSpeed);
 				this.ShotEffects();
+				anim.SetBool(hash.shotClicked, false);
 			}
 		}
 
@@ -142,12 +137,11 @@ public class PlayerController : MonoBehaviour {
 
 	void ShotEffects(){
 		shotPosition = Input.mousePosition;
-		shotPosition.y = 0.0f;
-		shotPosition = frontCamera.ScreenToWorldPoint (shotPosition) - transform.position;
-
-
+		shotPosition = Camera.main.ScreenToWorldPoint (shotPosition);
+		shotPosition.z = transform.position.z;
 		laserShotLine.SetPosition (0, laserShotLine.transform.position);
 		laserShotLine.SetPosition (1, shotPosition);
+		laserShotLine.enabled = true;
 		laserShotLight.intensity = flashIntensity;
 		AudioSource.PlayClipAtPoint (shotClip, laserShotLight.transform.position);
 	}

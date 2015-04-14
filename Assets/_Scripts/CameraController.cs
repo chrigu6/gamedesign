@@ -20,7 +20,6 @@ public class CameraController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Debug.Log ("Start!");
 		player1.GetComponent<PlayerController> ().changeState();
 		offset = transform.position;
 		lane1Visible = true;
