@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour {
 	public Transform groundCheck;
 	float groundRadius = 0.2f;
 	public LayerMask whatIsGround;
+	private int currentLayer;
 
 	public bool changeLane;
 
@@ -61,6 +62,7 @@ public class PlayerController : MonoBehaviour {
 
 		laserShotLine.enabled = false;
 		laserShotLight.intensity = 0f;
+		this.currentLayer = 1;
 	}
 
 	
@@ -94,11 +96,11 @@ public class PlayerController : MonoBehaviour {
 		if (shot < 0.5f) {
 			laserShotLine.enabled = false;
 		}
-		
 
 		Collider[] ground = Physics.OverlapSphere (groundCheck.position, groundRadius, whatIsGround);
 		if (ground.Length > 0) {
 			this.grounded = true;
+			this.currentLayer = this.getLayer(ground[0].tag);
 		} else {
 			this.grounded = false;
 		}
@@ -201,8 +203,20 @@ public class PlayerController : MonoBehaviour {
 		this.isActive = !this.isActive;
 	}
 
-	public void FlipHorizontaly()
-	{
+	private int getLayer(string LayerName){
+		if (LayerName.Equals ("1stLane"))
+			return 1;
+		if (LayerName.Equals ("2ndLane"))
+			return 2;
+		if (LayerName.Equals ("3dLane"))
+			return 3;
 
+		return this.currentLayer;
 	}
+
+	public int getLayerNumber()
+	{
+		return this.currentLayer;
+	}
+
 }
