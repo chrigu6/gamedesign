@@ -5,12 +5,12 @@ using System.Collections;
 public class PlayerHealth : MonoBehaviour {
 
 	public int startingHealth = 100;
-	public int currentHealth;
-	public Slider healthSlider;
+	public float currentHealth;
+	public Image healthSlider;
 	public Image damageImage;
 	public AudioClip deathClip;
 	public float flashSpeed = 5f;
-	public Color flashColour = new Color(1f, 0f, 0f, 0.1f);
+	public Color flashColour = new Color(1f, 0f, 0f, 1.5f);
 
 	AudioSource playerAudio;
 	PlayerController playerController;
@@ -37,7 +37,7 @@ public class PlayerHealth : MonoBehaviour {
 	public void TakeDamage (int amount){
 		damaged = true;
 		currentHealth -= amount;
-		healthSlider.value = currentHealth;
+		healthSlider.fillAmount = currentHealth/100;
 		playerAudio.Play ();
 
 		if (currentHealth <= 0 && !isDead) {

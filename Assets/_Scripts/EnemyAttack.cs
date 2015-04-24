@@ -6,14 +6,13 @@ public class EnemyAttack : MonoBehaviour {
 	public float timeBetweenAttacks = 0.5f;
 	public int attackDamage = 10;
 	
-	GameObject player;
+	public GameObject player;
 	PlayerHealth playerHealth;
 
 	bool playerInRange;
 	float timer;
 	
 	void Awake () {
-		player = GameObject.FindGameObjectWithTag ("Player1");
 		playerHealth = player.GetComponent <PlayerHealth> ();
 	}
 
