@@ -70,11 +70,17 @@ public class PlayerController : MonoBehaviour {
 	void FixedUpdate () {
 		float h = Input.GetAxisRaw ("Horizontal");
 	
-		float v = Input.GetAxisRaw("Vertical");
+		float v = Input.GetAxisRaw ("Vertical");
 		if (isActive) {
 			Move (h, v);
 		}
 
+
+		if (frontCamera.enabled) {
+			playerRigidbody.constraints = RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
+		} else {
+			playerRigidbody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
+		}
 		/*
 		if (frontCamera.enabled)
 		{
