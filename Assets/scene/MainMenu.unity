@@ -476,19 +476,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28b40a2855ec6ae4aacdbd767dbb23d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letterPause: .200000003
+  cursorSpeed: .5
+  letterPause: .100000001
   sound: {fileID: 8300000, guid: 7192ac9cb92322243bc4c073c0ac1b50, type: 3}
-  inputText: {fileID: 0}
-  message: This is a test, if this is working I'm really happy! I wonder what will
-    happen, if I put to much text in here? Will it automaticaly scroll? Or will the
-    hole shit just blow up? Just more text to make it go further down! Just more text
-    to make it go further down! Just more text to make it go further down! Just more
-    text to make it go further down! Just more text to make it go further down! Just
-    more text to make it go further down! Just more text to make it go further down!
-    Just more text to make it go further down! Just more text to make it go further
-    down! Just more text to make it go further down! Just more text to make it go
-    further down! Just more text to make it go further down! Just more text to make
-    it go further down! Just more text to make it go further down!
+  fileName: text.txt
 --- !u!82 &1799865784
 AudioSource:
   m_ObjectHideFlags: 0
