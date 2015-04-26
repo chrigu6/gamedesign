@@ -17,6 +17,7 @@ public class basicTerminalScript : MonoBehaviour {
 	private char[] chars;
 	private int i = 0;
 	private int lines = 0;
+	private int charPerLines = 0;
 	private AudioSource terminalAudio;
 	
 	// Use this for initialization
@@ -49,6 +50,9 @@ public class basicTerminalScript : MonoBehaviour {
 			
 			i++;
 			this.gameObject.GetComponent<Text> ().text += letter;
+			charPerLines++;
+			char currentLetter = letter;
+
 			if (sound && !terminalAudio.isPlaying)
 			{
 				terminalAudio.clip = sound;
@@ -57,14 +61,16 @@ public class basicTerminalScript : MonoBehaviour {
 
 
 			//If the textline is to long, start a new one
-			if(i%35 == 0 && !(i ==0))
+			if(charPerLines%35 == 0 && !(i ==0))
 			{
 				this.gameObject.GetComponent<Text> ().text += '\n';
+				currentLetter = '\n';
 			}
 			
 			//Count the number of lines if the number of lines reach the bottom of the textfield, start to wrap the lines
-			if (letter == '\n')
+			if (currentLetter == '\n')
 			{
+				charPerLines = 0;
 				lines++;
 				if (lines > 5)
 				{

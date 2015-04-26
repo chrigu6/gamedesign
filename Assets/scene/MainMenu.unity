@@ -454,7 +454,7 @@ MonoBehaviour:
     m_MaxSize: 10
     m_Alignment: 0
     m_RichText: 0
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: " **** COMMODORE 64 BASIC V2 ****\n         64K RAM SYSTEM \n      38911
@@ -477,7 +477,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursorSpeed: .5
-  letterPause: .100000001
+  letterPause: 0
   sound: {fileID: 8300000, guid: 7192ac9cb92322243bc4c073c0ac1b50, type: 3}
   fileName: text.txt
 --- !u!82 &1799865784
