@@ -11,6 +11,7 @@ public class CameraController : MonoBehaviour {
 
 	public Camera frontCamera;
 	public Camera aboveCamera;
+	public bool switchingCamAllowed;
 
 	private int layerNumber;
 	
@@ -27,6 +28,14 @@ public class CameraController : MonoBehaviour {
 		(frontCamera.GetComponent(typeof(AudioListener)) as AudioListener).enabled = true;
 		(aboveCamera.GetComponent(typeof(AudioListener)) as AudioListener).enabled = false;
 		this.layerNumber = this.getLayerFromPlayer (this.activePlayer);
+
+		// If first level, do not allow the player to switch to 3d view camera
+		if (Application.loadedLevelName == "level1") {
+			switchingCamAllowed = false;
+		} else {
+			switchingCamAllowed = true;
+		}
+
 	}
 
 
@@ -60,7 +69,7 @@ public class CameraController : MonoBehaviour {
 		}
 
 
-		if (Input.GetButtonDown ("ChangeCamera") && activePlayer.GetComponent<PlayerController>().changeLane == false) {
+		if (Input.GetButtonDown ("ChangeCamera") && activePlayer.GetComponent<PlayerController>().changeLane == false && switchingCamAllowed == true) {
 			frontCamera.enabled = !frontCamera.enabled;
 			aboveCamera.enabled = !frontCamera.enabled;
 			(frontCamera.GetComponent(typeof(AudioListener)) as AudioListener).enabled = frontCamera.enabled;
