@@ -17,6 +17,7 @@ public class DoorOpen : MonoBehaviour {
 
 	void Awake () {
 		playerAudio = GetComponent <AudioSource> ();
+		playerInRange = false;
 	}
 	
 	void OnTriggerEnter (Collider other) {
