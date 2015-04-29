@@ -34,6 +34,8 @@ public class EnemyAttack : MonoBehaviour {
 		if (timer >= timeBetweenAttacks && playerInRange) {
 			Attack ();
 		}
+		Debug.Log(playerInRange);
+
 	}
 
 	void Attack () {

@@ -885,6 +885,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 898b72bb0a14b8a46af5202f621181ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startingHealth: 0
+  maxHealth: 100
   currentHealth: 0
   healthSlider: {fileID: 0}
   damageImage: {fileID: 0}
@@ -4030,6 +4032,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 898b72bb0a14b8a46af5202f621181ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startingHealth: 100
+  maxHealth: 100
   currentHealth: 0
   healthSlider: {fileID: 1967812369}
   damageImage: {fileID: 1155164489}

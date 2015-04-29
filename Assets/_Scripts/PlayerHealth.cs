@@ -4,15 +4,16 @@ using System.Collections;
 
 public class PlayerHealth : MonoBehaviour {
 
-	public static int maxHealth = 100;
+	public int startingHealth;
+	public int maxHealth = 100;
 	public float currentHealth;
 	public Image healthSlider;
+
 	public Image damageImage;
 	public AudioClip deathClip;
-	public float flashSpeed = .5f;
-	public Color flashColour = new Color(1f, 0f, 0f, 255f);
+	public float flashSpeed = 5f;
+	public Color flashColour = new Color(1f, 0f, 0f, 0.1f);
 
-	int startingHealth = maxHealth;
 	AudioSource playerAudio;
 	PlayerController playerController;
 	bool healed;
@@ -31,16 +32,11 @@ public class PlayerHealth : MonoBehaviour {
 	void Update () {
 		// flash screen when damage is taken by player
 		if (damaged) {
-			this.startFlash = Time.time;
-			damageImage.enabled = true;
 			damageImage.color = flashColour;
+		} else {
+			damageImage.color = Color.Lerp (damageImage.color, Color.clear, flashSpeed * Time.deltaTime);
 		}
-
-		if (Time.time - this.startFlash > flashSpeed)
-		{
-			damageImage.color = new Color(0f, 0f, 0f, 0f);
-		}
-
+		damaged = false;
 	}
 
 	// Player regains health
@@ -56,8 +52,11 @@ public class PlayerHealth : MonoBehaviour {
 	// Player takes damage
 	public void TakeDamage (int amount){
 		damaged = true;
+
 		currentHealth -= amount;
+
 		healthSlider.fillAmount = currentHealth / maxHealth;
+
 		playerAudio.Play ();
 
 		// Player is dead
