@@ -19,27 +19,30 @@ public class basicTerminalScript : MonoBehaviour {
 	private int lines = 0;
 	private int charPerLines = 0;
 	private AudioSource terminalAudio;
+	private bool active = false;
 	
 	// Use this for initialization
 	void Start () {
 		string message = File.ReadAllText (Application.dataPath+ "/" + fileName).ToUpper();
 		chars = message.ToCharArray();
 		terminalAudio = gameObject.GetComponent<AudioSource> ();
+		this.gameObject.GetComponent<Canvas> ().enabled = false;
 	}
 	
 	void OnGUI() {
-		//If the end of the message is not reached and not allready writing startwriting
-		if (!isWriting && (i < chars.Length - 1)) {
-			isWriting = true;
-			cursorVisible = false;
-			StartCoroutine(TypeText());
-			StopCoroutine(ShowCursor());
-		} else {
-			if(!cursorVisible && (i > chars.Length - 1))
-			{
-				cursorVisible = true;
-				StopCoroutine(TypeText());
-				StartCoroutine(ShowCursor());
+		if (active) {
+			//If the end of the message is not reached and not allready writing startwriting
+			if (!isWriting && (i < chars.Length - 1)) {
+				isWriting = true;
+				cursorVisible = false;
+				StartCoroutine (TypeText ());
+				StopCoroutine (ShowCursor ());
+			} else {
+				if (!cursorVisible && (i > chars.Length - 1)) {
+					cursorVisible = true;
+					StopCoroutine (TypeText ());
+					StartCoroutine (ShowCursor ());
+				}
 			}
 		}
 	}

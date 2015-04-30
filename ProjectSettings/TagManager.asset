@@ -12,6 +12,8 @@ TagManager:
   - 1stLane
   - 2ndLane
   - 3dLane
+  - terminal
+  - invisible
   layers:
   - Default
   - TransparentFX
@@ -28,7 +30,7 @@ TagManager:
   - 3dLane
   - BetweenLanes
   - Shootable
-  - 
+  - invisible
   - 
   - 
   - 

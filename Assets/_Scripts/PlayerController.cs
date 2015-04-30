@@ -45,6 +45,9 @@ public class PlayerController : MonoBehaviour {
 	private bool shooting;
 	private Vector3 shotPosition;
 
+	private bool atTerminal = false;
+	private bool terminalActivated = false;
+
 
 	// Use this for initialization
 	void Start () {
@@ -126,6 +129,13 @@ public class PlayerController : MonoBehaviour {
 				this.ShotEffects();
 				anim.SetBool(hash.shotClicked, false);
 			}
+
+			if(atTerminal && Input.GetButtonDown("Action"))
+			{
+				this.terminalActivated = true;
+
+				Debug.Log("Activated");
+			}
 		}
 
 		laserShotLight.intensity = Mathf.Lerp (laserShotLight.intensity, 0f, fadeSpeed * Time.deltaTime);
@@ -176,11 +186,12 @@ public class PlayerController : MonoBehaviour {
 	void OnTriggerEnter(Collider other)
 	{
 		if (isActive) {
-			if (other.gameObject.tag == "intersection" ) {
-				changeLane = !changeLane;
+			if (other.gameObject.tag == "terminal" ) {
+				this.atTerminal = true;
 			}
 		}
 	}
+
 
 //	void OnCollisionEnter(Collision colide)
 //	{
@@ -223,6 +234,11 @@ public class PlayerController : MonoBehaviour {
 	public int getLayerNumber()
 	{
 		return this.currentLayer;
+	}
+
+	public bool getTerminalActivated()
+	{
+		return this.terminalActivated;
 	}
 
 }

@@ -6,11 +6,13 @@ public class CameraController : MonoBehaviour {
 	public GameObject player2;
 	public GameObject activePlayer;
 	public GameObject startArea;
+	public GameObject hud;
 
 	public Vector3	offset;
 
 	public Camera frontCamera;
 	public Camera aboveCamera;
+	public Camera terminalCamera;
 
 	private int layerNumber;
 	
@@ -23,6 +25,7 @@ public class CameraController : MonoBehaviour {
 		playerInStartArea = true;
 		frontCamera.enabled = true;
 		aboveCamera.enabled = false;
+		terminalCamera.enabled = false;
 		frontCamera.cullingMask = ((1 << LayerMask.NameToLayer("Default") | 1 << LayerMask.NameToLayer("1stLane") | 1 << LayerMask.NameToLayer(activePlayer.tag)));
 		(frontCamera.GetComponent(typeof(AudioListener)) as AudioListener).enabled = true;
 		(aboveCamera.GetComponent(typeof(AudioListener)) as AudioListener).enabled = false;
@@ -47,39 +50,45 @@ public class CameraController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (this.getLayerFromPlayer (this.activePlayer) == 1) {
-			Debug.Log ("1st Mask");
+			//Debug.Log ("1st Mask");
 			frontCamera.cullingMask = frontCamera.cullingMask = ((1 << LayerMask.NameToLayer ("Default") | 1 << LayerMask.NameToLayer ("1stLane") | 0 << LayerMask.NameToLayer ("2ndLane") | 0 << LayerMask.NameToLayer ("3dLane") | 1 << LayerMask.NameToLayer (activePlayer.tag) | 1 << LayerMask.NameToLayer ("Shootable")));
 		}
 		if (this.getLayerFromPlayer (this.activePlayer) == 2) {
-			Debug.Log ("2nd Mask");
+			//Debug.Log ("2nd Mask");
 			frontCamera.cullingMask = frontCamera.cullingMask = ((1 << LayerMask.NameToLayer ("Default") | 0 << LayerMask.NameToLayer ("1stLane") | 1 << LayerMask.NameToLayer ("2ndLane") | 0 << LayerMask.NameToLayer ("3dLane") | 1 << LayerMask.NameToLayer (activePlayer.tag) | 1 << LayerMask.NameToLayer ("Shootable")));
 		}
 		if (this.getLayerFromPlayer (this.activePlayer) == 3) {
-			Debug.Log ("3d Mask");
+			//Debug.Log ("3d Mask");
 			frontCamera.cullingMask = frontCamera.cullingMask = ((1 << LayerMask.NameToLayer ("Default") | 0 << LayerMask.NameToLayer ("1stLane") | 0 << LayerMask.NameToLayer ("2ndLane") | 1 << LayerMask.NameToLayer ("3dLane") | 1 << LayerMask.NameToLayer (activePlayer.tag) | 1 << LayerMask.NameToLayer ("Shootable")));
 		}
 
 
-		if (Input.GetButtonDown ("ChangeCamera") && activePlayer.GetComponent<PlayerController>().changeLane == false) {
+		if (Input.GetButtonDown ("ChangeCamera") && activePlayer.GetComponent<PlayerController> ().changeLane == false) {
 			frontCamera.enabled = !frontCamera.enabled;
 			aboveCamera.enabled = !frontCamera.enabled;
-			(frontCamera.GetComponent(typeof(AudioListener)) as AudioListener).enabled = frontCamera.enabled;
-			(aboveCamera.GetComponent(typeof(AudioListener)) as AudioListener).enabled = aboveCamera.enabled;
+			(frontCamera.GetComponent (typeof(AudioListener)) as AudioListener).enabled = frontCamera.enabled;
+			(aboveCamera.GetComponent (typeof(AudioListener)) as AudioListener).enabled = aboveCamera.enabled;
 		}
 
-		if (Input.GetButtonDown("SwitchPlayer")) {
-			player1.GetComponent<PlayerController>().changeState();
-			player2.GetComponent<PlayerController>().changeState();
+		if (Input.GetButtonDown ("SwitchPlayer")) {
+			player1.GetComponent<PlayerController> ().changeState ();
+			player2.GetComponent<PlayerController> ().changeState ();
 
-			if (activePlayer == player1)
-			{
+			if (activePlayer == player1) {
 				activePlayer = player2;
-			}
-			else
-			{
+			} else {
 				activePlayer = player1;
 			}
-			Debug.Log (activePlayer.name);
+			//Debug.Log (activePlayer.name);
+		}
+
+		if (activePlayer.GetComponent<PlayerController> ().getTerminalActivated ()) {
+
+			this.frontCamera.enabled = false;
+			this.aboveCamera.enabled = false;
+			this.terminalCamera.enabled = true;
+			this.hud.GetComponent<Canvas>().enabled = false;
+			this.activePlayer.GetComponent<PlayerController> ().changeState ();
 		}
 
 	}

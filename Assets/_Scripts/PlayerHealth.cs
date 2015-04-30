@@ -36,7 +36,7 @@ public class PlayerHealth : MonoBehaviour {
 
 		if (Time.time - this.startFlash > flashSpeed)
 		{
-			damageImage.color = new Color(0f, 0f, 0f, 0f);
+			//damageImage.color = new Color(0f, 0f, 0f, 0f);
 		}
 
 	}
