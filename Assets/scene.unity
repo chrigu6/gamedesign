@@ -1717,13 +1717,9 @@ Transform:
   - {fileID: 2144746944}
   - {fileID: 110583146}
   m_Father: {fileID: 0}
-<<<<<<< HEAD
-  m_RootOrder: 4
---- !u!20 &796962387
-=======
+
   m_RootOrder: 3
 --- !u!20 &796962387 stripped
->>>>>>> 497f909e84001b38becd69da4dbcd6e16ba6a9f8
 Camera:
   m_PrefabParentObject: {fileID: 2090558, guid: 1521c206b5a337344852e836d7139b43,
     type: 2}
@@ -3415,11 +3411,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: df5a433a0cff0024ebc42f9bd46edecd, type: 2}
   m_IsPrefabParent: 0
-<<<<<<< HEAD
---- !u!4 &1506821839
-=======
 --- !u!4 &1504412677 stripped
->>>>>>> 497f909e84001b38becd69da4dbcd6e16ba6a9f8
 Transform:
   m_PrefabParentObject: {fileID: 428632, guid: 1521c206b5a337344852e836d7139b43, type: 2}
   m_PrefabInternal: {fileID: 184701661}
