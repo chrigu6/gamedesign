@@ -45,7 +45,9 @@ public class CameraController : MonoBehaviour {
 
 
 	void FixedUpdate(){
-		transform.position = activePlayer.transform.position + offset;
+		if (!terminalCamera.enabled) {
+			transform.position = activePlayer.transform.position + offset;
+		}
 	}
 
 		void OnTriggerEnter (Collider other) {
@@ -60,47 +62,62 @@ public class CameraController : MonoBehaviour {
 	}
 	// Update is called once per frame
 	void Update () {
-		if (this.getLayerFromPlayer (this.activePlayer) == 1) {
-			//Debug.Log ("1st Mask");
-			frontCamera.cullingMask = frontCamera.cullingMask = ((1 << LayerMask.NameToLayer ("Default") | 1 << LayerMask.NameToLayer ("1stLane") | 0 << LayerMask.NameToLayer ("2ndLane") | 0 << LayerMask.NameToLayer ("3dLane") | 1 << LayerMask.NameToLayer (activePlayer.tag) | 1 << LayerMask.NameToLayer ("Shootable")));
-		}
-		if (this.getLayerFromPlayer (this.activePlayer) == 2) {
-			//Debug.Log ("2nd Mask");
-			frontCamera.cullingMask = frontCamera.cullingMask = ((1 << LayerMask.NameToLayer ("Default") | 0 << LayerMask.NameToLayer ("1stLane") | 1 << LayerMask.NameToLayer ("2ndLane") | 0 << LayerMask.NameToLayer ("3dLane") | 1 << LayerMask.NameToLayer (activePlayer.tag) | 1 << LayerMask.NameToLayer ("Shootable")));
-		}
-		if (this.getLayerFromPlayer (this.activePlayer) == 3) {
-			//Debug.Log ("3d Mask");
-			frontCamera.cullingMask = frontCamera.cullingMask = ((1 << LayerMask.NameToLayer ("Default") | 0 << LayerMask.NameToLayer ("1stLane") | 0 << LayerMask.NameToLayer ("2ndLane") | 1 << LayerMask.NameToLayer ("3dLane") | 1 << LayerMask.NameToLayer (activePlayer.tag) | 1 << LayerMask.NameToLayer ("Shootable")));
-		}
-
-
-
-		if (Input.GetButtonDown ("ChangeCamera") && activePlayer.GetComponent<PlayerController>().changeLane == false && switchingCamAllowed == true) {
-			frontCamera.enabled = !frontCamera.enabled;
-			aboveCamera.enabled = !frontCamera.enabled;
-			(frontCamera.GetComponent (typeof(AudioListener)) as AudioListener).enabled = frontCamera.enabled;
-			(aboveCamera.GetComponent (typeof(AudioListener)) as AudioListener).enabled = aboveCamera.enabled;
-		}
-
-		if (Input.GetButtonDown ("SwitchPlayer")) {
-			player1.GetComponent<PlayerController> ().changeState ();
-			player2.GetComponent<PlayerController> ().changeState ();
-
-			if (activePlayer == player1) {
-				activePlayer = player2;
-			} else {
-				activePlayer = player1;
+		if (!terminalCamera.enabled) {
+			if (this.getLayerFromPlayer (this.activePlayer) == 1) {
+				//Debug.Log ("1st Mask");
+				frontCamera.cullingMask = frontCamera.cullingMask = ((1 << LayerMask.NameToLayer ("Default") | 1 << LayerMask.NameToLayer ("1stLane") | 0 << LayerMask.NameToLayer ("2ndLane") | 0 << LayerMask.NameToLayer ("3dLane") | 1 << LayerMask.NameToLayer (activePlayer.tag) | 1 << LayerMask.NameToLayer ("Shootable")));
 			}
-			//Debug.Log (activePlayer.name);
+			if (this.getLayerFromPlayer (this.activePlayer) == 2) {
+				//Debug.Log ("2nd Mask");
+				frontCamera.cullingMask = frontCamera.cullingMask = ((1 << LayerMask.NameToLayer ("Default") | 0 << LayerMask.NameToLayer ("1stLane") | 1 << LayerMask.NameToLayer ("2ndLane") | 0 << LayerMask.NameToLayer ("3dLane") | 1 << LayerMask.NameToLayer (activePlayer.tag) | 1 << LayerMask.NameToLayer ("Shootable")));
+			}
+			if (this.getLayerFromPlayer (this.activePlayer) == 3) {
+				//Debug.Log ("3d Mask");
+				frontCamera.cullingMask = frontCamera.cullingMask = ((1 << LayerMask.NameToLayer ("Default") | 0 << LayerMask.NameToLayer ("1stLane") | 0 << LayerMask.NameToLayer ("2ndLane") | 1 << LayerMask.NameToLayer ("3dLane") | 1 << LayerMask.NameToLayer (activePlayer.tag) | 1 << LayerMask.NameToLayer ("Shootable")));
+			}
+
+
+
+			if (Input.GetButtonDown ("ChangeCamera") && activePlayer.GetComponent<PlayerController> ().changeLane == false && switchingCamAllowed == true) {
+				frontCamera.enabled = !frontCamera.enabled;
+				aboveCamera.enabled = !frontCamera.enabled;
+				(frontCamera.GetComponent (typeof(AudioListener)) as AudioListener).enabled = frontCamera.enabled;
+				(aboveCamera.GetComponent (typeof(AudioListener)) as AudioListener).enabled = aboveCamera.enabled;
+			}
+
+			if (Input.GetButtonDown ("SwitchPlayer")) {
+				player1.GetComponent<PlayerController> ().changeState ();
+				player2.GetComponent<PlayerController> ().changeState ();
+
+				if (activePlayer == player1) {
+					activePlayer = player2;
+				} else {
+					activePlayer = player1;
+				}
+				//Debug.Log (activePlayer.name);
+			}
+
+			if (this.activePlayer.GetComponent<PlayerController> ().getTerminalState()) {
+				Debug.Log("Activated terminal");
+				this.frontCamera.enabled = false;
+				this.aboveCamera.enabled = false;
+				this.terminalCamera.enabled = true;
+				this.hud.GetComponent<Canvas> ().enabled = false;
+				this.GetComponentInChildren<basicTerminalScript>().changeState();
+				this.activePlayer.GetComponent<PlayerController> ().changeState ();
+			}
+
 		}
 
-		if (activePlayer.GetComponent<PlayerController> ().getTerminalActivated ()) {
-
-			this.frontCamera.enabled = false;
+		if(this.GetComponentInChildren<basicTerminalScript> ().getAbort())
+		{
+			this.frontCamera.enabled = true;
 			this.aboveCamera.enabled = false;
-			this.terminalCamera.enabled = true;
-			this.hud.GetComponent<Canvas>().enabled = false;
+			this.terminalCamera.enabled = false;
+			this.hud.GetComponent<Canvas> ().enabled = true;
+			this.GetComponentInChildren<basicTerminalScript>().changeState();
 			this.activePlayer.GetComponent<PlayerController> ().changeState ();
+			this.activePlayer.GetComponent<PlayerController> ().abort();
 		}
 
 	}

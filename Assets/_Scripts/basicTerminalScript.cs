@@ -8,8 +8,8 @@ public class basicTerminalScript : MonoBehaviour {
 	private bool isWriting = false;
 	private bool cursorVisible = false;
 	
-	public float cursorSpeed = 0.2f;
-	public float letterPause = 0.2f;
+	public float cursorSpeed;
+	public float letterPause;
 	
 	public AudioClip sound;
 	
@@ -20,17 +20,26 @@ public class basicTerminalScript : MonoBehaviour {
 	private int charPerLines = 0;
 	private AudioSource terminalAudio;
 	private bool active = false;
+	private bool abort = false;
+	private string defaultText ="  **** COMMODORE 64 BASIC V2 ****\n        64K RAM SYSTEM\n	    38911 BASIC BYTES FREE\n\nREADY\n";
 	
 	// Use this for initialization
 	void Start () {
+		this.gameObject.GetComponent<Text> ().text = this.defaultText;
 		string message = File.ReadAllText (Application.dataPath+ "/" + fileName).ToUpper();
 		chars = message.ToCharArray();
 		terminalAudio = gameObject.GetComponent<AudioSource> ();
-		this.gameObject.GetComponent<Canvas> ().enabled = false;
+		terminalAudio.mute = true;
+		this.gameObject.GetComponentInParent<Canvas> ().enabled = false;
 	}
 	
 	void OnGUI() {
-		if (active) {
+		//Debug.Log ("Hans: " + active);
+		if (active) {;
+			if(Input.GetButtonDown ("SwitchPlayer"))
+			{
+				this.abortTerminal();
+			}
 			//If the end of the message is not reached and not allready writing startwriting
 			if (!isWriting && (i < chars.Length - 1)) {
 				isWriting = true;
@@ -59,6 +68,7 @@ public class basicTerminalScript : MonoBehaviour {
 			if (sound && !terminalAudio.isPlaying)
 			{
 				terminalAudio.clip = sound;
+				terminalAudio.mute = false;
 				terminalAudio.Play ();
 			}
 
@@ -109,5 +119,34 @@ public class basicTerminalScript : MonoBehaviour {
 			yield return 0;
 			yield return new WaitForSeconds (cursorSpeed);
 		}
+	}
+
+	public void changeState()
+	{
+		//Debug.Log ("change");
+		this.gameObject.GetComponentInParent<Canvas> ().enabled = true;
+		this.active = !this.active;
+		this.abort = false;
+	}
+
+	public bool getAbort()
+	{
+		return this.abort;
+	}
+
+	public bool isActive()
+	{
+		return this.active;
+	}
+
+	void abortTerminal ()
+	{
+		this.Start ();
+		this.terminalAudio.mute = true;
+		this.abort = true;
+		this.i = 0;
+	    this.lines = 0;;
+		StopAllCoroutines ();
+		this.isWriting = false;
 	}
 }

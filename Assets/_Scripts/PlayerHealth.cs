@@ -36,11 +36,11 @@ public class PlayerHealth : MonoBehaviour
         // flash screen when damage is taken by player
         if (damaged)
         {
-            damageImage.color = flashColour;
+            //damageImage.color = flashColour;
         }
         else
         {
-            damageImage.color = Color.Lerp(damageImage.color, Color.clear, flashSpeed * Time.deltaTime);
+           // damageImage.color = Color.Lerp(damageImage.color, Color.clear, flashSpeed * Time.deltaTime);
         }
         damaged = false;
     }

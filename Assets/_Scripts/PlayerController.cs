@@ -58,7 +58,8 @@ public class PlayerController : MonoBehaviour {
 	float effectsDisplayTime = 0.2f;
 
 	private bool atTerminal = false;
-	private bool terminalActivated = false;
+	private bool activateTerminal = false;
+
 
 
 	// Use this for initialization
@@ -150,11 +151,9 @@ public class PlayerController : MonoBehaviour {
 				anim.SetBool(hash.shotClicked, false);
 			}
 
-			if(atTerminal && Input.GetButtonDown("Action"))
+			if(this.atTerminal && Input.GetButtonDown("Action"))
 			{
-				this.terminalActivated = true;
-
-				Debug.Log("Activated");
+				this.activateTerminal = true;
 			}
 		}
 
@@ -229,11 +228,21 @@ public class PlayerController : MonoBehaviour {
 	void OnTriggerEnter(Collider other)
 	{
 		if (isActive) {
-			if (other.gameObject.tag == "terminal" ) {
+			if (other.gameObject.tag == "terminal") {
 				this.atTerminal = true;
 			}
 		}
 	}
+
+	void OnTriggerExit(Collider other)
+	{
+		if (isActive) {
+			if (other.gameObject.tag == "terminal") {
+				this.atTerminal = false;
+			}
+		}
+	}
+
 
 
 //	void OnCollisionEnter(Collision colide)
@@ -279,9 +288,13 @@ public class PlayerController : MonoBehaviour {
 		return this.currentLayer;
 	}
 
-	public bool getTerminalActivated()
+	public void abort(){
+		this.activateTerminal = false;
+	}
+
+	public bool getTerminalState()
 	{
-		return this.terminalActivated;
+		return this.activateTerminal;
 	}
 
 }
