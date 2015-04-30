@@ -44,6 +44,18 @@ public class PlayerController : MonoBehaviour {
 	private Light laserShotLight;
 	private bool shooting;
 	private Vector3 shotPosition;
+	public int damagePerShot = 20;
+	public float timeBetweenBullets = 0.15f;
+	public float range =  100f;
+
+	float timer;
+	Ray shootRay;
+	RaycastHit shootHit;
+	int shootableMask;
+	LineRenderer gunLine;
+	AudioSource gunAudio;
+	Light gunLight;
+	float effectsDisplayTime = 0.2f;
 
 
 	// Use this for initialization
@@ -55,8 +67,15 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void Awake() {
+
 		anim = GetComponent<Animator> ();
 		hash = GameObject.FindGameObjectWithTag ("GameController").GetComponent<HashIDs> ();
+
+		shootableMask = LayerMask.GetMask ("Shootable");
+		gunLine = GetComponent <LineRenderer> ();
+		gunAudio = GetComponent<AudioSource> ();
+		gunLight = GetComponent<Light> ();
+
 		laserShotLine = GetComponentInChildren<LineRenderer> ();
 		laserShotLight = GetComponentInChildren<Light> ();
 
@@ -97,6 +116,7 @@ public class PlayerController : MonoBehaviour {
 
 	void Update()
 	{
+		timer += Time.deltaTime;
 		float shot = anim.GetFloat (hash.shotFloat);
 
 		if (shot < 0.5f) {
@@ -152,6 +172,29 @@ public class PlayerController : MonoBehaviour {
 		laserShotLine.enabled = true;
 		laserShotLight.intensity = flashIntensity;
 		AudioSource.PlayClipAtPoint (shotClip, laserShotLight.transform.position);
+
+		gunLine.enabled = true;
+		gunLine.SetPosition (0, transform.position);
+
+		shootRay.origin = transform.position;
+		shootRay.direction = transform.forward;
+
+		if(Physics.Raycast(shootRay, out shootHit, range, shootableMask)){
+			EnemyHealth enemyHealth = shootHit.collider.GetComponent <EnemyHealth>();
+			// if there is a enemyHealth script component, take damage and draw a line
+			if(enemyHealth != null){
+				enemyHealth.TakeDamage (damagePerShot, shootHit.point);
+				// draw the line
+			}
+			gunLine.SetPosition (1, shootHit.point);
+
+		}
+
+			// else, just draw a line
+		else{
+			gunLine.SetPosition (1, shootRay.origin + shootRay.direction * range);
+
+		}
 	}
 
 	void Move (float h, float v)
