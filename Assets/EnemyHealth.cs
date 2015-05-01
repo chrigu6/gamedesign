@@ -11,14 +11,14 @@ public class EnemyHealth : MonoBehaviour {
 
 	AudioSource enemyAudio;
 	ParticleSystem hitParticles;
-	CapsuleCollider capsuleCollider;
-	bool isDead;
+	SphereCollider sphereCollider;
+	public bool isDead;
 	bool isSinking;
 
 	void Awake (){
 		enemyAudio = GetComponent <AudioSource> ();
 		hitParticles = GetComponent <ParticleSystem> ();
-		capsuleCollider = GetComponent <CapsuleCollider> ();
+		sphereCollider = GetComponent <SphereCollider> ();
 
 		currentHealth = startingHealth;
 	}
@@ -26,7 +26,7 @@ public class EnemyHealth : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (isSinking) {
-			transform.Translate (-Vector3.up * sinkSpeed * Time.deltaTime);
+			transform.Translate (Vector3.up * sinkSpeed * Time.deltaTime);
 		}
 	}
 
@@ -52,10 +52,12 @@ public class EnemyHealth : MonoBehaviour {
 	void Death(){
 		isDead = true;
 		
-		capsuleCollider.isTrigger = true;
+		sphereCollider.isTrigger = true;
 
 		enemyAudio.clip = deathClip;
 		enemyAudio.Play ();
+
+		StartSinking ();
 	}
 
 	public void StartSinking (){
@@ -65,6 +67,6 @@ public class EnemyHealth : MonoBehaviour {
 
 		isSinking = true;
 		// Destroy the object after 2 seconds
-		Destroy (gameObject, 2f);
+		Destroy (gameObject, 1f);
 	}
 }

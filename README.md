@@ -38,7 +38,7 @@
 	- Health
 
 - Technical stuff
-	- Map players and enemies on to one line in the 2d-Sight
+	- Map players (OK) and enemies on to one line in the 2d-Sight
 
 
 - General Gameplay Ideas
