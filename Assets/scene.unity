@@ -349,7 +349,7 @@ Transform:
   m_LocalScale: {x: 2.22086477, y: 8.60773182, z: 2.22086382}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!1001 &110114943
 Prefab:
   m_ObjectHideFlags: 0
@@ -425,6 +425,10 @@ Prefab:
       propertyPath: startingHealth
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 11452008, guid: 06f9367ded09e894e888036f5f045028, type: 2}
+      propertyPath: player1
+      value: 
+      objectReference: {fileID: 2031009821}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 06f9367ded09e894e888036f5f045028, type: 2}
   m_IsPrefabParent: 0
@@ -585,7 +589,7 @@ Transform:
   - {fileID: 1313019202}
   - {fileID: 654095734}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
 --- !u!1001 &184701661
 Prefab:
   m_ObjectHideFlags: 0
@@ -790,7 +794,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 468812, guid: df66fb6e1fbeef74f83bffd66283bac8, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: df66fb6e1fbeef74f83bffd66283bac8, type: 2}
@@ -938,7 +942,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 421978, guid: 4a1adaca7a683a540b12ebc308cc4360, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 138242, guid: 4a1adaca7a683a540b12ebc308cc4360, type: 2}
       propertyPath: m_Name
@@ -1763,7 +1767,7 @@ Transform:
   - {fileID: 2144746944}
   - {fileID: 110583146}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
 --- !u!20 &796962387 stripped
 Camera:
   m_PrefabParentObject: {fileID: 2090558, guid: 1521c206b5a337344852e836d7139b43,
@@ -2467,7 +2471,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 449228, guid: 59e38e61cbe06be4a9512627fd43101f, type: 2}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 59e38e61cbe06be4a9512627fd43101f, type: 2}
@@ -2615,7 +2619,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 419714, guid: 4c86ac4795df72b42a529b74407b0a3c, type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 11419494, guid: 4c86ac4795df72b42a529b74407b0a3c, type: 2}
       propertyPath: frontCamera
@@ -3309,7 +3313,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 496344, guid: df5a433a0cff0024ebc42f9bd46edecd, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 139560, guid: df5a433a0cff0024ebc42f9bd46edecd, type: 2}
       propertyPath: m_Name
@@ -3503,7 +3507,7 @@ RectTransform:
   - {fileID: 1601970012}
   - {fileID: 1155164488}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -3603,7 +3607,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
 --- !u!114 &1603520165
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4228,7 +4232,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 467450, guid: a5c6fb85760e24837a7564fc6cebbff6, type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 467448, guid: a5c6fb85760e24837a7564fc6cebbff6, type: 2}
       propertyPath: m_LocalRotation.x
@@ -4302,7 +4306,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 441148, guid: 35f6381eea62aeb4d863150093ed5d9b, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 11464560, guid: 35f6381eea62aeb4d863150093ed5d9b, type: 2}
       propertyPath: frontCamera
