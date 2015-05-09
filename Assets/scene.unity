@@ -4137,6 +4137,34 @@ Prefab:
       propertyPath: inputField
       value: 
       objectReference: {fileID: 1174529903}
+    - target: {fileID: 11442160, guid: f6965e4c79769b9429d9349e906024fc, type: 2}
+      propertyPath: fileName
+      value: intro.txt
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442160, guid: f6965e4c79769b9429d9349e906024fc, type: 2}
+      propertyPath: key1
+      value: 
+      objectReference: {fileID: 8300000, guid: daf38e67baa128e4285f33aa1478fb9d, type: 3}
+    - target: {fileID: 11442160, guid: f6965e4c79769b9429d9349e906024fc, type: 2}
+      propertyPath: key2
+      value: 
+      objectReference: {fileID: 8300000, guid: d8bdb93de4a38924ebaef51d15bc63ec, type: 3}
+    - target: {fileID: 11442160, guid: f6965e4c79769b9429d9349e906024fc, type: 2}
+      propertyPath: key3
+      value: 
+      objectReference: {fileID: 8300000, guid: 6eea676c28ee56148934e0c8aa6f6780, type: 3}
+    - target: {fileID: 11442160, guid: f6965e4c79769b9429d9349e906024fc, type: 2}
+      propertyPath: key4
+      value: 
+      objectReference: {fileID: 8300000, guid: a44aa0c9261be2c428bf377e74d807ec, type: 3}
+    - target: {fileID: 11442160, guid: f6965e4c79769b9429d9349e906024fc, type: 2}
+      propertyPath: key5
+      value: 
+      objectReference: {fileID: 8300000, guid: 27182455290a7204db24099318aa9dea, type: 3}
+    - target: {fileID: 11442160, guid: f6965e4c79769b9429d9349e906024fc, type: 2}
+      propertyPath: key6
+      value: 
+      objectReference: {fileID: 8300000, guid: d3ca80669d1b37d4b964050ce59d3643, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f6965e4c79769b9429d9349e906024fc, type: 2}
   m_IsPrefabParent: 0

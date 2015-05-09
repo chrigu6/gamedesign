@@ -1,0 +1,43 @@
+<w>
+Load"$",8
+
+<wL>
+Searching for $ 
+<fC>
+4
+<wL>
+Loading
+Ready.
+<fC>
+2
+<w>
+List
+<wL>
+0 "why we fight"	17	1A
+102 "Homework"			DTA
+0   "-----------------"	DEL
+183 Zak McKracken		PRG
+0   "-----------------"	DEL
+66  KoalaPainter		PRG
+0   "-----------------"	DEL
+290 8-Bit Porn			PRG
+0   "-----------------" DEL
+666 Tennessee Tuxedo #2	PRG
+0   "-----------------"	DEL
+43 BLocks Free.
+
+Ready.
+<fC>
+4
+<w>
+Load"Tennessee Tuxedo #2",9,1
+
+<wL>
+Searching for Tennessee Tuxedo #2
+Loading
+<fC>
+6
+<wL>
+RUN
+<fC>
+2

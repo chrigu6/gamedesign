@@ -15,7 +15,15 @@ public class basicTerminalScript : MonoBehaviour {
 	public float cursorSpeed;
 	public float letterPause = 0;
 	private EventSystem system;
-	public AudioClip sound;
+	public AudioClip key1;
+	public AudioClip key2;
+	public AudioClip key3;
+	public AudioClip key4;
+	public AudioClip key5;
+	public AudioClip key6;
+	private AudioClip[] keys = new AudioClip[6];
+
+
 	public InputField inputField;
 	public string fileName;
 	private char[] chars;
@@ -33,7 +41,6 @@ public class basicTerminalScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
-		Debug.Log ("start");
 		system = EventSystem.current;
 		this.inputField.enabled = false;
 		InputField.SubmitEvent submitEvent = new InputField.SubmitEvent ();
@@ -41,11 +48,18 @@ public class basicTerminalScript : MonoBehaviour {
 		inputField.onEndEdit = submitEvent;
 		this.gameObject.GetComponent<Text> ().text = this.defaultText;
 		this.instructions = File.ReadAllLines(Application.dataPath+ "/" + fileName);
-		Debug.Log (this.instructions);
 		//chars = message.ToCharArray();
 		terminalAudio = gameObject.GetComponent<AudioSource> ();
 		terminalAudio.mute = true;
 		this.gameObject.GetComponentInParent<Canvas> ().enabled = false;
+		keys [0] = key1;
+		keys [1] = key2;
+		keys [2] = key3;
+		keys [3] = key4;
+		keys [4] = key5;
+		keys [5] = key6;
+
+
 	}
 
 	public void start()
@@ -72,7 +86,11 @@ public class basicTerminalScript : MonoBehaviour {
 			string body = "";
 
 			do
-			{
+			{	while(this.busy)
+				{
+					yield return 0;
+				}
+				Debug.Log ("body = " + body);
 				body = body + instructions[instructionCounter]+"\n";
 				instructionCounter++;
 				if(instructionCounter >= instructions.Length)
@@ -137,7 +155,7 @@ public class basicTerminalScript : MonoBehaviour {
 
 	void endInput(string name)
 	{
-		Debug.Log (name);
+
 	}
 
 	
@@ -192,7 +210,7 @@ public class basicTerminalScript : MonoBehaviour {
 				}
 			this.writeLineMethod(line);
 			numberOfLines++;
-			if(numberOfLines>20)
+			if(numberOfLines>18)
 			{
 				this.wrapLines();
 			}
@@ -233,9 +251,9 @@ public class basicTerminalScript : MonoBehaviour {
 			charPerLines++;
 			char currentLetter = letter;
 
-			if (sound && !terminalAudio.isPlaying)
+			if (!terminalAudio.isPlaying)
 			{
-				terminalAudio.clip = sound;
+				terminalAudio.clip = this.keys[Random.Range(0,5)];
 				terminalAudio.mute = false;
 				terminalAudio.Play ();
 			}
@@ -253,7 +271,7 @@ public class basicTerminalScript : MonoBehaviour {
 			{
 				charPerLines = 0;
 				lines++;
-				if (lines > 15)
+				if (lines > 18)
 				{
 					wrapLines();
 				}
@@ -267,6 +285,7 @@ public class basicTerminalScript : MonoBehaviour {
 	
 	void wrapLines ()
 	{
+		Debug.Log ("wrap lines");
 		string a = this.gameObject.GetComponent<Text> ().text;
 		int i = a.IndexOf ("\n");
 		this.gameObject.GetComponent<Text> ().text = a.Substring(i+1);
@@ -298,6 +317,7 @@ public class basicTerminalScript : MonoBehaviour {
 			j++;
 			yield return new WaitForSeconds (cursorSpeed);
 		}
+		this.busy = false;
 		yield return 0;
 	}
 
@@ -330,12 +350,15 @@ public class basicTerminalScript : MonoBehaviour {
 
 			this.writeLineMethod(line);
 			numberOfLines++;
-			if(numberOfLines>20)
+			Debug.Log ("lines :" + numberOfLines);
+			while(numberOfLines>18)
 			{
+				numberOfLines--;
 				this.wrapLines();
 			}
 			yield return new WaitForSeconds(letterPause);
 		}
+		Debug.Log ("Busy false");
 		this.busy = false;
 
 	}
