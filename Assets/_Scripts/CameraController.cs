@@ -103,7 +103,9 @@ public class CameraController : MonoBehaviour {
 				this.aboveCamera.enabled = false;
 				this.terminalCamera.enabled = true;
 				this.hud.GetComponent<Canvas> ().enabled = false;
-				this.GetComponentInChildren<basicTerminalScript>().changeState();
+				this.GetComponentInChildren<basicTerminalScript>().enabled = true;
+				GetComponentInChildren<basicTerminalScript>().start();
+				StartCoroutine(GetComponentInChildren<basicTerminalScript>().run());
 				this.activePlayer.GetComponent<PlayerController> ().changeState ();
 			}
 
