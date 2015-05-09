@@ -36,6 +36,9 @@ public class basicTerminalScript : MonoBehaviour {
 		Debug.Log ("start");
 		system = EventSystem.current;
 		this.inputField.enabled = false;
+		InputField.SubmitEvent submitEvent = new InputField.SubmitEvent ();
+		submitEvent.AddListener (endInput);
+		inputField.onEndEdit = submitEvent;
 		this.gameObject.GetComponent<Text> ().text = this.defaultText;
 		this.instructions = File.ReadAllLines(Application.dataPath+ "/" + fileName);
 		Debug.Log (this.instructions);
@@ -131,6 +134,12 @@ public class basicTerminalScript : MonoBehaviour {
 				}
 			}*/
 	}
+
+	void endInput(string name)
+	{
+		Debug.Log (name);
+	}
+
 	
 	IEnumerator callMethod(string instruction, string body)
 	{
@@ -145,10 +154,15 @@ public class basicTerminalScript : MonoBehaviour {
 			yield return 0;
 			break;
 		case "<wL>":
+			StartCoroutine(this.writeLine(body));
 			yield return 0;
 			break;
 		case "<fC>":
 			StartCoroutine(cursor(body));
+			yield return 0;
+			break;
+		case "<m>":
+			StartCoroutine(matrix(body));
 			yield return 0;
 			break;
 		default:
@@ -157,6 +171,40 @@ public class basicTerminalScript : MonoBehaviour {
 		}
 	}
 
+	IEnumerator matrix(string body)
+	{
+		while (this.busy) {;
+			yield return 0;
+		}
+		this.busy = true;
+		int numberOfLines = this.gameObject.GetComponent<Text> ().text.Split('n').Length;
+		int count = System.Int32.Parse (body);
+		for (int i = 0; i < count; i++) {
+			string line = "";
+			for (int j=0; j < 6; j++)
+				{
+					string word = "";
+					for(int c = 0; c < Random.Range(4,6); c++ )
+					{
+						word = word + System.Convert.ToString(this.RandomLetter());
+					}
+					line = line + " " + word;
+				}
+			this.writeLineMethod(line);
+			numberOfLines++;
+			if(numberOfLines>20)
+			{
+				this.wrapLines();
+			}
+			yield return new WaitForSeconds(letterPause);
+		}
+		this.busy = false;
+	}
+
+	void writeLineMethod(string line)
+	{
+		this.gameObject.GetComponent<Text> ().text = this.gameObject.GetComponent<Text> ().text + line + "\n";
+	}
 
 	IEnumerator write(string body){
 		body = body.ToUpper ();
@@ -205,7 +253,7 @@ public class basicTerminalScript : MonoBehaviour {
 			{
 				charPerLines = 0;
 				lines++;
-				if (lines > 5)
+				if (lines > 15)
 				{
 					wrapLines();
 				}
@@ -266,8 +314,30 @@ public class basicTerminalScript : MonoBehaviour {
 			}
 			yield return new WaitForSeconds (cursorSpeed);
 		}
-		this.busy = false;
 		yield return 0;
+	}
+
+	IEnumerator writeLine(string body)
+	{
+
+		while (busy) {
+			yield return 0;
+		}
+		this.busy = true;
+		int numberOfLines = this.gameObject.GetComponent<Text> ().text.Split('n').Length;
+		string[] lines = body.Split ('\n');
+		foreach (string line in lines) {
+
+			this.writeLineMethod(line);
+			numberOfLines++;
+			if(numberOfLines>20)
+			{
+				this.wrapLines();
+			}
+			yield return new WaitForSeconds(letterPause);
+		}
+		this.busy = false;
+
 	}
 
 	public void changeState()
@@ -299,5 +369,13 @@ public class basicTerminalScript : MonoBehaviour {
 		StopAllCoroutines ();
 		this.isWriting = false;
 		this.GetComponent<basicTerminalScript> ().enabled = false;
+	}
+
+	public char RandomLetter()
+	{
+
+		int num = Random.Range(0, 256); // Zero to 25
+		char let = (char)('a' + num);
+		return let;
 	}
 }
