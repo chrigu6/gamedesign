@@ -51,6 +51,8 @@ RUN
 2
 <wL>
 Connecting to 69.58.186.114 .....
+<s>
+modem
 <fC>
 2
 <wL>
@@ -62,26 +64,15 @@ Encrypt Datatransfer
 <wL>
 
 Downloading Payload
-<s>
-modem
 <wL>
 
 Test Videostream
 
-Encrypting Videodata
+Decrypting Videodata
 <fC>
 4
 <wL>
 Play
 
-<scriptInput>
-{input}
-Lets test the 
-input
-behaviour
-of 
-the script!
-{input}
-{output}
-{input}
-{output}
+<w>
+

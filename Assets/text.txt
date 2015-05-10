@@ -4,7 +4,7 @@ Write
 unzip -d -w tar -X goto 20
 {output}
 {input}
-format c:\
+format d:\
 {output}
 {input}
 you did great
