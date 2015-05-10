@@ -90,7 +90,6 @@ public class basicTerminalScript : MonoBehaviour {
 				{
 					yield return 0;
 				}
-				Debug.Log ("body = " + body);
 				body = body + instructions[instructionCounter]+"\n";
 				instructionCounter++;
 				if(instructionCounter >= instructions.Length)
@@ -210,7 +209,7 @@ public class basicTerminalScript : MonoBehaviour {
 				}
 			this.writeLineMethod(line);
 			numberOfLines++;
-			if(numberOfLines>18)
+			if(numberOfLines>20)
 			{
 				this.wrapLines();
 			}
@@ -225,25 +224,20 @@ public class basicTerminalScript : MonoBehaviour {
 	}
 
 	IEnumerator write(string body){
+		while (this.busy) {
+			yield return 0;
+		}
+		this.busy = true;
 		body = body.ToUpper ();
 		chars = body.ToCharArray();
-		//If the end of the message is not reached and not allready writing startwriting
-		if (!isWriting && (i < chars.Length - 1)) {
-			isWriting = true;
-			cursorVisible = false;
-			StartCoroutine(TypeText());
-			//StopCoroutine (ShowCursor ());
-		} 
+		StartCoroutine(TypeText()); 
 		yield return 0;
 	}
 
 	
 	IEnumerator TypeText ()
 	{
-		while (this.busy) {;
-			yield return 0;
-		}
-		this.busy = true;
+
 		foreach (char letter in chars) {
 			
 			i++;
@@ -285,7 +279,6 @@ public class basicTerminalScript : MonoBehaviour {
 	
 	void wrapLines ()
 	{
-		Debug.Log ("wrap lines");
 		string a = this.gameObject.GetComponent<Text> ().text;
 		int i = a.IndexOf ("\n");
 		this.gameObject.GetComponent<Text> ().text = a.Substring(i+1);
@@ -344,21 +337,21 @@ public class basicTerminalScript : MonoBehaviour {
 			yield return 0;
 		}
 		this.busy = true;
-		int numberOfLines = this.gameObject.GetComponent<Text> ().text.Split('n').Length;
-		string[] lines = body.Split ('\n');
+		string text = this.gameObject.GetComponent<Text> ().text;
+		string[] lines = text.Split ('\n');
+		int numberOfLines = lines.Length;
+		lines = body.Split ('\n');
 		foreach (string line in lines) {
 
 			this.writeLineMethod(line);
 			numberOfLines++;
-			Debug.Log ("lines :" + numberOfLines);
-			while(numberOfLines>18)
+			while(numberOfLines>20)
 			{
 				numberOfLines--;
 				this.wrapLines();
 			}
 			yield return new WaitForSeconds(letterPause);
 		}
-		Debug.Log ("Busy false");
 		this.busy = false;
 
 	}
@@ -390,7 +383,6 @@ public class basicTerminalScript : MonoBehaviour {
 		this.i = 0;
 	    this.lines = 0;
 		StopAllCoroutines ();
-		this.isWriting = false;
 		this.GetComponent<basicTerminalScript> ().enabled = false;
 	}
 

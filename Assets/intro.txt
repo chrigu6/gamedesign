@@ -10,6 +10,7 @@ Loading
 Ready.
 <fC>
 2
+
 <w>
 List
 <wL>
@@ -38,6 +39,8 @@ Loading
 <fC>
 6
 <wL>
+Ready.
+<w>
 RUN
 <fC>
 2
