@@ -7,6 +7,9 @@ Searching for $
 4
 <wL>
 Loading
+<s>
+floppy
+<wL>
 Ready.
 <fC>
 2
@@ -36,11 +39,37 @@ Load"Tennessee Tuxedo #2",9,1
 <wL>
 Searching for Tennessee Tuxedo #2
 Loading
+<s>
+floppy
 <fC>
-6
+4
 <wL>
 Ready.
 <w>
 RUN
 <fC>
 2
+<wL>
+Connecting to 69.58.186.114 .....
+<fC>
+2
+<wL>
+Encrypt Datatransfer
+<fC>
+2
+<m>
+40
+<wL>
+
+Downloading Payload
+<s>
+modem
+<wL>
+
+Test Videostream
+
+Encrypting Videodata
+<fC>
+4
+<wL>
+Play

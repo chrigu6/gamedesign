@@ -182,15 +182,40 @@ public class basicTerminalScript : MonoBehaviour {
 			StartCoroutine(matrix(body));
 			yield return 0;
 			break;
+		case "<s>":
+			StartCoroutine (play(body));
+			yield return 0;
+			break;
 		default:
 			yield return 0;
 			break;
 		}
 	}
 
+	IEnumerator play(string body)
+	{
+		while (this.busy) {
+			yield return 0;
+		}
+		body = body.Remove (body.Length - 1);
+		this.busy = true;
+		terminalAudio.clip = (AudioClip)Resources.Load(body);
+		terminalAudio.mute = false;
+		terminalAudio.Play ();
+
+		while (terminalAudio.isPlaying) {
+			yield return 0;
+		}
+
+		this.busy = false;
+		yield return 0;
+
+	}
+
+
 	IEnumerator matrix(string body)
 	{
-		while (this.busy) {;
+		while (this.busy) {
 			yield return 0;
 		}
 		this.busy = true;
@@ -342,8 +367,8 @@ public class basicTerminalScript : MonoBehaviour {
 		int numberOfLines = lines.Length;
 		lines = body.Split ('\n');
 		foreach (string line in lines) {
-
-			this.writeLineMethod(line);
+			string line2 = line.ToUpper();
+			this.writeLineMethod(line2);
 			numberOfLines++;
 			while(numberOfLines>20)
 			{
