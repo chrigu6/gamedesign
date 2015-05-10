@@ -23,7 +23,7 @@ public class basicTerminalScript : MonoBehaviour {
 	public AudioClip key6;
 	private AudioClip[] keys = new AudioClip[6];
 
-
+	int cursorStarted = 0;
 	public InputField inputField;
 	public string fileName;
 	private char[] chars;
@@ -37,10 +37,15 @@ public class basicTerminalScript : MonoBehaviour {
 	string[] instructions;
 	private string defaultText ="  **** COMMODORE 64 BASIC V2 ****\n        64K RAM SYSTEM\n	    38911 BASIC BYTES FREE\n\nREADY\n";
 	private static Regex instructionPattern = new Regex("[<][a-zA-Z]*[>]");
-	
+	private string inputString;
+	private string targetString;
+
+
 	// Use this for initialization
 	void Start () 
 	{
+		this.abort = false;
+		this.cursorStarted = 0;
 		system = EventSystem.current;
 		this.inputField.enabled = false;
 		InputField.SubmitEvent submitEvent = new InputField.SubmitEvent ();
@@ -81,6 +86,11 @@ public class basicTerminalScript : MonoBehaviour {
 		this.gameObject.GetComponentInParent<Canvas> ().enabled = true;
 		for(int instructionCounter = 0; instructionCounter < instructions.Length; instructionCounter = instructionCounter)
 		{
+			if(this.abort)
+			{
+				StopAllCoroutines();
+				break;
+			}
 			string instruction = instructions[instructionCounter];
 			instructionCounter ++;
 			string body = "";
@@ -137,7 +147,7 @@ public class basicTerminalScript : MonoBehaviour {
 			this.inputField.MoveTextEnd(false);
 				this.gameObject.GetComponent<Text> ().text = this.originalText + input;
 				currentLetter = '\n';
-			}
+	}
 		StartCoroutine (this.ShowCursorWriting ());
 			//Count the number of lines if the number of lines reach the bottom of the textfield, start to wrap the lines
 			/*if (currentLetter == '\n') {
@@ -154,7 +164,10 @@ public class basicTerminalScript : MonoBehaviour {
 
 	void endInput(string name)
 	{
-
+		name = name.Replace ("\n", "").ToUpper();
+		this.inputString = name;
+		this.typing = false;
+		Debug.Log ("finished");
 	}
 
 	
@@ -186,10 +199,88 @@ public class basicTerminalScript : MonoBehaviour {
 			StartCoroutine (play(body));
 			yield return 0;
 			break;
+		case "<scriptInput>":
+			StartCoroutine(scriptInput(body));
+			yield return 0;
+			break;
+
 		default:
 			yield return 0;
 			break;
 		}
+	}
+
+	IEnumerator scriptInput(string body)
+	{
+		while (this.busy) {
+			yield return 0;
+		}
+		this.busy = true;
+		body = body.ToUpper ();
+		string[] lines = body.Split ('\n');
+		int numberOfLines = lines.Length;
+		int j = 0;
+		while (j<lines.Length) {
+			if(lines[j].Equals("{INPUT}"))
+			{
+				j++;
+				while(!lines[j].Equals("{OUTPUT}"))
+				 {
+					this.writeLineMethod(lines[j]);
+					j++;
+					numberOfLines++;
+					while(numberOfLines>20)
+					{
+						numberOfLines--;
+						this.wrapLines();
+					}
+					yield return new WaitForSeconds(letterPause);
+					if(j>=lines.Length)
+					{
+						break;
+					}
+				}
+			}
+
+			if(j>=lines.Length)
+			{
+				break;
+			}
+
+			if(lines[j].Equals ("{OUTPUT}"))
+			{
+				this.targetString = lines[j-1];
+				j++;
+				this.inputField.enabled = true;
+				this.typing = true;
+				Selectable next = this.inputField.GetComponentInChildren<Selectable>();
+				system.SetSelectedGameObject(next.gameObject);
+				this.originalText = this.gameObject.GetComponent<Text> ().text;
+				while(typing )
+				{
+					yield return 0;
+				}
+
+				if(this.inputString.Equals(this.targetString))
+				{
+					this.gameObject.GetComponent<Text> ().text += "\n";
+					this.inputField.enabled = false;
+					system.SetSelectedGameObject(null);
+				}
+				else{
+					this.writeLineMethod("\nIncorrect. Try Again");
+					this.originalText = this.gameObject.GetComponent<Text> ().text;
+					this.inputField.enabled = false;
+					system.SetSelectedGameObject(null);
+					j--;
+				}
+			}
+			
+		}
+		
+		this.busy = false;
+
+
 	}
 
 	IEnumerator play(string body)
@@ -340,17 +431,21 @@ public class basicTerminalScript : MonoBehaviour {
 	}
 
 	IEnumerator ShowCursorWriting() {
-		while (true) {
-			StopCoroutine(ShowCursorWriting());
-			string a = this.gameObject.GetComponent<Text> ().text;
-			char lastChar = a.ToCharArray () [a.Length-1];
+		this.cursorStarted++;
+
+		if (cursorStarted <= 1) {
+			while (true && !this.abort) {
+				StopCoroutine (ShowCursorWriting ());
+				string a = this.gameObject.GetComponent<Text> ().text;
+				char lastChar = a.ToCharArray () [a.Length - 1];
 			
-			if (lastChar == '▇') {
-				this.gameObject.GetComponent<Text> ().text = a.Substring (0, a.Length - 1);
-			} else {
-				this.gameObject.GetComponent<Text> ().text = this.gameObject.GetComponent<Text> ().text + "▇";
+				if (lastChar == '▇') {
+					this.gameObject.GetComponent<Text> ().text = a.Substring (0, a.Length - 1);
+				} else {
+					this.gameObject.GetComponent<Text> ().text = this.gameObject.GetComponent<Text> ().text + "▇";
+				}
+				yield return new WaitForSeconds (cursorSpeed);
 			}
-			yield return new WaitForSeconds (cursorSpeed);
 		}
 		yield return 0;
 	}
@@ -407,8 +502,9 @@ public class basicTerminalScript : MonoBehaviour {
 		this.abort = true;
 		this.i = 0;
 	    this.lines = 0;
-		StopAllCoroutines ();
+		this.StopAllCoroutines ();
 		this.GetComponent<basicTerminalScript> ().enabled = false;
+		this.cursorStarted = 0;
 	}
 
 	public char RandomLetter()

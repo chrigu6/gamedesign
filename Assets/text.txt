@@ -1,3 +1,10 @@
-<m>
-1000
-    
+<scriptInput>
+{input}
+Write
+unzip -d -w tar -X goto 20
+{output}
+{input}
+format c:\
+{output}
+{input}
+you did great

@@ -73,3 +73,15 @@ Encrypting Videodata
 4
 <wL>
 Play
+
+<scriptInput>
+{input}
+Lets test the 
+input
+behaviour
+of 
+the script!
+{input}
+{output}
+{input}
+{output}
