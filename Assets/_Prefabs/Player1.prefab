@@ -2535,7 +2535,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 2d07eba8eab06cb45898cb11da4a54e2, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: .230000004
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2911,11 +2911,11 @@ SkinnedMeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 42a548c93981b4f9cad542409fcf8693, type: 2}
-  - {fileID: 2100000, guid: 42a548c93981b4f9cad542409fcf8693, type: 2}
-  - {fileID: 2100000, guid: 42a548c93981b4f9cad542409fcf8693, type: 2}
-  - {fileID: 2100000, guid: 42a548c93981b4f9cad542409fcf8693, type: 2}
-  - {fileID: 2100000, guid: 42a548c93981b4f9cad542409fcf8693, type: 2}
+  - {fileID: 2100000, guid: 2f332f152b68838489cad04ed1f8b7be, type: 2}
+  - {fileID: 2100000, guid: 2f332f152b68838489cad04ed1f8b7be, type: 2}
+  - {fileID: 2100000, guid: 2f332f152b68838489cad04ed1f8b7be, type: 2}
+  - {fileID: 2100000, guid: 2f332f152b68838489cad04ed1f8b7be, type: 2}
+  - {fileID: 2100000, guid: 2f332f152b68838489cad04ed1f8b7be, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1

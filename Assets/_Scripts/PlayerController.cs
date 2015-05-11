@@ -67,7 +67,6 @@ public class PlayerController : MonoBehaviour {
 		spawn = transform.position;
 		playerRigidbody = GetComponent<Rigidbody> ();
 		playerRigidbody.transform.Rotate (0, 270, 0);
-
 	}
 
 	void Awake() {
@@ -180,7 +179,7 @@ public class PlayerController : MonoBehaviour {
 		laserShotLine.SetPosition (1, shotPosition);
 		laserShotLine.enabled = true;
 		laserShotLight.intensity = flashIntensity;
-		AudioSource.PlayClipAtPoint (shotClip, laserShotLight.transform.position);
+		AudioSource.PlayClipAtPoint (shotClip, laserShotLight.transform.position, 0.3f);
 
 		gunLine.enabled = true;
 		gunLine.SetPosition (0, transform.position);

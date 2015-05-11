@@ -21,6 +21,7 @@ GameObject:
   - 114: {fileID: 11423280}
   - 198: {fileID: 19897620}
   - 199: {fileID: 19966254}
+  - 114: {fileID: 11499842}
   m_Layer: 14
   m_Name: Enemy
   m_TagString: enemy
@@ -35,7 +36,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 129294}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 54.1500015, y: 1.005, z: 3.57999992}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -178,11 +179,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6323828ca7d9e440ba8ebb26178e9b12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 100
+  startingHealth: 30
   currentHealth: 0
   sinkSpeed: 2.5
   scoreValue: 10
   deathClip: {fileID: 8300000, guid: bff7b8d254e16dd46bd9b8e56d65fa49, type: 3}
+  isDead: 0
 --- !u!114 &11452008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -194,6 +196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25654f86b909ddc41ab7f6aa458095d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player1: {fileID: 0}
 --- !u!114 &11459916
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -212,6 +215,20 @@ MonoBehaviour:
   - {fileID: 0}
   moveSpeed: 5
 --- !u!114 &11480384
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 129294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5c6c2169c4892648bb9cfbc097bd3f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeBetweenAttacks: .5
+  attackDamage: 10
+  player: {fileID: 0}
+--- !u!114 &11499842
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
