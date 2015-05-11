@@ -4,7 +4,7 @@ using System.Collections;
 public class EnemyHealth : MonoBehaviour {
 	public int startingHealth;
 	public float currentHealth;
-	public float sinkSpeed = 2.5f;
+	public float sinkSpeed = 5.5f;
 	public int scoreValue = 10;
 	public AudioClip deathClip;
 
@@ -66,6 +66,6 @@ public class EnemyHealth : MonoBehaviour {
 
 		isSinking = true;
 		// Destroy the object after 2 seconds
-		Destroy (gameObject, 1f);
+		Destroy (gameObject, 10f);
 	}
 }

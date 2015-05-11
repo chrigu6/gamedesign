@@ -6,9 +6,11 @@ public class PlayerHealth : MonoBehaviour
 {
 
     public int startingHealth;
-    public int maxHealth = 100;
+    public int maxHealth = 1024;
     public float currentHealth;
     public Image healthSlider;
+	Text guiHealth;
+	Light frontSpotlight;
 
     public Image damageImage;
     public AudioClip deathClip;
@@ -26,13 +28,17 @@ public class PlayerHealth : MonoBehaviour
 
     void Awake()
     {
-        playerAudio = GetComponent<AudioSource>();
+		playerAudio = GetComponent<AudioSource> ();
+		frontSpotlight = GameObject.Find ("2dCamera").GetComponentInChildren<Light> ();
+		guiHealth = GameObject.Find("CurrentHealth").GetComponent<Text> ();
         playerController = GetComponent<PlayerController>();
         currentHealth = startingHealth;
     }
 
     void Update()
     {
+		guiHealth.text = currentHealth + " MB";
+		frontSpotlight.spotAngle = currentHealth / 18;
         // flash screen when damage is taken by player
         if (damaged)
         {
