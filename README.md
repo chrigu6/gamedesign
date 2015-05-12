@@ -1,6 +1,6 @@
 - Shooting
 	- Animation
-	- Enemy damage
+	- Enemy damage (OK)
 	- Different Weapons
 
 - Level Design
@@ -19,11 +19,11 @@
 	- AI (Beahviour)
 		- Fixed Path or following the player?
 	- Animations
-	- Healthsytem
+	- Healthsytem (OK)
 	- Physics
 	- Grafics
 
-- Music
+- Music (On it again :D )
 
 - SFX
 
@@ -35,14 +35,14 @@
 - UI
 	- Menu
 	- Ammo
-	- Health
+	- Health (OK)
 
 - Technical stuff
 	- Map players (OK) and enemies on to one line in the 2d-Sight (OK)
 
 
 - General Gameplay Ideas
-	- The sight of the player depends on his ammount of healt. Full health = full sight, small health = small sight
+	- The sight of the player depends on his ammount of healt. Full health = full sight, small health = small sight (OK for 2D Camera)
 	- Abilities of the characters: One can hack terminals, the other one can kill enemies. Coloured floors, the hacker  is able to change the colour, to give the killer access to the enemies
-	- Switch players and switch views should not be available at the beginnin
+	- Switch players and switch views should not be available at the beginning (OK)
 	

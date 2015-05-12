@@ -38,7 +38,7 @@ public class PlayerHealth : MonoBehaviour
     void Update()
     {
 		guiHealth.text = currentHealth + " MB";
-		frontSpotlight.spotAngle = currentHealth / 18;
+		frontSpotlight.spotAngle = currentHealth / 10;
         // flash screen when damage is taken by player
         if (damaged)
         {
