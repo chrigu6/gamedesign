@@ -1,10 +1,55 @@
+<wL>
+Establishing Network uplink
+<wL>
+Connecting to pirate bay
+<s>
+modem
+<fC>
+4
+<wL>
+Connection established
+<wL>
+Jack are you there ... ?
+The security between the ethernetcard and the
+mainbus is tighter than i fought.
+We have to breach the intern firewall to get 
+access to the hard of thi outpost.
+I prepared a little something to get you trough 
+this barrier to another bus.
+I don't have enough rights to run the code 
+remotly. 
+But you should be able to rund the script line
+ by line from within the system.
+Just type the following instructions into the
+terminal.
+But be carefull. If you make to many mistakes, 
+the system security will notice
+and you will get some company.
 <scriptInput>
 {input}
-Write
-unzip -d -w tar -X goto 20
+OK. Here is the first line:
+
+sfc /scannow
 {output}
 {input}
-format d:\
-{output}
+Beginning system scan.
+......
+......
+......
+Scan complete.
+
+That was to easy. 
+The next line is harder:
+
+
+sniffPort [1-x]-[*-999], check {breach}
 {input}
-you did great
+Port A113 open.
+Accessing port.
+
+Ok we have breached security. 
+You can go for the kill now:
+
+UP,up,down,down,left,right,left,rigth,b,a,start
+{output}
+
