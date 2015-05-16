@@ -19,9 +19,9 @@ public class basicTerminalScript : abstractTerminalScript {
 	override protected void endInput(string name)
 	{
 		name = name.Replace ("\n", "").ToUpper();
+		name = name.Trim(new char[] {'▇'});
 		this.inputString = name;
 		this.typing = false;
-		Debug.Log ("finished");
 	}
 
 	override protected IEnumerator scriptInput(string body)
@@ -32,8 +32,8 @@ public class basicTerminalScript : abstractTerminalScript {
 		this.busy = true;
 		body = body.ToUpper ();
 		string[] lines = body.Split ('\n');
-		int numberOfLines = lines.Length;
 		int j = 0;
+
 		while (j<lines.Length) {
 			if(lines[j].Equals("{INPUT}"))
 			{
@@ -42,12 +42,6 @@ public class basicTerminalScript : abstractTerminalScript {
 				 {
 					this.writeLineMethod(lines[j]);
 					j++;
-					numberOfLines++;
-					while(numberOfLines>20)
-					{
-						numberOfLines--;
-						this.wrapLines();
-					}
 					yield return new WaitForSeconds(letterPause);
 					if(j>=lines.Length)
 					{
@@ -68,7 +62,6 @@ public class basicTerminalScript : abstractTerminalScript {
 				this.inputField.enabled = true;
 				this.typing = true;
 				Selectable next = this.inputField.GetComponentInChildren<Selectable>();
-				Debug.Log (next.gameObject);
 				system.SetSelectedGameObject(next.gameObject);
 				this.originalText = this.gameObject.GetComponent<Text> ().text;
 				while(typing )
@@ -76,11 +69,13 @@ public class basicTerminalScript : abstractTerminalScript {
 					yield return 0;
 				}
 
+
 				if(this.inputString.Equals(this.targetString))
 				{
 					this.gameObject.GetComponent<Text> ().text += "\n";
 					this.inputField.enabled = false;
 					system.SetSelectedGameObject(null);
+					Debug.Log(j);
 				}
 				else{
 					this.writeLineMethod("\nIncorrect. Try Again");
@@ -90,8 +85,13 @@ public class basicTerminalScript : abstractTerminalScript {
 					j--;
 				}
 			}
-			
+
+			if(!lines[j].Equals ("{OUTPUT}") && !lines[j].Equals("{INPUT}"))
+			{
+				break;
+			}
 		}
+		this.cleanCursor();
 		this.busy = false;
 	}
 }

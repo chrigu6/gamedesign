@@ -13,6 +13,8 @@ public abstract class abstractTerminalScript : MonoBehaviour {
 	
 	public float cursorSpeed;
 	public float letterPause = 0;
+	public float linePause = 2;
+
 	protected EventSystem system;
 	public AudioClip key1;
 	public AudioClip key2;
@@ -27,8 +29,10 @@ public abstract class abstractTerminalScript : MonoBehaviour {
 	public string fileName;
 	protected char[] chars;
 	protected int i = 0;
-	protected int lines = 0;
 	protected int charPerLines = 0;
+	protected int numberOfLines = 0;
+	public int lineLength = 35;
+	public int maxNumberOfLines = 20;
 	protected AudioSource terminalAudio;
 	protected bool active = false;
 	protected bool abort = false;
@@ -79,7 +83,7 @@ public abstract class abstractTerminalScript : MonoBehaviour {
 		this.terminalAudio.mute = true;
 		this.abort = true;
 		this.i = 0;
-		this.lines = 0;
+		this.numberOfLines = 0;
 		this.StopAllCoroutines ();
 		this.GetComponent<basicTerminalScript> ().enabled = false;
 		this.cursorStarted = 0;
@@ -180,9 +184,10 @@ public abstract class abstractTerminalScript : MonoBehaviour {
 
 	protected IEnumerator TypeText ()
 	{
-		
+		StopCoroutine (ShowCursorWriting ());
+		this.cleanCursor ();
 		foreach (char letter in chars) {
-			
+			this.cleanCursor();
 			i++;
 			this.gameObject.GetComponent<Text> ().text += letter;
 			charPerLines++;
@@ -197,18 +202,17 @@ public abstract class abstractTerminalScript : MonoBehaviour {
 			
 			
 			//If the textline is to long, start a new one
-			if(charPerLines%35 == 0 && !(i ==0))
+			if(charPerLines%this.lineLength == 0 && !(i ==0))
 			{
 				this.gameObject.GetComponent<Text> ().text += '\n';
 				currentLetter = '\n';
 			}
 			
-			//Count the number of lines if the number of lines reach the bottom of the textfield, start to wrap the lines
+			//Count tfhe number of lines if the number of lines reach the bottom of the textfield, start to wrap the lines
 			if (currentLetter == '\n')
 			{
 				charPerLines = 0;
-				lines++;
-				if (lines > 18)
+				if(this.getNumberOfLines()>this.maxNumberOfLines)
 				{
 					wrapLines();
 				}
@@ -222,9 +226,13 @@ public abstract class abstractTerminalScript : MonoBehaviour {
 
 	protected void wrapLines ()
 	{
-		string a = this.gameObject.GetComponent<Text> ().text;
-		int i = a.IndexOf ("\n");
-		this.gameObject.GetComponent<Text> ().text = a.Substring(i+1);
+		this.cleanCursor ();
+		while (this.getNumberOfLines() > this.maxNumberOfLines)
+		{
+			string a = this.gameObject.GetComponent<Text> ().text;
+			int i = a.IndexOf ("\n");
+			this.gameObject.GetComponent<Text> ().text = a.Substring(i+1);
+		}
 		
 	}
 
@@ -233,6 +241,7 @@ public abstract class abstractTerminalScript : MonoBehaviour {
 		while (busy) {
 			yield return 0;
 		}
+		this.cleanCursor ();
 		this.busy = true;
 		this.inputField.enabled = true;
 		this.typing = true;
@@ -253,21 +262,17 @@ public abstract class abstractTerminalScript : MonoBehaviour {
 		while (busy) {
 			yield return 0;
 		}
+		this.cleanCursor ();
 		this.busy = true;
 		string text = this.gameObject.GetComponent<Text> ().text;
 		string[] lines = text.Split ('\n');
-		int numberOfLines = lines.Length;
 		lines = body.Split ('\n');
+
 		foreach (string line in lines) {
+
 			string line2 = line.ToUpper();
 			this.writeLineMethod(line2);
-			numberOfLines++;
-			while(numberOfLines>20)
-			{
-				numberOfLines--;
-				this.wrapLines();
-			}
-			yield return new WaitForSeconds(letterPause);
+			yield return new WaitForSeconds(this.linePause);
 		}
 		this.busy = false;
 		
@@ -275,8 +280,28 @@ public abstract class abstractTerminalScript : MonoBehaviour {
 
 	protected void writeLineMethod(string line)
 	{
+		this.cleanCursor ();
+
+		int i = this.lineLength;
 		
-		this.gameObject.GetComponent<Text> ().text = this.gameObject.GetComponent<Text> ().text + line + "\n";
+		while (i<line.Length)
+		{
+			line = line.Insert(i, "\n");
+			i += this.lineLength;
+		}
+
+		string[] lines = line.Split ('\n');
+		foreach (string textLine in lines) {
+			this.gameObject.GetComponent<Text> ().text = this.gameObject.GetComponent<Text> ().text + textLine + "\n";
+			if(this.getNumberOfLines()>this.maxNumberOfLines)
+			{
+				this.wrapLines();
+			}
+		}
+
+
+		
+
 	}
 
 
@@ -311,11 +336,11 @@ public abstract class abstractTerminalScript : MonoBehaviour {
 	
 	protected IEnumerator matrix(string body)
 	{
+		this.cleanCursor ();
 		while (this.busy) {
 			yield return 0;
 		}
 		this.busy = true;
-		int numberOfLines = this.gameObject.GetComponent<Text> ().text.Split('n').Length;
 		int count = System.Int32.Parse (body);
 		for (int i = 0; i < count; i++) {
 			string line = "";
@@ -329,11 +354,6 @@ public abstract class abstractTerminalScript : MonoBehaviour {
 				line = line + " " + word;
 			}
 			this.writeLineMethod(line);
-			numberOfLines++;
-			if(numberOfLines>20)
-			{
-				this.wrapLines();
-			}
 			yield return new WaitForSeconds(letterPause);
 		}
 		this.busy = false;
@@ -377,6 +397,7 @@ public abstract class abstractTerminalScript : MonoBehaviour {
 	{
 		return this.active;
 	}
+	
 
 	protected void updateInput()
 	{
@@ -388,10 +409,15 @@ public abstract class abstractTerminalScript : MonoBehaviour {
 		string input = this.inputField.text.ToUpper();
 		this.gameObject.GetComponent<Text> ().text = this.originalText + input;
 		
-		if (charPerLines % 35 == 0 && !(i == 0)) {
+		if (charPerLines % this.lineLength == 0 && !(i == 0)) {
 			this.inputField.text = this.inputField.text + "\n";
 			this.inputField.MoveTextEnd(false);
 			this.gameObject.GetComponent<Text> ().text = this.originalText + input;
+
+			if(this.getNumberOfLines()>this.maxNumberOfLines)
+			{
+				this.wrapLines();
+			}
 			//currentLetter = '\n';
 		}
 		
@@ -429,9 +455,14 @@ public abstract class abstractTerminalScript : MonoBehaviour {
 		yield return 0;
 	}
 
-	void cleanCursor ()
+	protected void cleanCursor ()
 	{
 		this.gameObject.GetComponent<Text> ().text = this.gameObject.GetComponent<Text> ().text.Trim(new char[] {'▇'});
+	}
+
+	protected int getNumberOfLines()
+	{
+		return this.gameObject.GetComponent<Text> ().text.Split ('\n').Length - 1;
 	}
 
 	abstract protected void abstractStart();

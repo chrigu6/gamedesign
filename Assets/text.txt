@@ -50,6 +50,6 @@ Accessing port.
 Ok we have breached security. 
 You can go for the kill now:
 
-UP,up,down,down,left,right,left,rigth,b,a,start
+UP,up,down,down,left,right,left,right,b,a,start
 {output}
 

@@ -188,6 +188,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cursorSpeed: .5
   letterPause: .100000001
+  linePause: .5
   key1: {fileID: 8300000, guid: daf38e67baa128e4285f33aa1478fb9d, type: 3}
   key2: {fileID: 8300000, guid: d8bdb93de4a38924ebaef51d15bc63ec, type: 3}
   key3: {fileID: 8300000, guid: 6eea676c28ee56148934e0c8aa6f6780, type: 3}
@@ -196,6 +197,8 @@ MonoBehaviour:
   key6: {fileID: 8300000, guid: d3ca80669d1b37d4b964050ce59d3643, type: 3}
   inputField: {fileID: 1765438474}
   fileName: intro.txt
+  lineLength: 35
+  maxNumberOfLines: 20
 --- !u!114 &1765438474
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11403400, guid: 15525b6ca0f745c4cbbcca46c855f881,
