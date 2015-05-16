@@ -12,7 +12,7 @@ TagManager:
   - 1stLane
   - 2ndLane
   - 3dLane
-  - terminal
+  - terminal1
   - invisible
   layers:
   - Default

@@ -13,7 +13,7 @@ public abstract class abstractTerminalScript : MonoBehaviour {
 	
 	public float cursorSpeed;
 	public float letterPause = 0;
-	public float linePause = 2;
+	public float linePause = 0;
 
 	protected EventSystem system;
 	public AudioClip key1;
@@ -26,7 +26,6 @@ public abstract class abstractTerminalScript : MonoBehaviour {
 
 	protected int cursorStarted = 0;
 	public InputField inputField;
-	public string fileName;
 	protected char[] chars;
 	protected int i = 0;
 	protected int charPerLines = 0;
@@ -51,19 +50,24 @@ public abstract class abstractTerminalScript : MonoBehaviour {
 		submitEvent.AddListener (endInput);
 		inputField.onEndEdit = submitEvent;
 		this.gameObject.GetComponent<Text> ().text = this.defaultText;
-
-		//Important: change to Application.persistentdataPath before releasing!!!!!!!!!
-
-		this.instructions = File.ReadAllLines(Application.dataPath+ "/" + fileName);
+		this.keys [0] = this.key1;
+		this.keys [1] = this.key2;
+		this.keys [2] = this.key3;
+		this.keys [3] = this.key4;
+		this.keys [4] = this.key5;
+		this.keys [5] = this.key6;
 		//chars = message.ToCharArray();
 		terminalAudio = gameObject.GetComponent<AudioSource> ();
 		terminalAudio.mute = true;
 		this.abstractStart ();
 	}
 
-	public void start()
+	public void start(string fileName)
 	{
 		this.Start ();
+		//Important: change to Application.persistentdataPath before releasing!!!!!!!!!
+		this.instructions = File.ReadAllLines(Application.dataPath+ "/" + fileName + ".txt");
+		this.abstractStart ();
 	}
 
 	protected void OnGUI() {
@@ -163,6 +167,10 @@ public abstract class abstractTerminalScript : MonoBehaviour {
 			StartCoroutine(scriptInput(body));
 			yield return 0;
 			break;
+		case "<end>":
+			StartCoroutine (end(body));
+			yield return 0;
+			break;
 			
 		default:
 			yield return 0;
@@ -170,6 +178,19 @@ public abstract class abstractTerminalScript : MonoBehaviour {
 		}
 	}
 
+	IEnumerator end (string body)
+	{
+		while (this.busy) {
+			yield return 0;
+		}
+		this.busy = true;
+		while (!Input.GetButtonDown ("Submit")) {
+			yield return 0;
+		}
+		this.abortTerminal ();
+		yield	 return 0;
+
+	}
 	
 	protected IEnumerator write(string body){
 		while (this.busy) {
@@ -193,12 +214,13 @@ public abstract class abstractTerminalScript : MonoBehaviour {
 			charPerLines++;
 			char currentLetter = letter;
 			
-			if (!terminalAudio.isPlaying)
-			{
+
 				terminalAudio.clip = this.keys[Random.Range(0,5)];
+				Debug.Log(terminalAudio.clip);
 				terminalAudio.mute = false;
+
 				terminalAudio.Play ();
-			}
+
 			
 			
 			//If the textline is to long, start a new one

@@ -59,6 +59,7 @@ public class PlayerController : MonoBehaviour {
 
 	private bool atTerminal = false;
 	private bool activateTerminal = false;
+	private string terminalName = "";
 
 
 
@@ -227,8 +228,9 @@ public class PlayerController : MonoBehaviour {
 	void OnTriggerEnter(Collider other)
 	{
 		if (isActive) {
-			if (other.gameObject.tag == "terminal") {
+			if (other.gameObject.tag.Contains ("terminal")) {
 				this.atTerminal = true;
+				this.terminalName = other.gameObject.tag;
 			}
 		}
 	}
@@ -236,8 +238,9 @@ public class PlayerController : MonoBehaviour {
 	void OnTriggerExit(Collider other)
 	{
 		if (isActive) {
-			if (other.gameObject.tag == "terminal") {
+			if (other.gameObject.tag.Contains("terminal")) {
 				this.atTerminal = false;
+				this.terminalName = "";
 			}
 		}
 	}
@@ -294,6 +297,11 @@ public class PlayerController : MonoBehaviour {
 	public bool getTerminalState()
 	{
 		return this.activateTerminal;
+	}
+
+	public string getTerminalName()
+	{
+		return this.terminalName;
 	}
 
 }

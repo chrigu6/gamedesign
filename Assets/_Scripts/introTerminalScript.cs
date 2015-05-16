@@ -10,6 +10,7 @@ public class introTerminalScript : abstractTerminalScript {
 	override protected void abstractStart()
 	{
 		this.gameObject.GetComponentInParent<Canvas> ().enabled = true;
+		this.instructions = File.ReadAllLines(Application.dataPath+ "/terminalintro.txt");
 		StartCoroutine (this.run ());
 	}
 
