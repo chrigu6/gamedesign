@@ -27,6 +27,7 @@ public class PlayerController : MonoBehaviour {
 	public bool changeLane;
 
 	bool isActive = false;
+	private bool canShoot = false;
 
 	public GameObject shot;
 	public Transform shotSpawn;
@@ -144,7 +145,7 @@ public class PlayerController : MonoBehaviour {
 				GetComponent<Rigidbody> ().AddForce (new Vector3 (0, jumpForce, 0));
 			}
 
-			if (frontCamera.enabled && Input.GetButton ("Fire2") && Time.time > nextFire) {
+			if (frontCamera.enabled && Input.GetButton ("Fire2") && Time.time > nextFire && this.canShoot) {
 				anim.SetBool(hash.shotClicked, true);
 				nextFire = Time.time + fireRate;
 				this.ShotEffects();
@@ -308,5 +309,16 @@ public class PlayerController : MonoBehaviour {
 	{
 		return this.isActive;
 	}
+
+	public void enableShooting()
+	{
+		this.canShoot = true;
+	}
+
+	public void disableShooting()
+	{
+		this.canShoot = false;
+	}
+
 
 }

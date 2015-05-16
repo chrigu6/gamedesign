@@ -1595,18 +1595,10 @@ Prefab:
       propertyPath: activePlayer
       value: 
       objectReference: {fileID: 1440610422}
-    - target: {fileID: 107828, guid: 1521c206b5a337344852e836d7139b43, type: 2}
-      propertyPath: m_Name
-      value: 2dCameraSpot
-      objectReference: {fileID: 0}
     - target: {fileID: 11449388, guid: 1521c206b5a337344852e836d7139b43, type: 2}
       propertyPath: hud
       value: 
       objectReference: {fileID: 2140182452}
-    - target: {fileID: 2054612, guid: 1521c206b5a337344852e836d7139b43, type: 2}
-      propertyPath: m_ClearFlags
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1521c206b5a337344852e836d7139b43, type: 2}
   m_IsPrefabParent: 0

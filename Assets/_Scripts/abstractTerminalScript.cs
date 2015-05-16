@@ -167,6 +167,15 @@ public abstract class abstractTerminalScript : MonoBehaviour {
 			StartCoroutine(scriptInput(body));
 			yield return 0;
 			break;
+		case "<cameraSwitch>":
+			this.enableCameraSwitch();
+			break;
+		case "<characterSwitch>":
+			this.enableCharacterSwitch();
+			break;
+		case "<enableShooting>":
+			this.enableShooting();
+			break;
 		case "<end>":
 			StartCoroutine (end(body));
 			yield return 0;
@@ -176,6 +185,21 @@ public abstract class abstractTerminalScript : MonoBehaviour {
 			yield return 0;
 			break;
 		}
+	}
+
+	void enableCameraSwitch ()
+	{
+		GameObject.FindGameObjectWithTag ("cameraController").GetComponent<CameraController> ().enableCameraSwitch ();
+	}
+
+	void enableCharacterSwitch()
+	{
+		GameObject.FindGameObjectWithTag ("cameraController").GetComponent<CameraController> ().enablePlayerSwitch ();
+	}
+
+	void enableShooting ()
+	{
+		GameObject.FindGameObjectWithTag ("cameraController").GetComponent<CameraController> ().enableShooting ();
 	}
 
 	IEnumerator end (string body)

@@ -51,11 +51,13 @@ public class EnemyMovement : MonoBehaviour {
 
 	public void setActive()
 	{
-		this.active = true;
+ 		this.active = true;
 	}
 
 	public void setInactive()
 	{
 		this.active = false;
 	}
+
+
 }

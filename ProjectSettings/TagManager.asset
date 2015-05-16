@@ -7,13 +7,15 @@ TagManager:
   - floor
   - intersection
   - enemy
-  - Player2
   - Player1
   - 1stLane
   - 2ndLane
   - 3dLane
   - terminal1
   - invisible
+  - terminal
+  - Player2
+  - cameraController
   layers:
   - Default
   - TransparentFX

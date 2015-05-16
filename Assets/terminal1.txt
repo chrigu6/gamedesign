@@ -52,5 +52,11 @@ You can go for the kill now:
 
 UP,up,down,down,left,right,left,right,b,a,start
 {output}
+<cameraSwitch>
+test
+<characterSwitch>
+test
+<enableShooting>
+test
 <end>
 <\end>
