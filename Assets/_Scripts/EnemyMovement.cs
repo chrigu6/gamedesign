@@ -7,6 +7,7 @@ public class EnemyMovement : MonoBehaviour {
 	NavMeshAgent nav;
 	bool frontCameraEnabled;
 	bool isDead;
+	bool active = true;
 	
 
 	void Awake (){
@@ -33,10 +34,28 @@ public class EnemyMovement : MonoBehaviour {
 
 		EnemyHealth enemyHealth = GetComponent<EnemyHealth> ();
 		isDead = enemyHealth.isDead;
+		
 
 		// If the enemy is not dead, set the destination to "player1.position"
 		if (isDead != true) {
-			nav.SetDestination (player1Transform.position);
+			if(active)
+			{
+				nav.SetDestination (player1Transform.position);
+			}
+			else
+			{
+				nav.SetDestination(this.transform.position);
+			}
 		}
+	}
+
+	public void setActive()
+	{
+		this.active = true;
+	}
+
+	public void setInactive()
+	{
+		this.active = false;
 	}
 }

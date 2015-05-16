@@ -34,7 +34,7 @@ public class EnemyAttack : MonoBehaviour {
 	void Update() {
 		timer += Time.deltaTime;
 
-		if (timer >= timeBetweenAttacks && playerInRange && enemyHealth.currentHealth > 0) {
+		if (timer >= timeBetweenAttacks && playerInRange && enemyHealth.currentHealth > 0 && player.GetComponent<PlayerController>().isPlayerActive()) {
 			Attack ();
 		}
 		//Debug.Log(playerInRange);

@@ -66,19 +66,20 @@ public class PlayerHealth : MonoBehaviour
     // Player takes damage
     public void TakeDamage(int amount)
     {
-        damaged = true;
+		if (playerController.isPlayerActive()) {
+			damaged = true;
 
-        currentHealth -= amount;
+			currentHealth -= amount;
 
-        healthSlider.fillAmount = currentHealth / maxHealth;
+			healthSlider.fillAmount = currentHealth / maxHealth;
 
-        playerAudio.Play();
+			playerAudio.Play ();
 
-        // Player is dead
-        if (currentHealth <= 0 && !isDead)
-        {
-            Death();
-        }
+			// Player is dead
+			if (currentHealth <= 0 && !isDead) {
+				Death ();
+			}
+		}
 
     }
 

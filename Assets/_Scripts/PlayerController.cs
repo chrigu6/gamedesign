@@ -304,4 +304,9 @@ public class PlayerController : MonoBehaviour {
 		return this.terminalName;
 	}
 
+	public bool isPlayerActive()
+	{
+		return this.isActive;
+	}
+
 }

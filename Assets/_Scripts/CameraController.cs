@@ -98,7 +98,6 @@ public class CameraController : MonoBehaviour {
 			}
 
 			if (this.activePlayer.GetComponent<PlayerController> ().getTerminalState()) {
-				Debug.Log("Activated terminal");
 				this.frontCamera.enabled = false;
 				this.aboveCamera.enabled = false;
 				this.terminalCamera.enabled = true;
@@ -107,6 +106,15 @@ public class CameraController : MonoBehaviour {
 				GetComponentInChildren<basicTerminalScript>().start(this.activePlayer.GetComponent<PlayerController> ().getTerminalName());
 				StartCoroutine(GetComponentInChildren<basicTerminalScript>().run());
 				this.activePlayer.GetComponent<PlayerController> ().changeState ();
+				GameObject[] enemies = GameObject.FindGameObjectsWithTag("enemy");
+				foreach(GameObject enemy in enemies)
+				{
+					EnemyMovement script = enemy.GetComponent<EnemyMovement>();
+					if(script != null)
+					{
+						script.setInactive();
+					}
+				}
 			}
 
 		}
@@ -120,6 +128,15 @@ public class CameraController : MonoBehaviour {
 			this.GetComponentInChildren<basicTerminalScript>().changeState();
 			this.activePlayer.GetComponent<PlayerController> ().changeState ();
 			this.activePlayer.GetComponent<PlayerController> ().abort();
+			GameObject[] enemies = GameObject.FindGameObjectsWithTag("enemy");
+			foreach(GameObject enemy in enemies)
+			{
+				EnemyMovement script = enemy.GetComponent<EnemyMovement>();
+				if(script != null)
+				{
+					script.setActive();
+				}
+			}
 		}
 
 	}
