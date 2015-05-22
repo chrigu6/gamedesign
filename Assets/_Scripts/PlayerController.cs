@@ -2,66 +2,67 @@
 using System.Collections;
 
 public class PlayerController : MonoBehaviour {
+
+
+	//General state
+	bool isActive = false;
+	private int currentLayer;
+	public bool changeLane;
+	private Animator anim;
+	private HashIDs hash;
+
+	//Movement
 	Rigidbody playerRigidbody;
-
-
 	public float speed;
-	public float jumpForce;
 	public float turnSmoothing = 15f;
 	public float speedDampTime = 0.1f;
-	public GameObject deathParticles;
 
-	private Vector3 spawn;
-	Vector3 movement;
-
-
-	public Camera frontCamera;
-	public Camera aboveCamera;
-
+	//Jumping
+	public float jumpForce;
 	bool grounded = true;
 	public Transform groundCheck;
 	float groundRadius = 0.2f;
 	public LayerMask whatIsGround;
-	private int currentLayer;
 
-	public bool changeLane;
-
-	bool isActive = false;
-	private bool canShoot = false;
-
-	public GameObject shot;
-	public Transform shotSpawn;
-	public float fireRate;
-	public float bulletSpeed;
-	private float nextFire;
-
-	private Animator anim;
-	private HashIDs hash;
-
+	//Shooting
+	public bool canShoot = true;
+	public GameObject shootingQuad;
 	public AudioClip shotClip;
 	public float flashIntensity = 3f;
 	public float fadeSpeed = 10f;
-	private LineRenderer laserShotLine;
-	private Light laserShotLight;
 	private bool shooting;
 	private Vector3 shotPosition;
 	public int damagePerShot = 20;
 	public float timeBetweenBullets = 0.15f;
 	public float range =  100f;
-
 	float timer;
 	Ray shootRay;
+	Ray enemyRay;
 	RaycastHit shootHit;
 	int shootableMask;
+	int shootingMask;
 	LineRenderer gunLine;
 	AudioSource gunAudio;
 	Light gunLight;
 	float effectsDisplayTime = 0.2f;
+	public Transform rightHand;
 
+	//Cameras
+	public Camera frontCamera;
+	public Camera aboveCamera;
+
+	//Die
+	public GameObject deathParticles;
+	private Vector3 spawn;
+	public Transform shotSpawn;
+	public float fireRate;
+	public float bulletSpeed;
+	private float nextFire;
+
+	//Terminal
 	private bool atTerminal = false;
 	private bool activateTerminal = false;
 	private string terminalName = "";
-
 
 
 	// Use this for initialization
@@ -77,15 +78,11 @@ public class PlayerController : MonoBehaviour {
 		hash = GameObject.FindGameObjectWithTag ("GameController").GetComponent<HashIDs> ();
 
 		shootableMask = LayerMask.GetMask ("Shootable");
+		shootingMask = LayerMask.GetMask ("ShootingQuad");
+
 		gunLine = GetComponent <LineRenderer> ();
 		gunAudio = GetComponent<AudioSource> ();
 		gunLight = GetComponent<Light> ();
-
-		laserShotLine = GetComponentInChildren<LineRenderer> ();
-		laserShotLight = GetComponentInChildren<Light> ();
-
-		laserShotLine.enabled = false;
-		laserShotLight.intensity = 0f;
 		this.currentLayer = 1;
 	}
 
@@ -122,11 +119,15 @@ public class PlayerController : MonoBehaviour {
 	void Update()
 	{
 		timer += Time.deltaTime;
-		float shot = anim.GetFloat (hash.shotFloat);
+		//float shot = anim.GetFloat (hash.shotFloat);
 
-		if (shot < 0.5f) {
-			laserShotLine.enabled = false;
+		if (this.isActive) {
+			this.shootingQuad.transform.position = this.transform.position;
 		}
+
+		/*if (shot < 0.5f) {
+			laserShotLine.enabled = false;
+		}*/
 
 		Collider[] ground = Physics.OverlapSphere (groundCheck.position, groundRadius, whatIsGround);
 		if (ground.Length > 0) {
@@ -146,22 +147,26 @@ public class PlayerController : MonoBehaviour {
 			}
 
 			if (frontCamera.enabled && Input.GetButton ("Fire2") && Time.time > nextFire && this.canShoot) {
-				anim.SetBool(hash.shotClicked, true);
+				//anim.SetBool(hash.shotClicked, true);
 				nextFire = Time.time + fireRate;
 				this.ShotEffects();
-				anim.SetBool(hash.shotClicked, false);
+				//anim.SetBool(hash.shotClicked, false);
 			}
 
 			if(this.atTerminal && Input.GetButtonDown("Action"))
 			{
 				this.activateTerminal = true;
 			}
+
 		}
 
-		laserShotLight.intensity = Mathf.Lerp (laserShotLight.intensity, 0f, fadeSpeed * Time.deltaTime);
+		if (timer >= timeBetweenBullets * effectsDisplayTime) {
+			DisableEffects();
+		}
+		//laserShotLight.intensity = Mathf.Lerp (laserShotLight.intensity, 0f, fadeSpeed * Time.deltaTime);
 	}
 
-	void OnAnimatorIK (int layerIndex)
+	/*void OnAnimatorIK (int layerIndex)
 	{
 		// Cache the current value of the AimWeight curve.
 		float aimWeight = anim.GetFloat(hash.aimWeightFloat);
@@ -171,40 +176,51 @@ public class PlayerController : MonoBehaviour {
 		
 		// Set the weight of the IK compared to animation to that of the curve.
 		anim.SetIKPositionWeight(AvatarIKGoal.RightHand, aimWeight);
-	}
+	}*/
 
 	void ShotEffects(){
+		timer = 0f;
+		gunLight.enabled = true;
+		gunLine.enabled = true;
+		gunLine.SetPosition (0, rightHand.position);
+		shootRay.origin = rightHand.position;
+
+		Ray camRay = Camera.main.ScreenPointToRay (Input.mousePosition);
+		RaycastHit floorHit;
+
 		shotPosition = Input.mousePosition;
 		shotPosition = Camera.main.ScreenToWorldPoint (shotPosition);
 		shotPosition.z = transform.position.z;
-		laserShotLine.SetPosition (0, laserShotLine.transform.position);
-		laserShotLine.SetPosition (1, shotPosition);
-		laserShotLine.enabled = true;
-		laserShotLight.intensity = flashIntensity;
-		AudioSource.PlayClipAtPoint (shotClip, laserShotLight.transform.position, 0.3f);
 
-		gunLine.enabled = true;
-		gunLine.SetPosition (0, transform.position);
+		AudioSource.PlayClipAtPoint (shotClip, rightHand.position, 0.3f);
 
-		shootRay.origin = transform.position;
-		shootRay.direction = transform.forward;
+		enemyRay.origin = transform.position;
+		enemyRay.direction = transform.forward;
 
-		if(Physics.Raycast(shootRay, out shootHit, range, shootableMask)){
+		if(Physics.Raycast(enemyRay, out shootHit, range, shootableMask)){
 			EnemyHealth enemyHealth = shootHit.collider.GetComponent <EnemyHealth>();
 			// if there is a enemyHealth script component, take damage and draw a line
 			if(enemyHealth != null){
 				enemyHealth.TakeDamage (damagePerShot, shootHit.point);
 				// draw the line
 			}
-			gunLine.SetPosition (1, shootHit.point);
+		}
+		 
 
+		if(Physics.Raycast(camRay, out floorHit, range, shootableMask))
+		{
+			Vector3 playerToMouse = floorHit.point - transform.position;
+			shootRay.direction = playerToMouse;
+			gunLine.SetPosition(1,shootRay.origin + shootRay.direction * range);
 		}
 
-			// else, just draw a line
-		else{
-			gunLine.SetPosition (1, shootRay.origin + shootRay.direction * range);
 
-		}
+	}
+
+	void DisableEffects()
+	{
+		gunLine.enabled = false;
+		gunLight.enabled = false;
 	}
 
 	void Move (float h, float v)
