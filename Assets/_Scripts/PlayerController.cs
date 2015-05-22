@@ -207,9 +207,9 @@ public class PlayerController : MonoBehaviour {
 		}
 		 
 
-		if(Physics.Raycast(camRay, out floorHit, range, shootableMask))
+		if(Physics.Raycast(camRay, out floorHit, range, this.shootingMask))
 		{
-			Vector3 playerToMouse = floorHit.point - transform.position;
+			Vector3 playerToMouse = floorHit.point - rightHand.position;
 			shootRay.direction = playerToMouse;
 			gunLine.SetPosition(1,shootRay.origin + shootRay.direction * range);
 		}
