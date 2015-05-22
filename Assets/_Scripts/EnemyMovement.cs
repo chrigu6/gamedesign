@@ -8,7 +8,9 @@ public class EnemyMovement : MonoBehaviour {
 	bool frontCameraEnabled;
 	bool isDead;
 	bool active = true;
-	
+
+	int maxRange = 15;
+
 
 	void Awake (){
 //		player1 = GameObject.FindGameObjectWithTag ("Player1");
@@ -36,9 +38,9 @@ public class EnemyMovement : MonoBehaviour {
 		isDead = enemyHealth.isDead;
 		
 
-		// If the enemy is not dead, set the destination to "player1.position"
+		// If the enemy is not dead and in below range of player, set the destination to "player1.position"
 		if (isDead != true) {
-			if(active)
+			if(active && Vector3.Distance(transform.position, player1Transform.position) < maxRange)
 			{
 				nav.SetDestination (player1Transform.position);
 			}
