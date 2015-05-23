@@ -148,8 +148,14 @@ public class PlayerController : MonoBehaviour {
 
 			if (frontCamera.enabled && Input.GetButton ("Fire2") && Time.time > nextFire && this.canShoot) {
 				//anim.SetBool(hash.shotClicked, true);
-				nextFire = Time.time + fireRate;
-				this.ShotEffects();
+				Vector3 shotPosition = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+				Vector3 playerToMouse = shotPosition - rightHand.position;
+
+				if((transform.forward.x > 0 && playerToMouse.x > 0) || (transform.forward.x < 0 && playerToMouse.x < 0))
+				{
+					nextFire = Time.time + fireRate;
+					this.ShotEffects();
+				}
 				//anim.SetBool(hash.shotClicked, false);
 			}
 
@@ -179,6 +185,7 @@ public class PlayerController : MonoBehaviour {
 	}*/
 
 	void ShotEffects(){
+		Debug.Log (transform.forward);
 		timer = 0f;
 		gunLight.enabled = true;
 		gunLine.enabled = true;
