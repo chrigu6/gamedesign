@@ -44,9 +44,17 @@ public class introTerminalScript : abstractTerminalScript {
 			StartCoroutine(callMethod(instruction,body));	
 		}
 
-		Application.LoadLevel("level1");
+		StartCoroutine (nextLevel ());
 		yield return 0;
 		
+	}
+
+	IEnumerator nextLevel()
+	{
+		while (this.busy) {
+			yield return 0;
+		}
+		Application.LoadLevel ("level1");
 	}
 
 	override protected IEnumerator scriptInput(string body)
