@@ -924,10 +924,6 @@ Prefab:
       propertyPath: m_Name
       value: Terminal 1
       objectReference: {fileID: 0}
-    - target: {fileID: 138242, guid: 4a1adaca7a683a540b12ebc308cc4360, type: 2}
-      propertyPath: m_TagString
-      value: terminal1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4a1adaca7a683a540b12ebc308cc4360, type: 2}
   m_IsPrefabParent: 0

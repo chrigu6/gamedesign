@@ -16,6 +16,7 @@ TagManager:
   - terminal
   - Player2
   - cameraController
+  - platform
   layers:
   - Default
   - TransparentFX

@@ -1,0 +1,118 @@
+fileFormatVersion: 2
+guid: 76a0a834094f61547ba3d7dac2dd056a
+timeCreated: 1432375295
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Body
+    100002: Body_MeshPart0
+    100004: Body_MeshPart1
+    100006: Circuit_Board
+    100008: Connectors
+    100010: Keyboard
+    100012: Keys
+    100014: Plane
+    100016: Sinclair_Text
+    100018: //RootNode
+    100020: ZX_Spectrum
+    100022: ZX_Spectrum_Text
+    400000: Body
+    400002: Body_MeshPart0
+    400004: Body_MeshPart1
+    400006: Circuit_Board
+    400008: Connectors
+    400010: Keyboard
+    400012: Keys
+    400014: Plane
+    400016: Sinclair_Text
+    400018: //RootNode
+    400020: ZX_Spectrum
+    400022: ZX_Spectrum_Text
+    2300000: Body_MeshPart0
+    2300002: Body_MeshPart1
+    2300004: Circuit_Board
+    2300006: Connectors
+    2300008: Keyboard
+    2300010: Keys
+    2300012: Plane
+    2300014: Sinclair_Text
+    2300016: ZX_Spectrum_Text
+    3300000: Body_MeshPart0
+    3300002: Body_MeshPart1
+    3300004: Circuit_Board
+    3300006: Connectors
+    3300008: Keyboard
+    3300010: Keys
+    3300012: Plane
+    3300014: Sinclair_Text
+    3300016: ZX_Spectrum_Text
+    4300000: Plane
+    4300002: Sinclair_Text
+    4300004: ZX_Spectrum_Text
+    4300006: Body_MeshPart0
+    4300008: Body_MeshPart1
+    4300010: Circuit_Board
+    4300012: Connectors
+    4300014: Keyboard
+    4300016: Keys
+    7400000: Default Take
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

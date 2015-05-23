@@ -186,7 +186,6 @@ public class PlayerController : MonoBehaviour {
 	}*/
 
 	void ShotEffects(){
-		Debug.Log (transform.forward);
 		timer = 0f;
 		gunLight.enabled = true;
 		gunLine.enabled = true;
