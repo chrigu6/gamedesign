@@ -27,6 +27,7 @@ public class PlayerController : MonoBehaviour {
 	//Shooting
 	public bool canShoot = true;
 	public GameObject shootingQuad;
+	public float shootingQuadoffset;
 	public AudioClip shotClip;
 	public float flashIntensity = 3f;
 	public float fadeSpeed = 10f;
@@ -122,7 +123,7 @@ public class PlayerController : MonoBehaviour {
 		//float shot = anim.GetFloat (hash.shotFloat);
 
 		if (this.isActive) {
-			this.shootingQuad.transform.position = this.transform.position;
+			this.shootingQuad.transform.position = this.transform.position +  new Vector3(0,0,shootingQuadoffset);
 		}
 
 		/*if (shot < 0.5f) {
@@ -271,14 +272,23 @@ public class PlayerController : MonoBehaviour {
 
 
 
-//	void OnCollisionEnter(Collision colide)
-//	{
-//		if (isActive) {
-//			if (colide.gameObject.tag == "enemy") {
-//				Die ();
-//			}
-//		}
-//	}
+	void OnCollisionEnter(Collision colide)
+	{
+		if (isActive) {
+			if (colide.gameObject.tag == "platform") {
+				transform.parent = colide.transform;
+			}
+		}
+	}
+
+	void OnCollisionExit(Collision colide)
+	{
+		if (isActive) {
+			if (colide.gameObject.tag == "platform") {
+				transform.parent = null;
+			}
+		}
+	}
 
 	void Rotating(float horizontal, float vertical)
 	{

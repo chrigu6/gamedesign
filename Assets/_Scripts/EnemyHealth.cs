@@ -57,7 +57,7 @@ public class EnemyHealth : MonoBehaviour {
 		
 		sphereCollider.isTrigger = true;
 		
-		playerScore.AddScore (scoreValue);
+		//playerScore.AddScore (scoreValue);
 		
 		enemyAudio.clip = deathClip;
 		enemyAudio.Play ();

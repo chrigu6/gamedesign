@@ -30,7 +30,7 @@ public class CameraController : MonoBehaviour {
 		frontCamera.enabled = true;
 		aboveCamera.enabled = false;
 		terminalCamera.enabled = false;
-		frontCamera.cullingMask = ((1 << LayerMask.NameToLayer("Default") | 1 << LayerMask.NameToLayer("1stLane") | 1 << LayerMask.NameToLayer(activePlayer.tag)));
+		frontCamera.cullingMask = ((1 << LayerMask.NameToLayer("Default") | 1 << LayerMask.NameToLayer("1stLane") | 1 << LayerMask.NameToLayer(activePlayer.tag) | 1 << LayerMask.NameToLayer("ShootingQuad")));
 		(frontCamera.GetComponent(typeof(AudioListener)) as AudioListener).enabled = true;
 		(aboveCamera.GetComponent(typeof(AudioListener)) as AudioListener).enabled = false;
 		this.layerNumber = this.getLayerFromPlayer (this.activePlayer);
@@ -63,15 +63,15 @@ public class CameraController : MonoBehaviour {
 		if (!terminalCamera.enabled) {
 			if (this.getLayerFromPlayer (this.activePlayer) == 1) {
 				//Debug.Log ("1st Mask");
-				frontCamera.cullingMask = frontCamera.cullingMask = ((1 << LayerMask.NameToLayer ("Default") | 1 << LayerMask.NameToLayer ("1stLane") | 0 << LayerMask.NameToLayer ("2ndLane") | 0 << LayerMask.NameToLayer ("3dLane") | 1 << LayerMask.NameToLayer (activePlayer.tag) | 1 << LayerMask.NameToLayer ("Shootable")));
+				frontCamera.cullingMask = frontCamera.cullingMask = ((1 << LayerMask.NameToLayer ("Default") | 1 << LayerMask.NameToLayer ("1stLane") | 0 << LayerMask.NameToLayer ("2ndLane") | 0 << LayerMask.NameToLayer ("3dLane") | 1 << LayerMask.NameToLayer (activePlayer.tag) | 1 << LayerMask.NameToLayer ("Shootable") | 1 << LayerMask.NameToLayer("ShootingQuad")));
 			}
 			if (this.getLayerFromPlayer (this.activePlayer) == 2) {
 				//Debug.Log ("2nd Mask");
-				frontCamera.cullingMask = frontCamera.cullingMask = ((1 << LayerMask.NameToLayer ("Default") | 0 << LayerMask.NameToLayer ("1stLane") | 1 << LayerMask.NameToLayer ("2ndLane") | 0 << LayerMask.NameToLayer ("3dLane") | 1 << LayerMask.NameToLayer (activePlayer.tag) | 1 << LayerMask.NameToLayer ("Shootable")));
+				frontCamera.cullingMask = frontCamera.cullingMask = ((1 << LayerMask.NameToLayer ("Default") | 0 << LayerMask.NameToLayer ("1stLane") | 1 << LayerMask.NameToLayer ("2ndLane") | 0 << LayerMask.NameToLayer ("3dLane") | 1 << LayerMask.NameToLayer (activePlayer.tag) | 1 << LayerMask.NameToLayer ("Shootable") | 1 << LayerMask.NameToLayer("ShootingQuad")));
 			}
 			if (this.getLayerFromPlayer (this.activePlayer) == 3) {
 				//Debug.Log ("3d Mask");
-				frontCamera.cullingMask = frontCamera.cullingMask = ((1 << LayerMask.NameToLayer ("Default") | 0 << LayerMask.NameToLayer ("1stLane") | 0 << LayerMask.NameToLayer ("2ndLane") | 1 << LayerMask.NameToLayer ("3dLane") | 1 << LayerMask.NameToLayer (activePlayer.tag) | 1 << LayerMask.NameToLayer ("Shootable")));
+				frontCamera.cullingMask = frontCamera.cullingMask = ((1 << LayerMask.NameToLayer ("Default") | 0 << LayerMask.NameToLayer ("1stLane") | 0 << LayerMask.NameToLayer ("2ndLane") | 1 << LayerMask.NameToLayer ("3dLane") | 1 << LayerMask.NameToLayer (activePlayer.tag) | 1 << LayerMask.NameToLayer ("Shootable") | 1 << LayerMask.NameToLayer("ShootingQuad")));
 			}
 
 
