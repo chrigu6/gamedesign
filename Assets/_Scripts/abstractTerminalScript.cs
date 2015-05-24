@@ -180,29 +180,28 @@ public abstract class abstractTerminalScript : MonoBehaviour {
 			StartCoroutine (end(body));
 			yield return 0;
 			break;
-			
 		default:
 			yield return 0;
 			break;
 		}
 	}
 
-	void enableCameraSwitch ()
+	protected void enableCameraSwitch ()
 	{
 		GameObject.FindGameObjectWithTag ("cameraController").GetComponent<CameraController> ().enableCameraSwitch ();
 	}
 
-	void enableCharacterSwitch()
+	protected void enableCharacterSwitch()
 	{
 		GameObject.FindGameObjectWithTag ("cameraController").GetComponent<CameraController> ().enablePlayerSwitch ();
 	}
 
-	void enableShooting ()
+	protected void enableShooting ()
 	{
 		GameObject.FindGameObjectWithTag ("cameraController").GetComponent<CameraController> ().enableShooting ();
 	}
 
-	IEnumerator end (string body)
+	protected IEnumerator end (string body)
 	{
 		while (this.busy) {
 			yield return 0;
