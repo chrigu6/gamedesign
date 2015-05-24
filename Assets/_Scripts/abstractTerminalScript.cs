@@ -239,7 +239,7 @@ public abstract class abstractTerminalScript : MonoBehaviour {
 			
 
 				terminalAudio.clip = this.keys[Random.Range(0,5)];
-				Debug.Log(terminalAudio.clip);
+				//Debug.Log(terminalAudio.clip);
 				terminalAudio.mute = false;
 				if(!terminalAudio.isPlaying)
 			{

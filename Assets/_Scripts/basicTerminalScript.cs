@@ -75,7 +75,7 @@ public class basicTerminalScript : abstractTerminalScript {
 					this.gameObject.GetComponent<Text> ().text += "\n";
 					this.inputField.enabled = false;
 					system.SetSelectedGameObject(null);
-					Debug.Log(j);
+					//Debug.Log(j);
 				}
 				else{
 					this.writeLineMethod("\nIncorrect. Try Again");
