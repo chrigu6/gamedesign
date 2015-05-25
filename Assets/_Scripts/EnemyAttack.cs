@@ -14,19 +14,19 @@ public class EnemyAttack : MonoBehaviour {
 	float timer;
 	
 	void Awake () {
-//		player = GameObject.FindGameObjectWithTag("Player1");
+		player = GameObject.FindGameObjectWithTag("Player1");
 		playerHealth = player.GetComponent <PlayerHealth> ();
 		enemyHealth = GetComponent<EnemyHealth> ();
 	}
 
 	void OnTriggerEnter (Collider other) {
-		if (other.gameObject == player) {
+		if (other.gameObject.tag == "Player1"){
 			playerInRange = true;
 		}
 	}
 
 	void OnTriggerExit (Collider other) {
-		if (other.gameObject == player) {
+		if (other.gameObject.tag == "Player1"){
 			playerInRange = false;
 		}
 	}
@@ -37,8 +37,6 @@ public class EnemyAttack : MonoBehaviour {
 		if (timer >= timeBetweenAttacks && playerInRange && enemyHealth.currentHealth > 0 && player.GetComponent<PlayerController>().isPlayerActive()) {
 			Attack ();
 		}
-		//Debug.Log(playerInRange);
-
 	}
 
 	void Attack () {

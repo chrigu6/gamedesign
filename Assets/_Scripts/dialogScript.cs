@@ -73,10 +73,10 @@ public class dialogScript : MonoBehaviour {
 		this.busy = true;
 		foreach (string s in this.dialogLines) {
 			this.text.text = s;
-			while(!next)
-			{
-				StartCoroutine(WaitForKey());
-			}
+//			while(!next)
+//			{
+//				StartCoroutine(WaitForKey());
+//			}
 
 		}
 		this.dialogCanvas.enabled = false;

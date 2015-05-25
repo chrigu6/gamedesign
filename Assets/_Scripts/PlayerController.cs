@@ -304,8 +304,10 @@ public class PlayerController : MonoBehaviour {
 //
 	void Die()
 	{
-		transform.position = spawn;
-		Instantiate(deathParticles, transform.position, Quaternion.identity);
+//		StartCoroutine (waitOneSecond());
+		// respawn at latest checkpoint
+		transform.position = CheckPoint.ReachedPoint;
+//		Instantiate(deathParticles, transform.position, Quaternion.identity);
 	}
 
 	public void changeState(){
@@ -357,6 +359,10 @@ public class PlayerController : MonoBehaviour {
 	public void disableShooting()
 	{
 		this.canShoot = false;
+	}
+
+	IEnumerator waitOneSecond() {
+		yield return new WaitForSeconds(1);
 	}
 
 

@@ -18,6 +18,7 @@ TagManager:
   - cameraController
   - platform
   - DialogCollider
+  - CheckPoint
   layers:
   - Default
   - TransparentFX
