@@ -6,7 +6,7 @@ public class PlayerScore : MonoBehaviour {
 	public int startingScore;
 	int currentScore;
 	
-	int amount = 10;
+	int amount;
 	bool scoreAdded = false;
 	string scoreText = "Score: 0";
 	

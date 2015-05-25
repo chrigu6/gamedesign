@@ -11,7 +11,7 @@ public class EnemyHealth : MonoBehaviour {
 	AudioSource enemyAudio;
 	ParticleSystem hitParticles;
 	SphereCollider sphereCollider;
-	PlayerScore playerScore;
+	public PlayerScore playerScore;
 	
 	public bool isDead;
 	bool isSinking;
@@ -20,8 +20,6 @@ public class EnemyHealth : MonoBehaviour {
 		enemyAudio = GetComponent <AudioSource> ();
 		hitParticles = GetComponent <ParticleSystem> ();
 		sphereCollider = GetComponent <SphereCollider> ();
-
-		playerScore = GameObject.Find("Player1").GetComponent<PlayerScore> ();
 		
 		currentHealth = startingHealth;
 	}
@@ -57,7 +55,7 @@ public class EnemyHealth : MonoBehaviour {
 		
 		sphereCollider.isTrigger = true;
 		
-		//playerScore.AddScore (scoreValue);
+		playerScore.AddScore (scoreValue);
 		
 		enemyAudio.clip = deathClip;
 		enemyAudio.Play ();
