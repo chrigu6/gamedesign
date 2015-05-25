@@ -170,6 +170,37 @@ public class CameraController : MonoBehaviour {
 		this.player2.GetComponent<PlayerController> ().enableShooting ();
 	}
 
+	public void ShowDialog()
+	{
+		this.hud.GetComponent<Canvas> ().enabled = false;
+		this.activePlayer.GetComponent<PlayerController> ().changeState ();
+		GameObject[] enemies = GameObject.FindGameObjectsWithTag("enemy");
+		foreach(GameObject enemy in enemies)
+		{
+			EnemyMovement script = enemy.GetComponent<EnemyMovement>();
+			if(script != null)
+			{
+				script.setInactive();
+			}
+		}
+	}
 
+	public void EndDialog()
+	{
+		this.hud.GetComponent<Canvas> ().enabled = true;
+		this.activePlayer.GetComponent<PlayerController> ().changeState ();
+		GameObject[] enemies = GameObject.FindGameObjectsWithTag("enemy");
+		foreach(GameObject enemy in enemies)
+		{
+			EnemyMovement script = enemy.GetComponent<EnemyMovement>();
+			if(script != null)
+			{
+				script.setActive();
+			}
+		}
 
+	}
+	
+	
+	
 }

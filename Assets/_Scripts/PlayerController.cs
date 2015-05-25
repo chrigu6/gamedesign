@@ -256,6 +256,11 @@ public class PlayerController : MonoBehaviour {
 				this.atTerminal = true;
 				this.terminalName = other.gameObject.tag;
 			}
+
+			if (other.gameObject.tag == "DialogCollider")
+			{
+				other.gameObject.GetComponent<dialogScript>().dialogCollision();
+			}
 		}
 	}
 
@@ -305,7 +310,9 @@ public class PlayerController : MonoBehaviour {
 
 	public void changeState(){
 		this.isActive = !this.isActive;
+		this.Move (0f,0f);
 	}
+
 
 	private int getLayer(string LayerName){
 		if (LayerName.Equals ("1stLane"))
