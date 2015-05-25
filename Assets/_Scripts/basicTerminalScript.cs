@@ -14,6 +14,7 @@ public class basicTerminalScript : abstractTerminalScript {
 	override protected void abstractStart()
 	{
 		this.gameObject.GetComponentInParent<Canvas> ().enabled = false;
+		this.terminalAudio.mute = true;
 	}
 
 	override protected void endInput(string name)
