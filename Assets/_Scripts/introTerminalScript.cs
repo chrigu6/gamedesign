@@ -7,13 +7,24 @@ using UnityEngine.EventSystems;
 
 public class introTerminalScript : abstractTerminalScript {	
 	public GameObject movieQuad;
+	public GameObject terminalCanvas;
+	private MovieTexture movTexture;
 
+	new protected void OnGUI() {
+		if (active) {;
+			if(Input.GetButtonDown ("Abort"))
+			{
+				Application.LoadLevel ("level1");
+			}
+		}
+	}
 
 	override protected void abstractStart()
 	{
 		this.gameObject.GetComponentInParent<Canvas> ().enabled = true;
 		this.instructions = File.ReadAllLines(Application.dataPath+ "/terminalintro.txt");
 		this.movieQuad.SetActive (false);
+		this.movTexture = this.movieQuad.GetComponent<Renderer>().material.mainTexture as MovieTexture;
 		StartCoroutine (this.run ());
 	}
 
@@ -79,8 +90,12 @@ public class introTerminalScript : abstractTerminalScript {
 			yield return 0;
 		}
 		this.busy = true;
-		MovieTexture movTexture = this.movieQuad.GetComponent<Renderer>().material.mainTexture as MovieTexture;
 		this.movieQuad.SetActive (true);
+		RectTransform terminal = terminalCanvas.GetComponent<RectTransform> ();
+		Vector3[] canvasPosition = new Vector3[4];
+		terminal.GetWorldCorners (canvasPosition);
+		MeshCollider collider = movieQuad.GetComponent<MeshCollider> ();
+		this.movieQuad.transform.position = (canvasPosition[2]) + ((canvasPosition[3] - canvasPosition[2])/2)  + new Vector3 (-collider.bounds.extents[0]*1.5f,0, -0.1f);
 		movTexture.Play ();
 		this.busy = false;
 		yield return 0;
@@ -116,6 +131,9 @@ public class introTerminalScript : abstractTerminalScript {
 			StartCoroutine(callMethod(instruction,body));	
 		}
 
+		while (this.movTexture.isPlaying) {
+			yield return 0;
+		}
 		StartCoroutine (nextLevel ());
 		yield return 0;
 		

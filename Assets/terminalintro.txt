@@ -1,3 +1,66 @@
+<w>
+Load"$",8
+
+<wL>
+Searching for $ 
+<fC>
+4
+<wL>
+Loading
+<s>
+floppy
+<wL>
+Ready.
+<fC>
+2
+
+<w>
+List
+<wL>
+0 "why we fight"	17	1A
+102 "Homework"			DTA
+0   "-----------------"	DEL
+183 Zak McKracken		PRG
+0   "-----------------"	DEL
+66  KoalaPainter		PRG
+0   "-----------------"	DEL
+290 8-Bit Mangas		PRG
+0   "-----------------" DEL
+666 Tennessee Tuxedo #2	PRG
+0   "-----------------"	DEL
+43 BLocks Free.
+
+Ready.
+<fC>
+4
+<w>
+Load"Tennessee Tuxedo #2",9,1
+
+<wL>
+Searching for Tennessee Tuxedo #2
+Loading
+<s>
+floppy
+<fC>
+4
+<wL>
+Ready.
+<w>
+RUN
+<fC>
+2
+<wL>
+Connecting to 69.58.186.114 .....
+<s>
+modem
+<fC>
+2
+<wL>
+Encrypt Datatransfer
+<fC>
+2
+<m>
+40
 <wL>
 
 Downloading Payload
@@ -13,41 +76,157 @@ Decrypting Videodata
 Play
 
 <w>
+
 	"For knowledge itself is power."
 
 Sir Francis Bacon
 
-In the 1930s mankind discovered the power of digital computing. Based on the research of several scientific masterminds digital computers replaced analog calculating devices, known to humanity since thousand of years.
-Electronic circuits made it possible for machines to do more calculating operations, than a human being ever dreamed of.
-Never ending technological progress enhanced the power of the machines, allowing even quicker and bigger operations. More and more digital data was generated, manipulated and stored.
-Bits became Bytes, Bytes became Kilobytes, Kilobytes became Megabytes, Megabytes became Gigabytes and so on. The digital age was a unstoppable technical and sociological phenomena.
-Personal Computers soon became a part of every household. Processors and Batteries became better, therefore allowing the use of smaller, mobile computing devices.
-The work of Tim Berners-Lee in the late 80s brought a further development to the digital age: the World Wide Web.
-Computers where no longer isolated machines, but started to build up an ever growing network of computing power and more important of connected data.
-The new millennium brought a further grow to the Web. Trough Social Media and other elements of the so called Web 2.0 people started to produce, distribute and share more personal data than ever.
-Along with the emergence of smart and connected devices, that were able to communicate and exchange data independently of any human interaction - known as the internet of things - more and more elements of everyday life was recorded, analyzed and logged.
 
-While the most of humans saw the tools of the digital age as instruments to make the world a better place, other people saw different possibilities.
-Among them was one man with a twisted and wicked character, never seen before: 
-				Gill Bates.
+In the 1930s mankind discovered 
+the power of digital computing.
+Based on the research of several
+scientific masterminds digital 
+computers replaced analog calcu-
+lating devices, known to hum-
+anity since thousand of years.
+
+
+Electronic circuits made it 
+possible for machines to do more
+calculating operations, than a 
+human being ever dreamed of.
+Never ending technological pro-
+gress enhanced the power of the 
+machines, allowing even quicker 
+and bigger operations. More and 
+more digital data was generated, 
+manipulated and stored.
+
+Bits became Bytes, Bytes became 
+Kilobytes, Kilobytes became 
+Megabytes, Megabytes became 
+Gigabytes and so on. 
+The digital age was a un-
+stoppable technical and 
+sociological phe-
+nomena.
+
+Personal Computers soon became a 
+part of every household. 
+Processors and Batteries became 
+better, therefore allowing the 
+use of smaller, mobile com-
+puting devices.
+
+
+The late 80s brought a further 
+development to the digital age:
+The World Wide Web.
+Computers where no longer iso-
+lated machines, but started to 
+build up an ever growing network 
+of computing power and more im-
+portant of connected data.
+The new millennium brought a fur-
+ther grow to the Web.
+Trough Social Media and other 
+elements of the so called 
+Web 2.0, people started to 
+produce, distribute and share 
+more personal data than ever.
+
+Along with the emergence of smart
+and connected devices, that were 
+able to communicate and exchange 
+data independently of any human 
+interaction, the internet of 
+things, more and more elements of
+everyday life was recorded, ana-
+lyzed and logged.
+
+While the most of humans saw the 
+tools of the digital age as in-
+struments to make the world a 
+better place, other people saw
+different possibilities.
+
+Among them was one man with a 
+twisted and wicked character,
+never seen before: 
+
+		Gill Bates.
 				
-Bates saw one thing clearer than his contemporaries: "Knowledge is power!"
-With his extraordinary programming skills, Bates gathered together more and more data. Political secrets, military information, financial transactions, private information about politicians - nothing was safe from Bates claws.
-Trough blackmail, coercion and inside information he was able to acquire more wealth than any other. But his ultimate goal wasn't money! The only thing he wanted was absolute power!
-What looked like a free market of competing Hard- and Software manufactures, was secretly undermined and finally controlled by Gates.
-Companies like Sumsang, Pear, Macrohard, Pony, Hatebook or Glitter, where in the total control of one evil genius.
-2038 Bates built a information system called Ring - Record-, Information and News-Generator.
-Ring was able to manipulate, direct and censor every single bit of information transported through the World Wide Web.
+Bates saw one thing clearer than 
+his contemporaries: 
+	"Knowledge is power!"
+With his extraordinary pro-
+gramming skills, Bates 
+gathered together more and 
+more data.Political secrets,
+military information, 
+financial transactions, 
+private information about 
+powerfull people - 
+nothing was safe 
+from Bates claws.
 
-One ring to rule them all, on ring to find them,
-one ring to bring them all and in Seattle bind them.
+Trough blackmail, coercion and 
+inside information he was able 
+to acquire more wealth than 
+any other. But his ultimate 
+goal wasn't money! The only 
+thing he wanted was absolute
+power!
 
-Nobody was able to stand up against the immense power of Gill Bates.
-Nobody? No! In the year 2045 to hacking computer nerds discovered Bates evil Scheme.
-Armed with an antique C-64 Computer and a 56kbit/s-Modem they prepared to battle this digital goliath.
-Because Bates power in the real world was to strong, they set to attack him at foundation of his strength: The digital world.
-Through the knowledge of every Episode of MacGyver ever produced they were able to transform one of themselves into bits and bytes.
-Uploaded into a computer, transmitted over the web, their quest is to defeat the Ring from within . . . .
+What looked like a free market 
+of competing Hard- and 
+Software manufactures, was 
+secretly undermined and 
+finally controlled by Gates.
+Companies like Sumsang, Pear, 
+Macrohard, Pony, Hatebook or 
+Glitter, where in the total 
+control of one evil genius.
+
+2038 Bates built an information 
+system called Ring - Record-, 
+Information- and News-Generator.
+Ring was able to manipulate, 
+direct and censor every single 
+bit of information transported
+through the World Wide Web.
+
+
+One ring to rule them all, 
+on ring to find them,
+one ring to bring them all 
+and in Seattle bind them.
+
+
+Nobody was able to stand up 
+against the immense power of 
+Gill Bates.
+Nobody? No! In the year 2045 
+two hacking computer nerds 
+discovered Bates evil Scheme.
+Armed with an antique C-64 
+Computer and a 56kbit/s-Modem 
+they prepared to battle this 
+digital goliath.
+Because Bates power in the
+real world was to strong, 
+they set to attack him at the
+foundation of his strength: 
+The digital world.
+Through the knowledge of every 
+Episode of MacGyver ever 
+produced, they were able to 
+transform one of themselves 
+into bits and bytes.
+Uploaded into a computer, 
+transmitted over the web, 
+their quest is to defeat 
+the Ring from within . . . .
 
 
 
