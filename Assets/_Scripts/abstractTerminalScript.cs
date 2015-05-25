@@ -58,7 +58,6 @@ public abstract class abstractTerminalScript : MonoBehaviour {
 		this.keys [5] = this.key6;
 		//chars = message.ToCharArray();
 		terminalAudio = gameObject.GetComponent<AudioSource> ();
-		terminalAudio.mute = true;
 		this.abstractStart ();
 	}
 
@@ -84,7 +83,6 @@ public abstract class abstractTerminalScript : MonoBehaviour {
 		this.busy = false;
 		this.typing = false;
 		this.gameObject.GetComponent<Text> ().text = this.defaultText;
-		this.terminalAudio.mute = true;
 		this.abort = true;
 		this.i = 0;
 		this.numberOfLines = 0;
@@ -240,7 +238,6 @@ public abstract class abstractTerminalScript : MonoBehaviour {
 
 				terminalAudio.clip = this.keys[Random.Range(0,5)];
 				//Debug.Log(terminalAudio.clip);
-				terminalAudio.mute = false;
 				if(!terminalAudio.isPlaying)
 			{
 					terminalAudio.Play ();
@@ -414,7 +411,6 @@ public abstract class abstractTerminalScript : MonoBehaviour {
 		body = body.Remove (body.Length - 1);
 		this.busy = true;
 		terminalAudio.clip = (AudioClip)Resources.Load(body);
-		terminalAudio.mute = false;
 		terminalAudio.Play ();
 		
 		while (terminalAudio.isPlaying) {

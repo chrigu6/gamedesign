@@ -97,6 +97,8 @@ public class introTerminalScript : abstractTerminalScript {
 		MeshCollider collider = movieQuad.GetComponent<MeshCollider> ();
 		this.movieQuad.transform.position = (canvasPosition[2]) + ((canvasPosition[3] - canvasPosition[2])/2)  + new Vector3 (-collider.bounds.extents[0]*1.5f,0, -0.1f);
 		movTexture.Play ();
+		this.terminalAudio.mute = true;
+		this.movieQuad.GetComponent<AudioSource> ().Play ();
 		this.busy = false;
 		yield return 0;
 	}
