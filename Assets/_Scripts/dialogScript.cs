@@ -12,8 +12,9 @@ public class dialogScript : MonoBehaviour {
 	private bool busy = false;
 	private bool waitingForKey = false;
 	private bool next = false;
+	private int counter = 0;
 	string dialog;
-	ArrayList dialogLines = new ArrayList();
+	object[] dialogLines;
 
 	// Use this for initialization
 	void Start () {
@@ -25,6 +26,7 @@ public class dialogScript : MonoBehaviour {
 
 	private void formatDialog (){
 		string[] words = dialog.Split (new char[]{' ','\n'});
+		ArrayList temp = new ArrayList ();
 		int currentLineLength = 0;
 		int currentNumberOfLines = 0;
 		string lineString = "";
@@ -43,24 +45,33 @@ public class dialogScript : MonoBehaviour {
 				}
 
 				else{
-					this.dialogLines.Add(lineString);
+					temp.Add(lineString);
 					currentNumberOfLines = 0;
 					lineString = s;
 					currentLineLength = s.Length;
 				}
 			}
 		}
-
+		temp.Add(lineString);
+		this.dialogLines = temp.ToArray ();
 	}
 
-	public void dialogCollision ()
+	public IEnumerator dialogCollision ()
 	{
 		if (!dialogShown) {
 			this.cameras.GetComponent<CameraController>().ShowDialog();
 			this.dialogCanvas.enabled = true;
 			this.dialogShown = true;
-			StartCoroutine(ShowDialog());
+			while(counter < this.dialogLines.Length-1)
+			{
+				StartCoroutine(ShowDialog());
+				yield return 0;
+			}
+			this.cameras.GetComponent<CameraController>().EndDialog();
+			this.dialogCanvas.enabled = false;
+			
 		}
+		yield return 0;
 	}
 
 
@@ -71,31 +82,13 @@ public class dialogScript : MonoBehaviour {
 			yield return 0;
 		}
 		this.busy = true;
-		foreach (string s in this.dialogLines) {
-			this.text.text = s;
-//			while(!next)
-//			{
-//				StartCoroutine(WaitForKey());
-//			}
+		this.text.text = this.dialogLines [this.counter] as string;
 
+		if (Input.GetButton ("Submit")) {
+			counter ++;
 		}
-		this.dialogCanvas.enabled = false;
-		this.cameras.GetComponent<CameraController>().EndDialog();
+
 		this.busy = false;
 		yield return 0;
-	}
-
-	private IEnumerator WaitForKey()
-	{
-		if (waitingForKey) {
-			yield return 0;
-		}
-
-		waitingForKey = true;
-		next = Input.GetButtonDown ("Submit");
-		waitingForKey = false;
-		yield return 0;
-	}
-
-	
+	}	
 }

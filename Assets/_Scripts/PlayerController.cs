@@ -259,7 +259,7 @@ public class PlayerController : MonoBehaviour {
 
 			if (other.gameObject.tag == "DialogCollider")
 			{
-				other.gameObject.GetComponent<dialogScript>().dialogCollision();
+				StartCoroutine(other.gameObject.GetComponent<dialogScript>().dialogCollision());
 			}
 		}
 	}
