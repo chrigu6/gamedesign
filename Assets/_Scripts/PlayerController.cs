@@ -18,6 +18,8 @@ public class PlayerController : MonoBehaviour {
 	public float speedDampTime = 0.1f;
 
 	//Jumping
+	public AudioClip jumpClip;
+	public AudioClip landedClip;
 	public float jumpForce;
 	bool grounded = true;
 	public Transform groundCheck;
@@ -47,6 +49,10 @@ public class PlayerController : MonoBehaviour {
 	Light gunLight;
 	float effectsDisplayTime = 0.2f;
 	public Transform rightHand;
+	public Transform shotSpawn;
+	public float fireRate;
+	public float bulletSpeed;
+	private float nextFire;
 
 	//Cameras
 	public Camera frontCamera;
@@ -54,21 +60,24 @@ public class PlayerController : MonoBehaviour {
 
 	//Die
 	public GameObject deathParticles;
+	private PlayerHealth health;
+	public AudioClip deathClip;
 	private Vector3 spawn;
-	public Transform shotSpawn;
-	public float fireRate;
-	public float bulletSpeed;
-	private float nextFire;
+
 
 	//Terminal
 	private bool atTerminal = false;
 	private bool activateTerminal = false;
 	private string terminalName = "";
 
+	//Health
+
+
 
 	// Use this for initialization
 	void Start () {
 		spawn = transform.position;
+		health = GetComponent<PlayerHealth> ();
 		playerRigidbody = GetComponent<Rigidbody> ();
 		playerRigidbody.transform.Rotate (0, 270, 0);
 	}
@@ -132,6 +141,10 @@ public class PlayerController : MonoBehaviour {
 
 		Collider[] ground = Physics.OverlapSphere (groundCheck.position, groundRadius, whatIsGround);
 		if (ground.Length > 0) {
+			if(!this.grounded)
+			{
+				AudioSource.PlayClipAtPoint(this.landedClip, transform.position, 0.1f);
+			}
 			this.grounded = true;
 			this.currentLayer = this.getLayer(ground[0].tag);
 		} else {
@@ -145,6 +158,7 @@ public class PlayerController : MonoBehaviour {
 
 			if (Input.GetButtonDown ("Jump") && this.grounded) {
 				GetComponent<Rigidbody> ().AddForce (new Vector3 (0, jumpForce, 0));
+				AudioSource.PlayClipAtPoint(this.jumpClip, transform.position, 0.3f);
 			}
 
 			if (frontCamera.enabled && Input.GetButton ("Fire2") && Time.time > nextFire && this.canShoot) {
@@ -302,11 +316,14 @@ public class PlayerController : MonoBehaviour {
 		playerRigidbody.MoveRotation (newRotation); 
 	}
 //
-	void Die()
+	public void Die()
 	{
 //		StartCoroutine (waitOneSecond());
 		// respawn at latest checkpoint
-		transform.position = CheckPoint.ReachedPoint;
+		AudioSource.PlayClipAtPoint (this.deathClip, this.transform.position, 0.5f);
+		transform.position = CheckPoint.ReachedPoint + new Vector3(0,3,0);
+		this.health.AddHealth (1024);
+		this.health.alive();
 //		Instantiate(deathParticles, transform.position, Quaternion.identity);
 	}
 

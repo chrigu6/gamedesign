@@ -83,13 +83,18 @@ public class PlayerHealth : MonoBehaviour
 
     }
 
+	public void alive()
+	{
+		this.isDead = false;
+	}
+
 
     void Death()
     {
         isDead = true;
-
-        playerAudio.clip = deathClip;
-        playerAudio.Play();
+		playerController.Die ();
+        //playerAudio.clip = deathClip;
+        //playerAudio.Play();
 
     }
 }
