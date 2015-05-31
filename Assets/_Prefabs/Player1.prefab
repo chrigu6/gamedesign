@@ -493,7 +493,7 @@ GameObject:
   - 95: {fileID: 9578814}
   m_Layer: 8
   m_Name: prop_sciFiGun_low
-  m_TagString: Player1
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -848,7 +848,7 @@ GameObject:
   - 114: {fileID: 11480624}
   - 120: {fileID: 12075886}
   - 108: {fileID: 10803496}
-  - 114: {fileID: 11419058}
+  - 114: {fileID: 11480564}
   m_Layer: 8
   m_Name: Player1
   m_TagString: Player1
@@ -1871,8 +1871,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 166266}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: -1.62920685e-07}
-  m_LocalPosition: {x: 0, y: .50999999, z: .779999971}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalPosition: {x: -3.24000001, y: .5, z: 2.56999993}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 435682}
   - {fileID: 466744}
@@ -2644,7 +2644,7 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .5
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -2935,18 +2935,6 @@ Light:
   m_ShadowRadius: 0
   m_ShadowAngle: 0
   m_AreaSize: {x: 1, y: 1}
---- !u!114 &11419058
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 166266}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74f8f685e9d7b417c906465374a7d25e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startingScore: 0
 --- !u!114 &11437404
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2962,13 +2950,14 @@ MonoBehaviour:
   speed: 6
   turnSmoothing: 15
   speedDampTime: .100000001
-  jumpForce: 650
+  jumpForce: 900
   groundCheck: {fileID: 419302}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 15360
   canShoot: 1
   shootingQuad: {fileID: 0}
+  shootingQuadoffset: 5
   shotClip: {fileID: 8300000, guid: 40e20cabe27ea0c44aedb8059a504a68, type: 3}
   flashIntensity: 3
   fadeSpeed: 10
@@ -2982,6 +2971,18 @@ MonoBehaviour:
   shotSpawn: {fileID: 488012}
   fireRate: .25
   bulletSpeed: 1
+--- !u!114 &11480564
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 166266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74f8f685e9d7b417c906465374a7d25e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingScore: 0
 --- !u!114 &11480624
 MonoBehaviour:
   m_ObjectHideFlags: 1

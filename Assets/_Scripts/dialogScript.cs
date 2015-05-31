@@ -11,7 +11,6 @@ public class dialogScript : MonoBehaviour {
 	public GameObject cameras;
 	private bool busy = false;
 	private bool waitingForKey = false;
-	private bool next = false;
 	private int counter = 0;
 	string dialog;
 	object[] dialogLines;
@@ -62,7 +61,7 @@ public class dialogScript : MonoBehaviour {
 			this.cameras.GetComponent<CameraController>().ShowDialog();
 			this.dialogCanvas.enabled = true;
 			this.dialogShown = true;
-			while(counter < this.dialogLines.Length-1)
+			while(counter < this.dialogLines.Length)
 			{
 				StartCoroutine(ShowDialog());
 				yield return 0;
