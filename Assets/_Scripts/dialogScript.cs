@@ -10,7 +10,6 @@ public class dialogScript : MonoBehaviour {
 	private bool dialogShown = false;
 	public GameObject cameras;
 	private bool busy = false;
-	private bool waitingForKey = false;
 	private int counter = 0;
 	string dialog;
 	object[] dialogLines;

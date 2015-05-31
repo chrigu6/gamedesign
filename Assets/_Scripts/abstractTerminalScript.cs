@@ -239,7 +239,7 @@ public abstract class abstractTerminalScript : MonoBehaviour {
 				terminalAudio.clip = this.keys[Random.Range(0,5)];
 				//Debug.Log(terminalAudio.clip);
 				if(!terminalAudio.isPlaying)
-			{
+			{		this.terminalAudio.mute = false;
 					terminalAudio.Play ();
 			}
 
@@ -261,7 +261,7 @@ public abstract class abstractTerminalScript : MonoBehaviour {
 					wrapLines();
 				}
 			}
-			
+			//Debug.Log (letterPause);
 			yield return new WaitForSeconds(letterPause);
 		}
 		this.busy = false;
@@ -410,13 +410,15 @@ public abstract class abstractTerminalScript : MonoBehaviour {
 		}
 		body = body.Remove (body.Length - 1);
 		this.busy = true;
+		terminalAudio.mute = false;
 		terminalAudio.clip = (AudioClip)Resources.Load(body);
 		terminalAudio.Play ();
 		
 		while (terminalAudio.isPlaying) {
 			yield return 0;
 		}
-		
+
+		terminalAudio.mute = true;
 		this.busy = false;
 		yield return 0;
 		

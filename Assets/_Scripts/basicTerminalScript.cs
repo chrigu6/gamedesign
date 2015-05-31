@@ -80,6 +80,7 @@ public class basicTerminalScript : abstractTerminalScript {
 				}
 				else{
 					this.writeLineMethod("\nIncorrect. Try Again");
+					this.writeLineMethod(this.targetString);
 					this.originalText = this.gameObject.GetComponent<Text> ().text;
 					this.inputField.enabled = false;
 					system.SetSelectedGameObject(null);

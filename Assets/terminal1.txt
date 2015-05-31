@@ -1,50 +1,68 @@
 <wL>
 Establishing Network uplink
 <wL>
-Connecting to pirate bay
+Opening port
 <s>
 modem
 <fC>
 4
 <wL>
 Connection established
+<w>
+Take care Jack, there is an anti-
+virus-program blocking your way.
+I try to transfer you to 
+another bus. This way you 
+will be able to go around it.
+<fC>
+3
+<w>
+
+reset	equ 0dh
+dfopen	equ 0fh
+openf 	equ 3eh
+mov		ax,cs
+mov		ds,ax
+rol		d1,c17
+push	cx
+<fC>
+2
 <wL>
-Jack are you there ... ?
-The security between the ethernetcard and the
-mainbus is tighter than i fought.
-We have to breach the intern firewall to get 
-access to the hard of thi outpost.
-I prepared a little something to get you trough 
-this barrier to another bus.
-I don't have enough rights to run the code 
-remotly. 
-But you should be able to rund the script line
- by line from within the system.
-Just type the following instructions into the
-terminal.
-But be carefull. If you make to many mistakes, 
-the system security will notice
-and you will get some company.
+
+Access refused!
+<w>
+The security on this Bus is 
+tighter than i fought.
+I don't have enough rights 
+to run the code remotly. 
+But you should be able to 
+run the script line
+by line from within 
+the system.
+Just type the following 
+instructions into the
+terminal:
 <scriptInput>
 {input}
-OK. Here is the first line:
 
 sfc /scannow
 {output}
 {input}
 Beginning system scan.
-......
-......
-......
+...
+...
+...
 Scan complete.
+
+Weakest port: # 45
 
 That was to easy. 
 The next line is harder:
 
-
-sniffPort [1-x]-[*-999], check {breach}
+sniffPort [1-x]-[*-999],45 check {breach} #45
+{output}
 {input}
-Port A113 open.
+Port 45 open.
 Accessing port.
 
 Ok we have breached security. 
@@ -54,9 +72,10 @@ UP,up,down,down,left,right,left,right,b,a,start
 {output}
 <cameraSwitch>
 test
-<characterSwitch>
-test
-<enableShooting>
-test
+<w>
+Perfect Jack, you can now switch between
+ports by calling the "tab"-function.
+You may disover new paths that way.
+Good Luck!
 <end>
 <\end>
