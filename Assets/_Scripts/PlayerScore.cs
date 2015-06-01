@@ -11,6 +11,9 @@ public class PlayerScore : MonoBehaviour {
 	string scoreText = "Score: 0";
 	
 	Text guiScore;
+
+	public AudioClip coinClip;
+	AudioSource coinAudio;
 	
 	
 	
@@ -19,6 +22,8 @@ public class PlayerScore : MonoBehaviour {
 		currentScore = startingScore;
 		guiScore = GameObject.Find("Score").GetComponent<Text> ();
 		guiScore.text = scoreText;
+		coinAudio = GetComponent <AudioSource> ();
+
 	}
 	
 	// Update is called once per frame
@@ -35,6 +40,13 @@ public class PlayerScore : MonoBehaviour {
 		scoreText = "Score: " + currentScore.ToString ();
 		guiScore.text = scoreText;
 		//			playerAudio.Play();
+	}
+
+	public void PlayCoinSound(){
+		
+		coinAudio.clip = coinClip;
+		coinAudio.Play ();
+	
 	}
 	
 	
