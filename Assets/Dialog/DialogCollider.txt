@@ -1,4 +1,4 @@
-Ok Jack, I managed to transfer you in one of the outer nodes of the RING. We don't have enough access righta  to send you to the core of the ring. 
+Ok Jack, I managed to transfer you in one of the outer nodes of the RING. We don't have enough access rights  to send you to the core of the ring. 
 We have to manipulate the central memory of this node, gain access to the CPU and open a network port to get to the RING itself. 
 You are currently at the Ethernetport you have to fight your way over the South-, and the Northbridge over the central Bus to get to the RAM.
 But be careful, this system is heavily protected. There will be Firewalls, Antivirussoftwares, Sandboxes and other stuff blocking your way.

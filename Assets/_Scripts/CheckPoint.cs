@@ -3,6 +3,7 @@ using System.Collections;
 
 public class CheckPoint : MonoBehaviour {
 	public static Vector3 ReachedPoint;
+	public AudioClip checkPointClip;
 
 
 	// Use this for initialization
@@ -19,9 +20,9 @@ public class CheckPoint : MonoBehaviour {
 		// check if collider's tag contains "Player"
 		if (other.tag.Contains("Player")) {
 			if (other.transform.position.x > ReachedPoint.x){
+				AudioSource.PlayClipAtPoint(this.checkPointClip,transform.position);
 				// checkpoint's position = player's position
 				ReachedPoint = transform.position;
-				Debug.Log (ReachedPoint);
 			}
 		}
 

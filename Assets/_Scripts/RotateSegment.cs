@@ -3,9 +3,10 @@ using System.Collections;
 
 public class RotateSegment : MonoBehaviour {
 	public float angle = 0.1f;
-	public Vector3 pivot;
+	private Vector3 pivot;
 	// Use this for initialization
 	void Start () {
+		this.pivot = GetComponentInChildren<GetPivot> ().getPivot ();
 	}
 	
 	// Update is called once per frame

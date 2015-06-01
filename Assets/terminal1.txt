@@ -74,7 +74,7 @@ UP,up,down,down,left,right,left,right,b,a,start
 test
 <w>
 Perfect Jack, you can now switch between
-ports by calling the "tab"-function.
+BUS by calling the "tab"-function.
 You may disover new paths that way.
 Good Luck!
 <end>
