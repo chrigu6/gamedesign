@@ -30,7 +30,7 @@ GameObject:
   - 114: {fileID: 11426552}
   m_Layer: 0
   m_Name: Blue_Bolt
-  m_TagString: Untagged
+  m_TagString: FriendlyBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -118,6 +118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
+  damage: 50
 --- !u!136 &13607842
 CapsuleCollider:
   m_ObjectHideFlags: 1

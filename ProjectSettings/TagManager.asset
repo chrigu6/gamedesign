@@ -20,6 +20,8 @@ TagManager:
   - DialogCollider
   - CheckPoint
   - Coin
+  - EnemyBullet
+  - FriendlyBullet
   layers:
   - Default
   - TransparentFX

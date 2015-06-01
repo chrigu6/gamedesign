@@ -7,7 +7,7 @@ public class Mover : MonoBehaviour
 	public float damage = 50;
 
 	private Vector3 origin;
-	private float range = 0;
+	private float range = 100;
 
 
 	void Start ()

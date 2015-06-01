@@ -17,7 +17,6 @@ public class LaserSwitchDeactivation : MonoBehaviour {
 
 	void OnTriggerStay(Collider other)
 	{
-		Debug.Log (player);
 		if (other.gameObject == player) 
 		{
 			if(Input.GetButton("Action"))

@@ -17,6 +17,7 @@ public class PlayerHealth : MonoBehaviour
     public float flashSpeed = 5f;
     public Color flashColour = new Color(1f, 0f, 0f, 0.1f);
 
+	private Mover bullet;
     AudioSource playerAudio;
     PlayerController playerController;
     bool healed;
@@ -62,6 +63,16 @@ public class PlayerHealth : MonoBehaviour
             playerAudio.Play();
         }
     }
+	
+	void OnTriggerEnter(Collider other) {
+		//Receive damage from enemy bullet
+		Debug.Log (other);
+		if(other.tag == "EnemyBullet") {
+			bullet = other.GetComponent<Mover>();
+			TakeDamage((int)bullet.damage);
+			Destroy(bullet.gameObject);
+		}
+	}
 
     // Player takes damage
     public void TakeDamage(int amount)
