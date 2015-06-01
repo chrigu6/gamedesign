@@ -54,6 +54,8 @@ public class PlayerController : MonoBehaviour {
 	public float bulletSpeed;
 	private float nextFire;
 
+	public GameObject shot;
+
 	//Cameras
 	public Camera frontCamera;
 	public Camera aboveCamera;
@@ -202,8 +204,8 @@ public class PlayerController : MonoBehaviour {
 	void ShotEffects(){
 		timer = 0f;
 		gunLight.enabled = true;
-		gunLine.enabled = true;
-		gunLine.SetPosition (0, rightHand.position);
+		//gunLine.enabled = true;
+		//gunLine.SetPosition (0, rightHand.position);
 		shootRay.origin = rightHand.position;
 
 		Ray camRay = Camera.main.ScreenPointToRay (Input.mousePosition);
@@ -215,8 +217,8 @@ public class PlayerController : MonoBehaviour {
 
 		AudioSource.PlayClipAtPoint (shotClip, rightHand.position, 0.3f);
 
-		enemyRay.origin = transform.position;
-		enemyRay.direction = transform.forward;
+		enemyRay.origin = rightHand.position;
+		enemyRay.direction = shotPosition;
 
 		if(Physics.Raycast(enemyRay, out shootHit, range, shootableMask)){
 			EnemyHealth enemyHealth = shootHit.collider.GetComponent <EnemyHealth>();
@@ -231,8 +233,17 @@ public class PlayerController : MonoBehaviour {
 		if(Physics.Raycast(camRay, out floorHit, range, this.shootingMask))
 		{
 			Vector3 playerToMouse = floorHit.point - rightHand.position;
-			shootRay.direction = playerToMouse;
-			gunLine.SetPosition(1,shootRay.origin + shootRay.direction * range);
+			playerToMouse.z = rightHand.position.z;
+			float angle = Vector3.Angle(playerToMouse,new Vector3(1,0,0));
+			if(playerToMouse.y<0)
+			{
+				angle = angle *-1;
+			}
+			//shootRay.direction = playerToMouse;
+			//gunLine.SetPosition(1,shootRay.origin + shootRay.direction * range);
+			//Quaternion rotation = 
+			//rotation = rightHand.rotation * rotation;
+			Instantiate (shot, rightHand.position, Quaternion.Euler (new Vector3(0,0,angle)));
 		}
 
 
@@ -240,7 +251,7 @@ public class PlayerController : MonoBehaviour {
 
 	void DisableEffects()
 	{
-		gunLine.enabled = false;
+		//gunLine.enabled = false;
 		gunLight.enabled = false;
 	}
 
