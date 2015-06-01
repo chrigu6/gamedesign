@@ -66,7 +66,6 @@ public class PlayerHealth : MonoBehaviour
 	
 	void OnTriggerEnter(Collider other) {
 		//Receive damage from enemy bullet
-		Debug.Log (other);
 		if(other.tag == "EnemyBullet") {
 			bullet = other.GetComponent<Mover>();
 			TakeDamage((int)bullet.damage);

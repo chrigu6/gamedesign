@@ -8,14 +8,17 @@ public class MountedGunHealth : MonoBehaviour {
 	private float currentHealth;
 	private Mover bullet;
 
+	private PlayerController player1;
+
 	void Awake() {
 		currentHealth = health;
+		player1 = GameObject.FindGameObjectWithTag ("Player1").GetComponent<PlayerController> ();
 	}
 
 	void OnTriggerEnter(Collider other) {
 		if (other.tag == "FriendlyBullet") {
 			bullet = other.GetComponent<Mover>();
-			TakeDamage(bullet.damage);
+			TakeDamage(player1.damagePerShot);
 			Destroy(bullet.gameObject);
 		}
 	}
