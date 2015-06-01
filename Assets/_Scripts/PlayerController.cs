@@ -52,8 +52,8 @@ public class PlayerController : MonoBehaviour {
 	public Transform shotSpawn;
 	public float fireRate;
 	public float bulletSpeed;
+	public float ammo = 10;
 	private float nextFire;
-
 	public GameObject shot;
 
 	//Cameras
@@ -137,6 +137,10 @@ public class PlayerController : MonoBehaviour {
 			this.shootingQuad.transform.position = this.transform.position +  new Vector3(0,0,shootingQuadoffset);
 		}
 
+		if (ammo <= 0) {
+			this.canShoot = false;
+		}
+
 		/*if (shot < 0.5f) {
 			laserShotLine.enabled = false;
 		}*/
@@ -203,6 +207,7 @@ public class PlayerController : MonoBehaviour {
 
 	void ShotEffects(){
 		timer = 0f;
+		ammo -= 1;
 		gunLight.enabled = true;
 		//gunLine.enabled = true;
 		//gunLine.SetPosition (0, rightHand.position);
@@ -399,6 +404,5 @@ public class PlayerController : MonoBehaviour {
 	IEnumerator waitOneSecond() {
 		yield return new WaitForSeconds(1);
 	}
-
-
+	
 }
