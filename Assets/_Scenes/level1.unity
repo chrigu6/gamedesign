@@ -3608,6 +3608,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 11477600, guid: 4c86ac4795df72b42a529b74407b0a3c, type: 2}
+      propertyPath: healthSlider
+      value: 
+      objectReference: {fileID: 1333852789}
+    - target: {fileID: 11477600, guid: 4c86ac4795df72b42a529b74407b0a3c, type: 2}
+      propertyPath: damageImage
+      value: 
+      objectReference: {fileID: 1333852788}
     - target: {fileID: 11419494, guid: 4c86ac4795df72b42a529b74407b0a3c, type: 2}
       propertyPath: shootingQuad
       value: 
@@ -3624,14 +3632,6 @@ Prefab:
       propertyPath: m_Name
       value: Player2
       objectReference: {fileID: 0}
-    - target: {fileID: 11477600, guid: 4c86ac4795df72b42a529b74407b0a3c, type: 2}
-      propertyPath: healthSlider
-      value: 
-      objectReference: {fileID: 1333852789}
-    - target: {fileID: 11477600, guid: 4c86ac4795df72b42a529b74407b0a3c, type: 2}
-      propertyPath: damageImage
-      value: 
-      objectReference: {fileID: 1333852788}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4c86ac4795df72b42a529b74407b0a3c, type: 2}
   m_IsPrefabParent: 0
@@ -11797,14 +11797,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 11480624, guid: bed7ed52c780a0a4d9da3340ab2f958b, type: 2}
-      propertyPath: healthSlider
-      value: 
-      objectReference: {fileID: 1876963641}
-    - target: {fileID: 11480624, guid: bed7ed52c780a0a4d9da3340ab2f958b, type: 2}
-      propertyPath: damageImage
-      value: 
-      objectReference: {fileID: 1333852788}
     - target: {fileID: 11437404, guid: bed7ed52c780a0a4d9da3340ab2f958b, type: 2}
       propertyPath: shootingQuad
       value: 
@@ -11817,6 +11809,14 @@ Prefab:
       propertyPath: aboveCamera
       value: 
       objectReference: {fileID: 1947031007}
+    - target: {fileID: 11480624, guid: bed7ed52c780a0a4d9da3340ab2f958b, type: 2}
+      propertyPath: healthSlider
+      value: 
+      objectReference: {fileID: 1876963641}
+    - target: {fileID: 11480624, guid: bed7ed52c780a0a4d9da3340ab2f958b, type: 2}
+      propertyPath: damageImage
+      value: 
+      objectReference: {fileID: 1333852788}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bed7ed52c780a0a4d9da3340ab2f958b, type: 2}
   m_IsPrefabParent: 0

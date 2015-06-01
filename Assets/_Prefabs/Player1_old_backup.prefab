@@ -2852,7 +2852,7 @@ MonoBehaviour:
   fadeSpeed: 10
   damagePerShot: 20
   timeBetweenBullets: .150000006
-  range: 100
+  range: 50
   rightHand: {fileID: 450508}
   shotSpawn: {fileID: 475156}
   fireRate: .25
