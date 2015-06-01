@@ -1,0 +1,8 @@
+<w>
+You are not longer alone, Jack!
+Call the "c"-function to give
+controll over to Bruce-Lee!
+<characterSwitch>
+test
+<end>
+</end>

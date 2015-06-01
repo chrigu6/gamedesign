@@ -30,7 +30,7 @@ GameObject:
   - 114: {fileID: 11446604}
   m_Layer: 10
   m_Name: Segment - Rotating
-  m_TagString: floor
+  m_TagString: platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48,7 +48,7 @@ GameObject:
   - 23: {fileID: 2333918}
   m_Layer: 10
   m_Name: Bottom
-  m_TagString: Untagged
+  m_TagString: platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

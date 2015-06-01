@@ -3,4 +3,5 @@ We have to manipulate the central memory of this node, gain access to the CPU an
 You are currently at the Ethernetport you have to fight your way over the South-, and the Northbridge over the central Bus to get to the RAM.
 But be careful, this system is heavily protected. There will be Firewalls, Antivirussoftwares, Sandboxes and other stuff blocking your way.
 Remember you can move by calling the "w"-,"s"-,"a"- and "d"-functions. You can jump using the "space"-function. If you stumble upon a connection-terminal call the "e"-function to establish a link to me.
+There are several back-up possibilites ahead. From them you will be able to restore your status in case you get erased!
 Good luck!

@@ -2895,7 +2895,7 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 15360
-  canShoot: 1
+  canShoot: 0
   shootingQuad: {fileID: 0}
   shootingQuadoffset: 5
   shotClip: {fileID: 8300000, guid: 40e20cabe27ea0c44aedb8059a504a68, type: 3}
@@ -2908,6 +2908,7 @@ MonoBehaviour:
   shotSpawn: {fileID: 488012}
   fireRate: .25
   bulletSpeed: 1
+  ammo: 10
   shot: {fileID: 141238, guid: 3e9cf5af545c26047b031c8a515b8db4, type: 2}
   frontCamera: {fileID: 0}
   aboveCamera: {fileID: 0}

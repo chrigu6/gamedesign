@@ -22,6 +22,8 @@ TagManager:
   - Coin
   - EnemyBullet
   - FriendlyBullet
+  - terminal2
+  - terminal3
   layers:
   - Default
   - TransparentFX

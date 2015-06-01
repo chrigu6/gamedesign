@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour {
 	public LayerMask whatIsGround;
 
 	//Shooting
-	public bool canShoot = true;
+	public bool canShoot = false;
 	public GameObject shootingQuad;
 	public float shootingQuadoffset;
 	public AudioClip shotClip;

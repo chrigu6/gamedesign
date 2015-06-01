@@ -1,81 +1,24 @@
-<wL>
-Establishing Network uplink
-<wL>
-Opening port
-<s>
-modem
-<fC>
-4
-<wL>
-Connection established
 <w>
-Take care Jack, there is an anti-
-virus-program blocking your way.
-I try to transfer you to 
-another bus. This way you 
-will be able to go around it.
-<fC>
-3
-<w>
-
-reset	equ 0dh
-dfopen	equ 0fh
-openf 	equ 3eh
-mov		ax,cs
-mov		ds,ax
-rol		d1,c17
-push	cx
-<fC>
-2
+Attention Jack! There is a 
+bogey ahead!
+I will give you some firepower.
+Attack harmfull programms by 
+calling the 
+"left-mouse"-function.
+But take care, 
+you dont have endless
+memory-access for attacs.
 <wL>
 
-Access refused!
-<w>
-The security on this Bus is 
-tighter than i fought.
-I don't have enough rights 
-to run the code remotly. 
-But you should be able to 
-run the script line
-by line from within 
-the system.
-Just type the following 
-instructions into the
-terminal:
-<scriptInput>
-{input}
+Memory access granted!
 
-sfc /scannow
-{output}
-{input}
-Beginning system scan.
-...
-...
-...
-Scan complete.
-
-Weakest port: # 45
-
-That was to easy. 
-The next line is harder:
-
-sniffPort [1-x]-[*-999],45 check {breach} #45
-{output}
-{input}
-Port 45 open.
-Accessing port.
-
-Ok we have breached security. 
-You can go for the kill now:
-
-UP,up,down,down,left,right,left,right,b,a,start
-{output}
-<cameraSwitch>
+<enableShooting>
 test
-<w>
-Perfect Jack, you can now switch between
-BUS by calling the "tab"-function.
-You may disover new paths that way.
-Good Luck!
+<wL>
+
+Shoot ahead!
+
+All your base are belong to us!
+
 <end>
-<\end>
+</end>
