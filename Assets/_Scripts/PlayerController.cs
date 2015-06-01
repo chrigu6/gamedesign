@@ -243,7 +243,9 @@ public class PlayerController : MonoBehaviour {
 			//gunLine.SetPosition(1,shootRay.origin + shootRay.direction * range);
 			//Quaternion rotation = 
 			//rotation = rightHand.rotation * rotation;
-			Instantiate (shot, rightHand.position, Quaternion.Euler (new Vector3(0,0,angle)));
+			GameObject o = Instantiate (shot, rightHand.position, Quaternion.Euler (new Vector3(0,0,angle))) as GameObject;
+			o.GetComponent<Mover>().setRange(this.range);
+			o.GetComponent<Mover>().setOrigin(this.rightHand.position);
 		}
 
 
