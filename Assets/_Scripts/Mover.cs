@@ -4,6 +4,8 @@ using System.Collections;
 public class Mover : MonoBehaviour 
 {
 	public float speed;
+	public float damage = 50;
+
 	private Vector3 origin;
 	private float range = 0;
 
