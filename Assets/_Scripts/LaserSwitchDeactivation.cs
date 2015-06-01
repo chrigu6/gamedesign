@@ -9,7 +9,7 @@ public class LaserSwitchDeactivation : MonoBehaviour {
 	private GameObject player;
 	private AudioSource audio;
 
-	void Avake() 
+	void Awake() 
 	{
 		player = GameObject.FindGameObjectWithTag ("Player1");
 		audio = GetComponent<AudioSource> ();
@@ -17,6 +17,7 @@ public class LaserSwitchDeactivation : MonoBehaviour {
 
 	void OnTriggerStay(Collider other)
 	{
+		Debug.Log (player);
 		if (other.gameObject == player) 
 		{
 			if(Input.GetButton("Action"))
