@@ -206,7 +206,7 @@ public class PlayerController : MonoBehaviour {
 		gunLight.enabled = true;
 		//gunLine.enabled = true;
 		//gunLine.SetPosition (0, rightHand.position);
-		shootRay.origin = rightHand.position;
+		//shootRay.origin = rightHand.position;
 
 		Ray camRay = Camera.main.ScreenPointToRay (Input.mousePosition);
 		RaycastHit floorHit;
@@ -232,18 +232,23 @@ public class PlayerController : MonoBehaviour {
 
 		if(Physics.Raycast(camRay, out floorHit, range, this.shootingMask))
 		{
+			//Debug.Log (floorHit.point);
 			Vector3 playerToMouse = floorHit.point - rightHand.position;
-			playerToMouse.z = rightHand.position.z;
+			playerToMouse.z = 0;
+			//Debug.Log ("ptm: " + playerToMouse);
+			//Debug.Log (rightHand.position);
 			float angle = Vector3.Angle(playerToMouse,new Vector3(1,0,0));
+			//Debug.Log (angle);
 			if(playerToMouse.y<0)
 			{
 				angle = angle *-1;
 			}
 			//shootRay.direction = playerToMouse;
+
 			//gunLine.SetPosition(1,shootRay.origin + shootRay.direction * range);
 			//Quaternion rotation = 
 			//rotation = rightHand.rotation * rotation;
-			GameObject o = Instantiate (shot, rightHand.position, Quaternion.Euler (new Vector3(0,0,angle))) as GameObject;
+			GameObject o = Instantiate (shot, rightHand.position, Quaternion.AngleAxis (angle, new Vector3(0,0,1))) as GameObject;
 			o.GetComponent<Mover>().setRange(this.range);
 			o.GetComponent<Mover>().setOrigin(this.rightHand.position);
 		}
