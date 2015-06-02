@@ -27,7 +27,7 @@ public class CheckPoint : MonoBehaviour {
 				if (gameObject.name.Contains ("CheckPointP1 0")){
 				}
 				else{
-					AudioSource.PlayClipAtPoint(this.checkPointClip,transform.position);
+					AudioSource.PlayClipAtPoint(this.checkPointClip,transform.position, 0.5f);
 					// checkpoint's position = player's position
 				}
 			}
@@ -40,7 +40,7 @@ public class CheckPoint : MonoBehaviour {
 				if (gameObject.name.Contains ("CheckPointP2 0")){
 				}
 				else{
-				AudioSource.PlayClipAtPoint(this.checkPointClip,transform.position);
+				AudioSource.PlayClipAtPoint(this.checkPointClip,transform.position, 0.5f);
 				// checkpoint's position = player's position
 				}
 			}

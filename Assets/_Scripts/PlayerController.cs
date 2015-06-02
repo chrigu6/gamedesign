@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class PlayerController : MonoBehaviour {
@@ -73,7 +74,8 @@ public class PlayerController : MonoBehaviour {
 	private bool atTerminal = false;
 	private bool activateTerminal = false;
 	private string terminalName = "";
-	
+
+
 	//Health
 	
 	
@@ -84,6 +86,7 @@ public class PlayerController : MonoBehaviour {
 		health = GetComponent<PlayerHealth> ();
 		playerRigidbody = GetComponent<Rigidbody> ();
 		playerRigidbody.transform.Rotate (0, 270, 0);
+		isPlayerActive ();
 	}
 	
 	void Awake() {
@@ -118,6 +121,15 @@ public class PlayerController : MonoBehaviour {
 		} else {
 			playerRigidbody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
 		}
+
+		if (canShoot == false) {
+			GameObject.Find("CurrentAmmo").GetComponent<Text> ().enabled = false;
+		}
+		if (canShoot == true) {
+			GameObject.Find("CurrentAmmo").GetComponent<Text> ().enabled = true;
+		}
+
+
 		/*
 		if (frontCamera.enabled)
 		{
@@ -325,6 +337,9 @@ public class PlayerController : MonoBehaviour {
 		if (isActive) {
 			if (colide.gameObject.tag.Contains ("platform")) {
 				transform.parent = colide.transform;
+			}
+			if (colide.gameObject.tag.Contains ("platform") == false) {
+				transform.parent = null;
 			}
 		}
 	}

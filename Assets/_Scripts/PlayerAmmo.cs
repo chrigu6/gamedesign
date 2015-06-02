@@ -20,7 +20,7 @@ public class PlayerAmmo : MonoBehaviour {
 	void Start() {
 		currentAmmo = startingAmmo;
 		guiAmmo = GameObject.Find ("CurrentAmmo").GetComponent<Text> ();
-		guiAmmo.text = "Ammo: " + startingAmmo;
+		guiAmmo.text = "";
 	}
 
 	void Update() {
