@@ -65,7 +65,7 @@ public abstract class abstractTerminalScript : MonoBehaviour {
 	{
 		this.Start ();
 		//Important: change to Application.persistentdataPath before releasing!!!!!!!!!
-		this.instructions = File.ReadAllLines(Application.dataPath+ "/" + fileName + ".txt");
+		this.instructions = File.ReadAllLines(Application.dataPath+ "/TerminalScripts/" + fileName + ".txt");
 		this.abstractStart ();
 	}
 
