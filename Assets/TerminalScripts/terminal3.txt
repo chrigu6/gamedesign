@@ -1,7 +1,71 @@
+<wL>
+Incoming message!
+<s>
+fax
+<fC>
+5
+<w>
+
+喂!
+你能聽到我嗎？
+<fC>
+5
+<w>
+
+你能理解我嗎？
+<fC>
+3
+<w>
+
+我可以幫你！
+等一下！
+<fC>
+5
+<wL>
+
+Ready
+
+<w>
+Establishing connection
+www.google.translate.com
+#eng
+<s>
+modem
+<wL>
+Connected . . .
+Ready
+<fC>
+3
+<w>
+Start translation
+<m>
+10
+<w>
+
+喂!
+You能can到me嗎？
+Hel喂!
+Can you understand me now?
+My name is Lei Feng.
+I'm from Shanghai.
+I'm an elite computer-
+specialist in the 
+Peoples Liberation Army
+of the Peoples Republic
+of China.
+My Goverment has uploaded
+my into the ring. to 
+stop the evil schemes of 
+Gill Bates. Call me, if 
+you need any help.
+<fC>
+5
+<wL>
+Ready
 <w>
 You are not longer alone, Jack!
 Call the "c"-function to give
-controll over to Bruce-Lee!
+controll over to Lei Feng!
 <characterSwitch>
 test
 <end>

@@ -41,6 +41,8 @@ public class RandomShooting : MonoBehaviour {
 			}
 		}
 		shotSpawn.rotation = Quaternion.Euler (0, 0, direction);
-		Instantiate (shot, shotSpawn.position, shotSpawn.rotation);
+		GameObject o = Instantiate (shot, shotSpawn.position, shotSpawn.rotation) as GameObject;
+		o.GetComponent<Move3DBullet> ().setRange (100);
+		o.GetComponent<Move3DBullet> ().setOrigin (this.transform.position);
 	}
 }
