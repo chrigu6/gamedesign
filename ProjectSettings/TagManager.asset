@@ -16,7 +16,7 @@ TagManager:
   - terminal
   - Player2
   - cameraController
-  - platform
+  - 1stLane - platform
   - DialogCollider
   - CheckPoint
   - Coin

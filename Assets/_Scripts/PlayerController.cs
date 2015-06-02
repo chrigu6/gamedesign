@@ -323,7 +323,7 @@ public class PlayerController : MonoBehaviour {
 	void OnCollisionEnter(Collision colide)
 	{
 		if (isActive) {
-			if (colide.gameObject.tag == "platform") {
+					if (colide.gameObject.tag.Contains ("platform")) {
 				transform.parent = colide.transform;
 			}
 		}
@@ -332,7 +332,7 @@ public class PlayerController : MonoBehaviour {
 	void OnCollisionExit(Collision colide)
 	{
 		if (isActive) {
-			if (colide.gameObject.tag == "platform") {
+			if (colide.gameObject.tag.Contains ("platform")) {
 				transform.parent = null;
 			}
 		}
@@ -365,11 +365,11 @@ public class PlayerController : MonoBehaviour {
 
 	private int getLayer(string LayerName){
 		Debug.Log (LayerName);
-		if (LayerName.Equals ("1stLane"))
+		if (LayerName.Contains ("1stLane"))
 			return 1;
-		if (LayerName.Equals ("2ndLane"))
+		if (LayerName.Contains ("2ndLane"))
 			return 2;
-		if (LayerName.Equals ("3dLane"))
+		if (LayerName.Contains ("3dLane"))
 			return 3;
 
 		return this.currentLayer;

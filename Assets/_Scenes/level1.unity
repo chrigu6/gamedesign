@@ -126,6 +126,34 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 110896, guid: a2fd8b6ebf501634abddd800b1438ab2, type: 2}
+      propertyPath: m_TagString
+      value: 1stLane - platform
+      objectReference: {fileID: 0}
+    - target: {fileID: 194552, guid: a2fd8b6ebf501634abddd800b1438ab2, type: 2}
+      propertyPath: m_TagString
+      value: 1stLane - platform
+      objectReference: {fileID: 0}
+    - target: {fileID: 192302, guid: a2fd8b6ebf501634abddd800b1438ab2, type: 2}
+      propertyPath: m_TagString
+      value: 1stLane - platform
+      objectReference: {fileID: 0}
+    - target: {fileID: 115532, guid: a2fd8b6ebf501634abddd800b1438ab2, type: 2}
+      propertyPath: m_TagString
+      value: 1stLane - platform
+      objectReference: {fileID: 0}
+    - target: {fileID: 102978, guid: a2fd8b6ebf501634abddd800b1438ab2, type: 2}
+      propertyPath: m_TagString
+      value: 1stLane - platform
+      objectReference: {fileID: 0}
+    - target: {fileID: 187344, guid: a2fd8b6ebf501634abddd800b1438ab2, type: 2}
+      propertyPath: m_TagString
+      value: 1stLane - platform
+      objectReference: {fileID: 0}
+    - target: {fileID: 147190, guid: a2fd8b6ebf501634abddd800b1438ab2, type: 2}
+      propertyPath: m_TagString
+      value: 1stLane - platform
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a2fd8b6ebf501634abddd800b1438ab2, type: 2}
   m_IsPrefabParent: 0
@@ -142,7 +170,7 @@ GameObject:
   - 23: {fileID: 15833844}
   m_Layer: 10
   m_Name: Side2
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -218,7 +246,7 @@ GameObject:
   - 23: {fileID: 16679219}
   m_Layer: 10
   m_Name: Back
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -294,7 +322,7 @@ GameObject:
   - 23: {fileID: 25476467}
   m_Layer: 10
   m_Name: Front
-  m_TagString: Untagged
+  m_TagString: 1stLane - platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -370,7 +398,7 @@ GameObject:
   - 23: {fileID: 38561232}
   m_Layer: 10
   m_Name: Side1
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -478,11 +506,31 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 110896, guid: a2fd8b6ebf501634abddd800b1438ab2, type: 2}
       propertyPath: m_TagString
-      value: platform
+      value: 1stLane - platform
       objectReference: {fileID: 0}
     - target: {fileID: 102978, guid: a2fd8b6ebf501634abddd800b1438ab2, type: 2}
       propertyPath: m_TagString
-      value: platform
+      value: 1stLane - platform
+      objectReference: {fileID: 0}
+    - target: {fileID: 194552, guid: a2fd8b6ebf501634abddd800b1438ab2, type: 2}
+      propertyPath: m_TagString
+      value: 1stLane - platform
+      objectReference: {fileID: 0}
+    - target: {fileID: 192302, guid: a2fd8b6ebf501634abddd800b1438ab2, type: 2}
+      propertyPath: m_TagString
+      value: 1stLane - platform
+      objectReference: {fileID: 0}
+    - target: {fileID: 115532, guid: a2fd8b6ebf501634abddd800b1438ab2, type: 2}
+      propertyPath: m_TagString
+      value: 1stLane - platform
+      objectReference: {fileID: 0}
+    - target: {fileID: 187344, guid: a2fd8b6ebf501634abddd800b1438ab2, type: 2}
+      propertyPath: m_TagString
+      value: 1stLane - platform
+      objectReference: {fileID: 0}
+    - target: {fileID: 147190, guid: a2fd8b6ebf501634abddd800b1438ab2, type: 2}
+      propertyPath: m_TagString
+      value: 1stLane - platform
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a2fd8b6ebf501634abddd800b1438ab2, type: 2}
@@ -500,7 +548,7 @@ GameObject:
   - 23: {fileID: 43100134}
   m_Layer: 10
   m_Name: Side2
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -629,7 +677,7 @@ GameObject:
   - 23: {fileID: 45789909}
   m_Layer: 10
   m_Name: Side2
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -702,7 +750,7 @@ GameObject:
   - 4: {fileID: 53378153}
   m_Layer: 10
   m_Name: LanePart 2
-  m_TagString: floor
+  m_TagString: 1stLane - platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -724,7 +772,7 @@ Transform:
   - {fileID: 1553339488}
   - {fileID: 1023831044}
   m_Father: {fileID: 877754053}
-  m_RootOrder: 5
+  m_RootOrder: 3
 --- !u!1 &57435596
 GameObject:
   m_ObjectHideFlags: 0
@@ -738,7 +786,7 @@ GameObject:
   - 23: {fileID: 57435598}
   m_Layer: 10
   m_Name: Back
-  m_TagString: Untagged
+  m_TagString: 1stLane - platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -801,82 +849,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 57435596}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &60213953
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 125472, guid: 2ad98ac5b1742b646906a1d6a528edda, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 60213954}
-  - 33: {fileID: 60213957}
-  - 64: {fileID: 60213956}
-  - 23: {fileID: 60213955}
-  m_Layer: 10
-  m_Name: Side1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
---- !u!4 &60213954
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 469324, guid: 2ad98ac5b1742b646906a1d6a528edda, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 60213953}
-  m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106709}
-  m_LocalPosition: {x: -5, y: 0, z: 2.5}
-  m_LocalScale: {x: 5, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 680561664}
-  m_RootOrder: 0
---- !u!23 &60213955
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 2306240, guid: 2ad98ac5b1742b646906a1d6a528edda,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 60213953}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_Materials:
-  - {fileID: 2100000, guid: 94dfb7e528d95ca4e8f1eb6448dbb53b, type: 2}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
---- !u!64 &60213956
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6411748, guid: 2ad98ac5b1742b646906a1d6a528edda,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 60213953}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 0
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!33 &60213957
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 3360808, guid: 2ad98ac5b1742b646906a1d6a528edda,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 60213953}
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &68525794
 GameObject:
   m_ObjectHideFlags: 0
@@ -890,7 +862,7 @@ GameObject:
   - 23: {fileID: 68525796}
   m_Layer: 11
   m_Name: Top
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -966,7 +938,7 @@ GameObject:
   - 23: {fileID: 69745145}
   m_Layer: 10
   m_Name: Side2
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1042,7 +1014,7 @@ GameObject:
   - 23: {fileID: 72853132}
   m_Layer: 11
   m_Name: Top
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1115,7 +1087,7 @@ GameObject:
   - 4: {fileID: 73664518}
   m_Layer: 11
   m_Name: LanePart
-  m_TagString: floor
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1137,7 +1109,7 @@ Transform:
   - {fileID: 348341814}
   - {fileID: 210685699}
   m_Father: {fileID: 1437268526}
-  m_RootOrder: 7
+  m_RootOrder: 5
 --- !u!1 &78837305
 GameObject:
   m_ObjectHideFlags: 0
@@ -1151,7 +1123,7 @@ GameObject:
   - 23: {fileID: 78837307}
   m_Layer: 10
   m_Name: Front
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1303,7 +1275,7 @@ GameObject:
   - 23: {fileID: 90934533}
   m_Layer: 11
   m_Name: Bottom
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1379,7 +1351,7 @@ GameObject:
   - 23: {fileID: 92270990}
   m_Layer: 10
   m_Name: Top
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1455,7 +1427,7 @@ GameObject:
   - 23: {fileID: 94096686}
   m_Layer: 10
   m_Name: Bottom
-  m_TagString: Untagged
+  m_TagString: 1stLane - platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1531,7 +1503,7 @@ GameObject:
   - 23: {fileID: 98400447}
   m_Layer: 11
   m_Name: Side1
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1607,7 +1579,7 @@ GameObject:
   - 23: {fileID: 101974899}
   m_Layer: 10
   m_Name: Side1
-  m_TagString: Untagged
+  m_TagString: 1stLane - platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1683,7 +1655,7 @@ GameObject:
   - 23: {fileID: 103614801}
   m_Layer: 11
   m_Name: Bottom
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1814,7 +1786,7 @@ GameObject:
   - 4: {fileID: 109166549}
   m_Layer: 10
   m_Name: LanePart 1
-  m_TagString: floor
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1836,7 +1808,7 @@ Transform:
   - {fileID: 1163948492}
   - {fileID: 1363677297}
   m_Father: {fileID: 1099796402}
-  m_RootOrder: 6
+  m_RootOrder: 4
 --- !u!1 &110304354
 GameObject:
   m_ObjectHideFlags: 0
@@ -1850,7 +1822,7 @@ GameObject:
   - 23: {fileID: 110304356}
   m_Layer: 10
   m_Name: Bottom
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1926,7 +1898,7 @@ GameObject:
   - 23: {fileID: 125728373}
   m_Layer: 11
   m_Name: Side2
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -2002,7 +1974,7 @@ GameObject:
   - 23: {fileID: 128170348}
   m_Layer: 10
   m_Name: Back
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2078,7 +2050,7 @@ GameObject:
   - 23: {fileID: 135829325}
   m_Layer: 11
   m_Name: Front
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -2154,7 +2126,7 @@ GameObject:
   - 23: {fileID: 136553782}
   m_Layer: 10
   m_Name: Back
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2230,7 +2202,7 @@ GameObject:
   - 23: {fileID: 142678948}
   m_Layer: 10
   m_Name: Back
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2306,7 +2278,7 @@ GameObject:
   - 23: {fileID: 149644172}
   m_Layer: 10
   m_Name: Front
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2382,7 +2354,7 @@ GameObject:
   - 23: {fileID: 153280106}
   m_Layer: 10
   m_Name: Front
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2455,7 +2427,7 @@ GameObject:
   - 4: {fileID: 156016045}
   m_Layer: 10
   m_Name: LanePart
-  m_TagString: floor
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -2477,7 +2449,7 @@ Transform:
   - {fileID: 671406992}
   - {fileID: 925991737}
   m_Father: {fileID: 2130333286}
-  m_RootOrder: 7
+  m_RootOrder: 5
 --- !u!1 &173047293
 GameObject:
   m_ObjectHideFlags: 0
@@ -2491,7 +2463,7 @@ GameObject:
   - 23: {fileID: 173047295}
   m_Layer: 10
   m_Name: Side1
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -2567,7 +2539,7 @@ GameObject:
   - 23: {fileID: 177795183}
   m_Layer: 10
   m_Name: Side2
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -2643,7 +2615,7 @@ GameObject:
   - 23: {fileID: 178995507}
   m_Layer: 10
   m_Name: Side1
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -2719,7 +2691,7 @@ GameObject:
   - 23: {fileID: 190745881}
   m_Layer: 11
   m_Name: Top
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -2795,7 +2767,7 @@ GameObject:
   - 23: {fileID: 195486648}
   m_Layer: 10
   m_Name: Front
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -2871,7 +2843,7 @@ GameObject:
   - 23: {fileID: 201758074}
   m_Layer: 10
   m_Name: Front
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -2947,7 +2919,7 @@ GameObject:
   - 23: {fileID: 202533490}
   m_Layer: 10
   m_Name: Bottom
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -3020,7 +2992,7 @@ GameObject:
   - 4: {fileID: 203196100}
   m_Layer: 11
   m_Name: LanePart 1
-  m_TagString: floor
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3042,7 +3014,7 @@ Transform:
   - {fileID: 2002929498}
   - {fileID: 809928990}
   m_Father: {fileID: 1662952173}
-  m_RootOrder: 6
+  m_RootOrder: 4
 --- !u!1 &210685698
 GameObject:
   m_ObjectHideFlags: 0
@@ -3056,7 +3028,7 @@ GameObject:
   - 23: {fileID: 210685700}
   m_Layer: 11
   m_Name: Side2
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -3132,7 +3104,7 @@ GameObject:
   - 23: {fileID: 210872194}
   m_Layer: 11
   m_Name: Side1
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -3205,7 +3177,7 @@ GameObject:
   - 4: {fileID: 214998126}
   m_Layer: 10
   m_Name: LanePart 5
-  m_TagString: floor
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3227,7 +3199,7 @@ Transform:
   - {fileID: 583560959}
   - {fileID: 765476958}
   m_Father: {fileID: 1869950732}
-  m_RootOrder: 2
+  m_RootOrder: 0
 --- !u!1001 &222486348
 Prefab:
   m_ObjectHideFlags: 0
@@ -3292,7 +3264,7 @@ GameObject:
   - 4: {fileID: 225370452}
   m_Layer: 10
   m_Name: LanePart 4
-  m_TagString: floor
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3314,7 +3286,7 @@ Transform:
   - {fileID: 38561231}
   - {fileID: 1903952284}
   m_Father: {fileID: 824358300}
-  m_RootOrder: 3
+  m_RootOrder: 1
 --- !u!1 &232842430
 GameObject:
   m_ObjectHideFlags: 0
@@ -3328,7 +3300,7 @@ GameObject:
   - 23: {fileID: 232842432}
   m_Layer: 10
   m_Name: Top
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -3404,7 +3376,7 @@ GameObject:
   - 23: {fileID: 234635587}
   m_Layer: 11
   m_Name: Back
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3480,7 +3452,7 @@ GameObject:
   - 23: {fileID: 236548672}
   m_Layer: 10
   m_Name: Side2
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -3553,7 +3525,7 @@ GameObject:
   - 4: {fileID: 242092859}
   m_Layer: 10
   m_Name: LanePart 1
-  m_TagString: floor
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -3575,7 +3547,7 @@ Transform:
   - {fileID: 983158245}
   - {fileID: 557410290}
   m_Father: {fileID: 531895143}
-  m_RootOrder: 6
+  m_RootOrder: 4
 --- !u!1 &243325169
 GameObject:
   m_ObjectHideFlags: 0
@@ -3589,7 +3561,7 @@ GameObject:
   - 23: {fileID: 243325171}
   m_Layer: 10
   m_Name: Bottom
-  m_TagString: Untagged
+  m_TagString: 1stLane - platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -3665,7 +3637,7 @@ GameObject:
   - 23: {fileID: 243770966}
   m_Layer: 10
   m_Name: Side1
-  m_TagString: Untagged
+  m_TagString: 1stLane - platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -3741,7 +3713,7 @@ GameObject:
   - 23: {fileID: 245955076}
   m_Layer: 10
   m_Name: Front
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -3817,7 +3789,7 @@ GameObject:
   - 23: {fileID: 251740613}
   m_Layer: 10
   m_Name: Bottom
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -4991,7 +4963,7 @@ GameObject:
   - 23: {fileID: 256487305}
   m_Layer: 10
   m_Name: Side1
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -5067,7 +5039,7 @@ GameObject:
   - 23: {fileID: 263789152}
   m_Layer: 10
   m_Name: Side1
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5143,7 +5115,7 @@ GameObject:
   - 23: {fileID: 267173688}
   m_Layer: 10
   m_Name: Top
-  m_TagString: Untagged
+  m_TagString: 1stLane - platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -5219,7 +5191,7 @@ GameObject:
   - 23: {fileID: 273490399}
   m_Layer: 10
   m_Name: Front
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5295,7 +5267,7 @@ GameObject:
   - 23: {fileID: 274434496}
   m_Layer: 10
   m_Name: Side2
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5358,33 +5330,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 274434494}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &276580962
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 174836, guid: 2ad98ac5b1742b646906a1d6a528edda, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 276580963}
-  m_Layer: 10
-  m_Name: LanePart 7
-  m_TagString: floor
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &276580963
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 479440, guid: 2ad98ac5b1742b646906a1d6a528edda, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 276580962}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 63.8699989, y: -1, z: -1.50999999}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1869950732}
-  m_RootOrder: 0
 --- !u!1 &289261263
 GameObject:
   m_ObjectHideFlags: 0
@@ -5398,7 +5343,7 @@ GameObject:
   - 23: {fileID: 289261265}
   m_Layer: 10
   m_Name: Front
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5474,7 +5419,7 @@ GameObject:
   - 23: {fileID: 303684309}
   m_Layer: 11
   m_Name: Back
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5612,7 +5557,7 @@ GameObject:
   - 23: {fileID: 331730450}
   m_Layer: 10
   m_Name: Front
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5688,7 +5633,7 @@ GameObject:
   - 23: {fileID: 336306840}
   m_Layer: 10
   m_Name: Back
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -5761,7 +5706,7 @@ GameObject:
   - 4: {fileID: 338727725}
   m_Layer: 10
   m_Name: LanePart 4
-  m_TagString: floor
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5783,7 +5728,7 @@ Transform:
   - {fileID: 1752040535}
   - {fileID: 885127044}
   m_Father: {fileID: 1869950732}
-  m_RootOrder: 3
+  m_RootOrder: 1
 --- !u!1 &340636767
 GameObject:
   m_ObjectHideFlags: 0
@@ -5797,7 +5742,7 @@ GameObject:
   - 23: {fileID: 340636769}
   m_Layer: 10
   m_Name: Back
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5873,7 +5818,7 @@ GameObject:
   - 23: {fileID: 348341815}
   m_Layer: 11
   m_Name: Side1
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -5949,7 +5894,7 @@ GameObject:
   - 23: {fileID: 352832538}
   m_Layer: 11
   m_Name: Side1
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -6029,7 +5974,7 @@ GameObject:
   - 23: {fileID: 376220864}
   m_Layer: 10
   m_Name: Side2
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -6092,33 +6037,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 376220862}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &377724582
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 174836, guid: 2ad98ac5b1742b646906a1d6a528edda, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 377724583}
-  m_Layer: 10
-  m_Name: LanePart 7
-  m_TagString: floor
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &377724583
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 479440, guid: 2ad98ac5b1742b646906a1d6a528edda, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 377724582}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 63.8699989, y: -1, z: -1.50999999}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1099796402}
-  m_RootOrder: 0
 --- !u!1 &382069257
 GameObject:
   m_ObjectHideFlags: 0
@@ -6132,7 +6050,7 @@ GameObject:
   - 23: {fileID: 382069259}
   m_Layer: 10
   m_Name: Side1
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6208,7 +6126,7 @@ GameObject:
   - 23: {fileID: 383052234}
   m_Layer: 10
   m_Name: Bottom
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -6284,7 +6202,7 @@ GameObject:
   - 23: {fileID: 386072023}
   m_Layer: 10
   m_Name: Bottom
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6360,7 +6278,7 @@ GameObject:
   - 23: {fileID: 388855403}
   m_Layer: 10
   m_Name: Top
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6433,7 +6351,7 @@ GameObject:
   - 4: {fileID: 411117895}
   m_Layer: 10
   m_Name: LanePart 2
-  m_TagString: floor
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6455,7 +6373,7 @@ Transform:
   - {fileID: 1896642832}
   - {fileID: 1344632217}
   m_Father: {fileID: 1099796402}
-  m_RootOrder: 5
+  m_RootOrder: 3
 --- !u!1 &411619817
 GameObject:
   m_ObjectHideFlags: 0
@@ -6469,7 +6387,7 @@ GameObject:
   - 23: {fileID: 411619819}
   m_Layer: 10
   m_Name: Bottom
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -6545,7 +6463,7 @@ GameObject:
   - 23: {fileID: 414515086}
   m_Layer: 10
   m_Name: Side1
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6625,7 +6543,7 @@ GameObject:
   - 23: {fileID: 416662009}
   m_Layer: 10
   m_Name: Side2
-  m_TagString: Untagged
+  m_TagString: 1stLane - platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -6701,7 +6619,7 @@ GameObject:
   - 23: {fileID: 421391007}
   m_Layer: 10
   m_Name: Back
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -6777,7 +6695,7 @@ GameObject:
   - 23: {fileID: 422935323}
   m_Layer: 10
   m_Name: Top
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -6857,7 +6775,7 @@ GameObject:
   - 23: {fileID: 436825370}
   m_Layer: 11
   m_Name: Back
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6933,7 +6851,7 @@ GameObject:
   - 23: {fileID: 437432126}
   m_Layer: 11
   m_Name: Front
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -7009,7 +6927,7 @@ GameObject:
   - 23: {fileID: 438845917}
   m_Layer: 11
   m_Name: Bottom
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7085,7 +7003,7 @@ GameObject:
   - 23: {fileID: 444926284}
   m_Layer: 10
   m_Name: Front
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7148,109 +7066,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 444926282}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &453014190
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 125472, guid: 2ad98ac5b1742b646906a1d6a528edda, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 453014191}
-  - 33: {fileID: 453014194}
-  - 64: {fileID: 453014193}
-  - 23: {fileID: 453014192}
-  m_Layer: 10
-  m_Name: Side1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
---- !u!4 &453014191
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 469324, guid: 2ad98ac5b1742b646906a1d6a528edda, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 453014190}
-  m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106709}
-  m_LocalPosition: {x: -5, y: 0, z: 2.5}
-  m_LocalScale: {x: 5, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2051445603}
-  m_RootOrder: 0
---- !u!23 &453014192
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 2306240, guid: 2ad98ac5b1742b646906a1d6a528edda,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 453014190}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_Materials:
-  - {fileID: 2100000, guid: 94dfb7e528d95ca4e8f1eb6448dbb53b, type: 2}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
---- !u!64 &453014193
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6411748, guid: 2ad98ac5b1742b646906a1d6a528edda,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 453014190}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 0
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!33 &453014194
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 3360808, guid: 2ad98ac5b1742b646906a1d6a528edda,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 453014190}
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &455026584
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 174836, guid: 2ad98ac5b1742b646906a1d6a528edda, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 455026585}
-  m_Layer: 11
-  m_Name: LanePart 7
-  m_TagString: floor
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &455026585
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 479440, guid: 2ad98ac5b1742b646906a1d6a528edda, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 455026584}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 63.8699989, y: -1, z: -1.50999999}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1662952173}
-  m_RootOrder: 0
 --- !u!1 &457339065
 GameObject:
   m_ObjectHideFlags: 0
@@ -7264,7 +7079,7 @@ GameObject:
   - 23: {fileID: 457339067}
   m_Layer: 11
   m_Name: Front
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7337,7 +7152,7 @@ GameObject:
   - 4: {fileID: 463097414}
   m_Layer: 10
   m_Name: LanePart 3
-  m_TagString: floor
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7359,7 +7174,7 @@ Transform:
   - {fileID: 809457605}
   - {fileID: 552548662}
   m_Father: {fileID: 1099796402}
-  m_RootOrder: 4
+  m_RootOrder: 2
 --- !u!1 &478636273
 GameObject:
   m_ObjectHideFlags: 0
@@ -7373,7 +7188,7 @@ GameObject:
   - 23: {fileID: 478636275}
   m_Layer: 10
   m_Name: Back
-  m_TagString: Untagged
+  m_TagString: 1stLane - platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -7449,7 +7264,7 @@ GameObject:
   - 23: {fileID: 483391777}
   m_Layer: 11
   m_Name: Bottom
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7525,7 +7340,7 @@ GameObject:
   - 23: {fileID: 492733459}
   m_Layer: 11
   m_Name: Back
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -7601,7 +7416,7 @@ GameObject:
   - 23: {fileID: 493786871}
   m_Layer: 10
   m_Name: Top
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7664,34 +7479,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 493786869}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &500588689
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 150106, guid: 2ad98ac5b1742b646906a1d6a528edda, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 500588690}
-  m_Layer: 10
-  m_Name: LanePart 6
-  m_TagString: floor
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &500588690
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 474390, guid: 2ad98ac5b1742b646906a1d6a528edda, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 500588689}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 53.8699989, y: -1, z: -1.50999999}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1612327142}
-  m_Father: {fileID: 1869950732}
-  m_RootOrder: 1
 --- !u!1 &506394819
 GameObject:
   m_ObjectHideFlags: 0
@@ -7702,7 +7489,7 @@ GameObject:
   - 4: {fileID: 506394820}
   m_Layer: 11
   m_Name: LanePart 3
-  m_TagString: floor
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -7724,7 +7511,7 @@ Transform:
   - {fileID: 824977114}
   - {fileID: 1363414100}
   m_Father: {fileID: 1437268526}
-  m_RootOrder: 4
+  m_RootOrder: 2
 --- !u!1 &522584933
 GameObject:
   m_ObjectHideFlags: 0
@@ -7738,7 +7525,7 @@ GameObject:
   - 23: {fileID: 522584935}
   m_Layer: 11
   m_Name: Back
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7814,7 +7601,7 @@ GameObject:
   - 23: {fileID: 528247089}
   m_Layer: 10
   m_Name: Bottom
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7890,7 +7677,7 @@ GameObject:
   - 23: {fileID: 531538530}
   m_Layer: 10
   m_Name: Back
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -7963,7 +7750,7 @@ GameObject:
   - 4: {fileID: 531895143}
   m_Layer: 10
   m_Name: Top
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7978,8 +7765,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1789004809}
-  - {fileID: 680561664}
   - {fileID: 1851454603}
   - {fileID: 2136059085}
   - {fileID: 584658489}
@@ -7987,186 +7772,6 @@ Transform:
   - {fileID: 242092859}
   - {fileID: 905346175}
   m_Father: {fileID: 1420639331}
-  m_RootOrder: 1
---- !u!1 &532573620
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 186200, guid: 2ad98ac5b1742b646906a1d6a528edda, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 532573621}
-  - 33: {fileID: 532573624}
-  - 64: {fileID: 532573623}
-  - 23: {fileID: 532573622}
-  m_Layer: 11
-  m_Name: Side1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
---- !u!4 &532573621
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 451864, guid: 2ad98ac5b1742b646906a1d6a528edda, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 532573620}
-  m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106709}
-  m_LocalPosition: {x: -5, y: 0, z: 2.5}
-  m_LocalScale: {x: 5, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1801612621}
-  m_RootOrder: 0
---- !u!23 &532573622
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 2373288, guid: 2ad98ac5b1742b646906a1d6a528edda,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 532573620}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_Materials:
-  - {fileID: 2100000, guid: 94dfb7e528d95ca4e8f1eb6448dbb53b, type: 2}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
---- !u!64 &532573623
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6473512, guid: 2ad98ac5b1742b646906a1d6a528edda,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 532573620}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 0
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!33 &532573624
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 3379694, guid: 2ad98ac5b1742b646906a1d6a528edda,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 532573620}
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &533902729
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 186200, guid: 2ad98ac5b1742b646906a1d6a528edda, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 533902730}
-  - 33: {fileID: 533902733}
-  - 64: {fileID: 533902732}
-  - 23: {fileID: 533902731}
-  m_Layer: 10
-  m_Name: Side1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
---- !u!4 &533902730
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 451864, guid: 2ad98ac5b1742b646906a1d6a528edda, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 533902729}
-  m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106709}
-  m_LocalPosition: {x: -5, y: 0, z: 2.5}
-  m_LocalScale: {x: 5, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1789004809}
-  m_RootOrder: 0
---- !u!23 &533902731
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 2373288, guid: 2ad98ac5b1742b646906a1d6a528edda,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 533902729}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_Materials:
-  - {fileID: 2100000, guid: 94dfb7e528d95ca4e8f1eb6448dbb53b, type: 2}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
---- !u!64 &533902732
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6473512, guid: 2ad98ac5b1742b646906a1d6a528edda,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 533902729}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 0
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!33 &533902733
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 3379694, guid: 2ad98ac5b1742b646906a1d6a528edda,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 533902729}
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &534545251
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 150106, guid: 2ad98ac5b1742b646906a1d6a528edda, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 534545252}
-  m_Layer: 11
-  m_Name: LanePart 6
-  m_TagString: floor
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
---- !u!4 &534545252
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 474390, guid: 2ad98ac5b1742b646906a1d6a528edda, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 534545251}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 53.8699989, y: -1, z: -1.50999999}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1690839396}
-  m_Father: {fileID: 1437268526}
   m_RootOrder: 1
 --- !u!1 &536882033
 GameObject:
@@ -8181,7 +7786,7 @@ GameObject:
   - 23: {fileID: 536882035}
   m_Layer: 10
   m_Name: Side1
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -8257,7 +7862,7 @@ GameObject:
   - 23: {fileID: 544695334}
   m_Layer: 10
   m_Name: Front
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -8333,7 +7938,7 @@ GameObject:
   - 23: {fileID: 545709755}
   m_Layer: 10
   m_Name: Side2
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -8409,7 +8014,7 @@ GameObject:
   - 23: {fileID: 547585021}
   m_Layer: 10
   m_Name: Back
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -8485,7 +8090,7 @@ GameObject:
   - 23: {fileID: 552548663}
   m_Layer: 10
   m_Name: Side2
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8561,7 +8166,7 @@ GameObject:
   - 23: {fileID: 557410291}
   m_Layer: 10
   m_Name: Side2
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -8637,7 +8242,7 @@ GameObject:
   - 23: {fileID: 560300473}
   m_Layer: 10
   m_Name: Bottom
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8713,7 +8318,7 @@ GameObject:
   - 23: {fileID: 561364345}
   m_Layer: 10
   m_Name: Front
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -8789,7 +8394,7 @@ GameObject:
   - 23: {fileID: 567664620}
   m_Layer: 10
   m_Name: Side2
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8865,7 +8470,7 @@ GameObject:
   - 23: {fileID: 573901344}
   m_Layer: 11
   m_Name: Back
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8941,7 +8546,7 @@ GameObject:
   - 23: {fileID: 578669877}
   m_Layer: 11
   m_Name: Bottom
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -9017,7 +8622,7 @@ GameObject:
   - 23: {fileID: 583560960}
   m_Layer: 10
   m_Name: Side1
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9090,7 +8695,7 @@ GameObject:
   - 4: {fileID: 584658489}
   m_Layer: 10
   m_Name: LanePart 3
-  m_TagString: floor
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -9112,7 +8717,7 @@ Transform:
   - {fileID: 536882034}
   - {fileID: 69745144}
   m_Father: {fileID: 531895143}
-  m_RootOrder: 4
+  m_RootOrder: 2
 --- !u!1 &588051261
 GameObject:
   m_ObjectHideFlags: 0
@@ -9126,7 +8731,7 @@ GameObject:
   - 23: {fileID: 588051263}
   m_Layer: 10
   m_Name: Front
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -9202,7 +8807,7 @@ GameObject:
   - 23: {fileID: 593402922}
   m_Layer: 10
   m_Name: Top
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9336,7 +8941,7 @@ GameObject:
   - 23: {fileID: 615615994}
   m_Layer: 10
   m_Name: Top
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9409,7 +9014,7 @@ GameObject:
   - 4: {fileID: 623680239}
   m_Layer: 10
   m_Name: LanePart 5
-  m_TagString: floor
+  m_TagString: 1stLane - platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -9431,7 +9036,7 @@ Transform:
   - {fileID: 243770965}
   - {fileID: 1000802678}
   m_Father: {fileID: 877754053}
-  m_RootOrder: 2
+  m_RootOrder: 0
 --- !u!1 &626313373
 GameObject:
   m_ObjectHideFlags: 0
@@ -9442,7 +9047,7 @@ GameObject:
   - 4: {fileID: 626313374}
   m_Layer: 10
   m_Name: LanePart
-  m_TagString: floor
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9464,7 +9069,7 @@ Transform:
   - {fileID: 1670554829}
   - {fileID: 1782201369}
   m_Father: {fileID: 1869950732}
-  m_RootOrder: 7
+  m_RootOrder: 5
 --- !u!1 &627254873
 GameObject:
   m_ObjectHideFlags: 0
@@ -9478,7 +9083,7 @@ GameObject:
   - 23: {fileID: 627254875}
   m_Layer: 10
   m_Name: Front
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9554,7 +9159,7 @@ GameObject:
   - 23: {fileID: 627987429}
   m_Layer: 11
   m_Name: Top
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -9630,7 +9235,7 @@ GameObject:
   - 23: {fileID: 635278971}
   m_Layer: 10
   m_Name: Bottom
-  m_TagString: Untagged
+  m_TagString: 1stLane - platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -9706,7 +9311,7 @@ GameObject:
   - 23: {fileID: 640635953}
   m_Layer: 10
   m_Name: Side1
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9769,82 +9374,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 640635951}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &640867211
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 125472, guid: 2ad98ac5b1742b646906a1d6a528edda, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 640867212}
-  - 33: {fileID: 640867215}
-  - 64: {fileID: 640867214}
-  - 23: {fileID: 640867213}
-  m_Layer: 10
-  m_Name: Side1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
---- !u!4 &640867212
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 469324, guid: 2ad98ac5b1742b646906a1d6a528edda, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 640867211}
-  m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106709}
-  m_LocalPosition: {x: -5, y: 0, z: 2.5}
-  m_LocalScale: {x: 5, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1833550900}
-  m_RootOrder: 0
---- !u!23 &640867213
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 2306240, guid: 2ad98ac5b1742b646906a1d6a528edda,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 640867211}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_Materials:
-  - {fileID: 2100000, guid: 94dfb7e528d95ca4e8f1eb6448dbb53b, type: 2}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
---- !u!64 &640867214
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6411748, guid: 2ad98ac5b1742b646906a1d6a528edda,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 640867211}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 0
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!33 &640867215
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 3360808, guid: 2ad98ac5b1742b646906a1d6a528edda,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 640867211}
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &642928670
 GameObject:
   m_ObjectHideFlags: 0
@@ -9858,7 +9387,7 @@ GameObject:
   - 23: {fileID: 642928672}
   m_Layer: 11
   m_Name: Back
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9934,7 +9463,7 @@ GameObject:
   - 23: {fileID: 655861326}
   m_Layer: 10
   m_Name: Back
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -10007,7 +9536,7 @@ GameObject:
   - 4: {fileID: 657193256}
   m_Layer: 10
   m_Name: LanePart 1
-  m_TagString: floor
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10029,7 +9558,7 @@ Transform:
   - {fileID: 1005618150}
   - {fileID: 1991522527}
   m_Father: {fileID: 824358300}
-  m_RootOrder: 6
+  m_RootOrder: 4
 --- !u!1 &668113723
 GameObject:
   m_ObjectHideFlags: 0
@@ -10105,7 +9634,7 @@ GameObject:
   - 23: {fileID: 668501688}
   m_Layer: 10
   m_Name: Top
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10181,7 +9710,7 @@ GameObject:
   - 23: {fileID: 669744372}
   m_Layer: 10
   m_Name: Front
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -10257,7 +9786,7 @@ GameObject:
   - 23: {fileID: 671406993}
   m_Layer: 10
   m_Name: Side1
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -10330,7 +9859,7 @@ GameObject:
   - 4: {fileID: 679101381}
   m_Layer: 11
   m_Name: LanePart 2
-  m_TagString: floor
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -10352,7 +9881,7 @@ Transform:
   - {fileID: 210872193}
   - {fileID: 1575854129}
   m_Father: {fileID: 1437268526}
-  m_RootOrder: 5
+  m_RootOrder: 3
 --- !u!1 &679128090
 GameObject:
   m_ObjectHideFlags: 0
@@ -10363,7 +9892,7 @@ GameObject:
   - 4: {fileID: 679128091}
   m_Layer: 10
   m_Name: 1stLane
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -10390,34 +9919,6 @@ Transform:
   - {fileID: 1426654168}
   m_Father: {fileID: 0}
   m_RootOrder: 21
---- !u!1 &680561663
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 150106, guid: 2ad98ac5b1742b646906a1d6a528edda, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 680561664}
-  m_Layer: 10
-  m_Name: LanePart 6
-  m_TagString: floor
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
---- !u!4 &680561664
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 474390, guid: 2ad98ac5b1742b646906a1d6a528edda, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 680561663}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 53.8699989, y: -1, z: -1.50999999}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 60213954}
-  m_Father: {fileID: 531895143}
-  m_RootOrder: 1
 --- !u!1 &681818609
 GameObject:
   m_ObjectHideFlags: 0
@@ -10431,7 +9932,7 @@ GameObject:
   - 23: {fileID: 681818611}
   m_Layer: 10
   m_Name: Bottom
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -10507,7 +10008,7 @@ GameObject:
   - 23: {fileID: 682093566}
   m_Layer: 11
   m_Name: Top
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10630,7 +10131,7 @@ GameObject:
   - 23: {fileID: 692337730}
   m_Layer: 11
   m_Name: Bottom
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -10706,7 +10207,7 @@ GameObject:
   - 23: {fileID: 693800109}
   m_Layer: 11
   m_Name: Top
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10779,7 +10280,7 @@ GameObject:
   - 4: {fileID: 698465271}
   m_Layer: 10
   m_Name: LanePart 5
-  m_TagString: floor
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10801,7 +10302,7 @@ Transform:
   - {fileID: 263789151}
   - {fileID: 1193318308}
   m_Father: {fileID: 1099796402}
-  m_RootOrder: 2
+  m_RootOrder: 0
 --- !u!1 &707205664
 GameObject:
   m_ObjectHideFlags: 0
@@ -10815,7 +10316,7 @@ GameObject:
   - 23: {fileID: 707205666}
   m_Layer: 10
   m_Name: Top
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -10957,7 +10458,7 @@ GameObject:
   - 23: {fileID: 724768212}
   m_Layer: 11
   m_Name: Side1
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11033,7 +10534,7 @@ GameObject:
   - 23: {fileID: 727940694}
   m_Layer: 10
   m_Name: Bottom
-  m_TagString: Untagged
+  m_TagString: 1stLane - platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -11109,7 +10610,7 @@ GameObject:
   - 23: {fileID: 728030201}
   m_Layer: 10
   m_Name: Bottom
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11185,7 +10686,7 @@ GameObject:
   - 23: {fileID: 733737623}
   m_Layer: 10
   m_Name: Side1
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11258,7 +10759,7 @@ GameObject:
   - 4: {fileID: 745460566}
   m_Layer: 11
   m_Name: LanePart 4
-  m_TagString: floor
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11280,7 +10781,7 @@ Transform:
   - {fileID: 98400446}
   - {fileID: 1544664176}
   m_Father: {fileID: 1662952173}
-  m_RootOrder: 3
+  m_RootOrder: 1
 --- !u!1 &757086813
 GameObject:
   m_ObjectHideFlags: 0
@@ -11294,7 +10795,7 @@ GameObject:
   - 23: {fileID: 757086815}
   m_Layer: 10
   m_Name: Bottom
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11367,7 +10868,7 @@ GameObject:
   - 4: {fileID: 762142693}
   m_Layer: 11
   m_Name: LanePart 4
-  m_TagString: floor
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -11389,7 +10890,7 @@ Transform:
   - {fileID: 1570586231}
   - {fileID: 2076731013}
   m_Father: {fileID: 1437268526}
-  m_RootOrder: 3
+  m_RootOrder: 1
 --- !u!1 &765476957
 GameObject:
   m_ObjectHideFlags: 0
@@ -11403,7 +10904,7 @@ GameObject:
   - 23: {fileID: 765476959}
   m_Layer: 10
   m_Name: Side2
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11476,7 +10977,7 @@ GameObject:
   - 4: {fileID: 767134258}
   m_Layer: 11
   m_Name: LanePart 5
-  m_TagString: floor
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11498,7 +10999,7 @@ Transform:
   - {fileID: 724768211}
   - {fileID: 2059177444}
   m_Father: {fileID: 1662952173}
-  m_RootOrder: 2
+  m_RootOrder: 0
 --- !u!1 &769661571
 GameObject:
   m_ObjectHideFlags: 0
@@ -11512,7 +11013,7 @@ GameObject:
   - 23: {fileID: 769661573}
   m_Layer: 11
   m_Name: Side2
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11588,7 +11089,7 @@ GameObject:
   - 23: {fileID: 769908666}
   m_Layer: 10
   m_Name: Back
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -11740,7 +11241,7 @@ GameObject:
   - 23: {fileID: 781373597}
   m_Layer: 11
   m_Name: Back
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -11813,7 +11314,7 @@ GameObject:
   - 4: {fileID: 783487398}
   m_Layer: 10
   m_Name: LanePart 1
-  m_TagString: floor
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11835,7 +11336,7 @@ Transform:
   - {fileID: 382069258}
   - {fileID: 2062141316}
   m_Father: {fileID: 1869950732}
-  m_RootOrder: 6
+  m_RootOrder: 4
 --- !u!1 &809457604
 GameObject:
   m_ObjectHideFlags: 0
@@ -11849,7 +11350,7 @@ GameObject:
   - 23: {fileID: 809457606}
   m_Layer: 10
   m_Name: Side1
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11925,7 +11426,7 @@ GameObject:
   - 23: {fileID: 809928991}
   m_Layer: 11
   m_Name: Side2
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12006,7 +11507,7 @@ GameObject:
   - 23: {fileID: 810882255}
   m_Layer: 11
   m_Name: Top
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12082,7 +11583,7 @@ GameObject:
   - 23: {fileID: 814080588}
   m_Layer: 10
   m_Name: Bottom
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12158,7 +11659,7 @@ GameObject:
   - 23: {fileID: 814587020}
   m_Layer: 10
   m_Name: Bottom
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12234,7 +11735,7 @@ GameObject:
   - 23: {fileID: 814612369}
   m_Layer: 10
   m_Name: Top
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12307,7 +11808,7 @@ GameObject:
   - 4: {fileID: 824358300}
   m_Layer: 10
   m_Name: Down
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12322,8 +11823,6 @@ Transform:
   m_LocalPosition: {x: -.00237846375, y: -1, z: -.0024844408}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 994707561}
-  - {fileID: 1434048539}
   - {fileID: 1958095312}
   - {fileID: 225370452}
   - {fileID: 1556112238}
@@ -12345,7 +11844,7 @@ GameObject:
   - 23: {fileID: 824977115}
   m_Layer: 11
   m_Name: Side1
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -12418,7 +11917,7 @@ GameObject:
   - 4: {fileID: 830857203}
   m_Layer: 10
   m_Name: LanePart
-  m_TagString: floor
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12440,7 +11939,7 @@ Transform:
   - {fileID: 640635952}
   - {fileID: 1508597399}
   m_Father: {fileID: 824358300}
-  m_RootOrder: 7
+  m_RootOrder: 5
 --- !u!1 &843284823
 GameObject:
   m_ObjectHideFlags: 0
@@ -12454,7 +11953,7 @@ GameObject:
   - 23: {fileID: 843284825}
   m_Layer: 10
   m_Name: Front
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12527,7 +12026,7 @@ GameObject:
   - 4: {fileID: 852170971}
   m_Layer: 10
   m_Name: LanePart
-  m_TagString: floor
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12549,7 +12048,7 @@ Transform:
   - {fileID: 1421484221}
   - {fileID: 274434495}
   m_Father: {fileID: 1099796402}
-  m_RootOrder: 7
+  m_RootOrder: 5
 --- !u!1 &863877531
 GameObject:
   m_ObjectHideFlags: 0
@@ -12563,7 +12062,7 @@ GameObject:
   - 23: {fileID: 863877533}
   m_Layer: 11
   m_Name: Top
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -12639,7 +12138,7 @@ GameObject:
   - 23: {fileID: 864667149}
   m_Layer: 10
   m_Name: Side1
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12712,7 +12211,7 @@ GameObject:
   - 4: {fileID: 877754053}
   m_Layer: 10
   m_Name: Top
-  m_TagString: Untagged
+  m_TagString: 1stLane - platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12727,8 +12226,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1014422133}
-  - {fileID: 2051445603}
   - {fileID: 623680239}
   - {fileID: 1202502906}
   - {fileID: 1554961472}
@@ -12750,7 +12247,7 @@ GameObject:
   - 23: {fileID: 885127045}
   m_Layer: 10
   m_Name: Side2
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12826,7 +12323,7 @@ GameObject:
   - 23: {fileID: 887751390}
   m_Layer: 11
   m_Name: Side1
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12902,7 +12399,7 @@ GameObject:
   - 23: {fileID: 897193344}
   m_Layer: 11
   m_Name: Front
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -12978,7 +12475,7 @@ GameObject:
   - 23: {fileID: 900587867}
   m_Layer: 10
   m_Name: Top
-  m_TagString: Untagged
+  m_TagString: 1stLane - platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -13051,7 +12548,7 @@ GameObject:
   - 4: {fileID: 900810141}
   m_Layer: 10
   m_Name: LanePart 1
-  m_TagString: floor
+  m_TagString: 1stLane - platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -13073,7 +12570,7 @@ Transform:
   - {fileID: 1792633405}
   - {fileID: 1320401403}
   m_Father: {fileID: 877754053}
-  m_RootOrder: 6
+  m_RootOrder: 4
 --- !u!1 &901750870
 GameObject:
   m_ObjectHideFlags: 0
@@ -13087,7 +12584,7 @@ GameObject:
   - 23: {fileID: 901750872}
   m_Layer: 11
   m_Name: Back
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -13163,7 +12660,7 @@ GameObject:
   - 23: {fileID: 905027655}
   m_Layer: 10
   m_Name: Bottom
-  m_TagString: Untagged
+  m_TagString: 1stLane - platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -13236,7 +12733,7 @@ GameObject:
   - 4: {fileID: 905346175}
   m_Layer: 10
   m_Name: LanePart
-  m_TagString: floor
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -13258,7 +12755,7 @@ Transform:
   - {fileID: 1499149242}
   - {fileID: 1296195869}
   m_Father: {fileID: 531895143}
-  m_RootOrder: 7
+  m_RootOrder: 5
 --- !u!1 &919032463
 GameObject:
   m_ObjectHideFlags: 0
@@ -13334,7 +12831,7 @@ GameObject:
   - 23: {fileID: 925991738}
   m_Layer: 10
   m_Name: Side2
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -13410,7 +12907,7 @@ GameObject:
   - 23: {fileID: 934040854}
   m_Layer: 10
   m_Name: Back
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13483,7 +12980,7 @@ GameObject:
   - 4: {fileID: 946444176}
   m_Layer: 11
   m_Name: LanePart 3
-  m_TagString: floor
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13505,7 +13002,7 @@ Transform:
   - {fileID: 1104303153}
   - {fileID: 1651844439}
   m_Father: {fileID: 1662952173}
-  m_RootOrder: 4
+  m_RootOrder: 2
 --- !u!1 &957905156
 GameObject:
   m_ObjectHideFlags: 0
@@ -13519,7 +13016,7 @@ GameObject:
   - 23: {fileID: 957905158}
   m_Layer: 11
   m_Name: Bottom
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -13595,7 +13092,7 @@ GameObject:
   - 23: {fileID: 961921685}
   m_Layer: 11
   m_Name: Back
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -13717,7 +13214,7 @@ GameObject:
   - 23: {fileID: 969854753}
   m_Layer: 11
   m_Name: Bottom
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13790,7 +13287,7 @@ GameObject:
   - 4: {fileID: 972862021}
   m_Layer: 10
   m_Name: LanePart 4
-  m_TagString: floor
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -13812,7 +13309,7 @@ Transform:
   - {fileID: 1100596377}
   - {fileID: 376220863}
   m_Father: {fileID: 2130333286}
-  m_RootOrder: 3
+  m_RootOrder: 1
 --- !u!1 &978661329
 GameObject:
   m_ObjectHideFlags: 0
@@ -13826,7 +13323,7 @@ GameObject:
   - 23: {fileID: 978661331}
   m_Layer: 10
   m_Name: Top
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13902,7 +13399,7 @@ GameObject:
   - 23: {fileID: 983158246}
   m_Layer: 10
   m_Name: Side1
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -13978,7 +13475,7 @@ GameObject:
   - 23: {fileID: 984546144}
   m_Layer: 10
   m_Name: Top
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14054,7 +13551,7 @@ GameObject:
   - 23: {fileID: 985610606}
   m_Layer: 10
   m_Name: Top
-  m_TagString: Untagged
+  m_TagString: 1stLane - platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -14250,7 +13747,7 @@ GameObject:
   - 23: {fileID: 990794583}
   m_Layer: 10
   m_Name: Top
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14313,33 +13810,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 990794581}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &994707560
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 174836, guid: 2ad98ac5b1742b646906a1d6a528edda, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 994707561}
-  m_Layer: 10
-  m_Name: LanePart 7
-  m_TagString: floor
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &994707561
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 479440, guid: 2ad98ac5b1742b646906a1d6a528edda, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 994707560}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 63.8699989, y: -1, z: -1.50999999}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 824358300}
-  m_RootOrder: 0
 --- !u!1 &996821783
 GameObject:
   m_ObjectHideFlags: 0
@@ -14353,7 +13823,7 @@ GameObject:
   - 23: {fileID: 996821785}
   m_Layer: 10
   m_Name: Front
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14429,7 +13899,7 @@ GameObject:
   - 23: {fileID: 1000802679}
   m_Layer: 10
   m_Name: Side2
-  m_TagString: Untagged
+  m_TagString: 1stLane - platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -14505,7 +13975,7 @@ GameObject:
   - 23: {fileID: 1005618151}
   m_Layer: 10
   m_Name: Side1
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14581,7 +14051,7 @@ GameObject:
   - 23: {fileID: 1008392019}
   m_Layer: 11
   m_Name: Bottom
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -14657,7 +14127,7 @@ GameObject:
   - 23: {fileID: 1008634930}
   m_Layer: 10
   m_Name: Bottom
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14720,33 +14190,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1008634928}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1014422132
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 174836, guid: 2ad98ac5b1742b646906a1d6a528edda, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1014422133}
-  m_Layer: 10
-  m_Name: LanePart 7
-  m_TagString: floor
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
---- !u!4 &1014422133
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 479440, guid: 2ad98ac5b1742b646906a1d6a528edda, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1014422132}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 63.8700027, y: -1, z: -1.50999999}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 877754053}
-  m_RootOrder: 0
 --- !u!1 &1023831043
 GameObject:
   m_ObjectHideFlags: 0
@@ -14760,7 +14203,7 @@ GameObject:
   - 23: {fileID: 1023831045}
   m_Layer: 10
   m_Name: Side2
-  m_TagString: Untagged
+  m_TagString: 1stLane - platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -14836,7 +14279,7 @@ GameObject:
   - 23: {fileID: 1025649361}
   m_Layer: 11
   m_Name: Front
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14912,7 +14355,7 @@ GameObject:
   - 23: {fileID: 1027418869}
   m_Layer: 10
   m_Name: Side2
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15064,7 +14507,7 @@ GameObject:
   - 23: {fileID: 1045292610}
   m_Layer: 10
   m_Name: Front
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15140,7 +14583,7 @@ GameObject:
   - 23: {fileID: 1062544288}
   m_Layer: 11
   m_Name: Front
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -15339,7 +14782,7 @@ GameObject:
   - 23: {fileID: 1084833361}
   m_Layer: 10
   m_Name: Bottom
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15415,7 +14858,7 @@ GameObject:
   - 23: {fileID: 1086116947}
   m_Layer: 10
   m_Name: Back
-  m_TagString: Untagged
+  m_TagString: 1stLane - platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -15488,7 +14931,7 @@ GameObject:
   - 4: {fileID: 1091448883}
   m_Layer: 10
   m_Name: LanePart 2
-  m_TagString: floor
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -15510,7 +14953,7 @@ Transform:
   - {fileID: 178995506}
   - {fileID: 43100133}
   m_Father: {fileID: 531895143}
-  m_RootOrder: 5
+  m_RootOrder: 3
 --- !u!1 &1095923639
 GameObject:
   m_ObjectHideFlags: 0
@@ -15524,7 +14967,7 @@ GameObject:
   - 23: {fileID: 1095923641}
   m_Layer: 10
   m_Name: Back
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -15597,7 +15040,7 @@ GameObject:
   - 4: {fileID: 1099796402}
   m_Layer: 10
   m_Name: Down
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15612,8 +15055,6 @@ Transform:
   m_LocalPosition: {x: -.00237846375, y: -1, z: -.0024844408}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 377724583}
-  - {fileID: 1242764105}
   - {fileID: 698465271}
   - {fileID: 1555246697}
   - {fileID: 463097414}
@@ -15635,7 +15076,7 @@ GameObject:
   - 23: {fileID: 1100596378}
   m_Layer: 10
   m_Name: Side1
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -15711,7 +15152,7 @@ GameObject:
   - 23: {fileID: 1101872818}
   m_Layer: 10
   m_Name: Bottom
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15787,7 +15228,7 @@ GameObject:
   - 23: {fileID: 1104303154}
   m_Layer: 11
   m_Name: Side1
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15939,7 +15380,7 @@ GameObject:
   - 23: {fileID: 1107201524}
   m_Layer: 10
   m_Name: Bottom
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16002,82 +15443,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1107201522}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1113122397
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 125472, guid: 2ad98ac5b1742b646906a1d6a528edda, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1113122398}
-  - 33: {fileID: 1113122401}
-  - 64: {fileID: 1113122400}
-  - 23: {fileID: 1113122399}
-  m_Layer: 10
-  m_Name: Side1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1113122398
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 469324, guid: 2ad98ac5b1742b646906a1d6a528edda, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1113122397}
-  m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106709}
-  m_LocalPosition: {x: -5, y: 0, z: 2.5}
-  m_LocalScale: {x: 5, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1434048539}
-  m_RootOrder: 0
---- !u!23 &1113122399
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 2306240, guid: 2ad98ac5b1742b646906a1d6a528edda,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1113122397}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_Materials:
-  - {fileID: 2100000, guid: 94dfb7e528d95ca4e8f1eb6448dbb53b, type: 2}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
---- !u!64 &1113122400
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6411748, guid: 2ad98ac5b1742b646906a1d6a528edda,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1113122397}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 0
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!33 &1113122401
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 3360808, guid: 2ad98ac5b1742b646906a1d6a528edda,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1113122397}
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1121443686
 GameObject:
   m_ObjectHideFlags: 0
@@ -16091,7 +15456,7 @@ GameObject:
   - 23: {fileID: 1121443688}
   m_Layer: 10
   m_Name: Side1
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16241,7 +15606,7 @@ GameObject:
   - 23: {fileID: 1138658802}
   m_Layer: 11
   m_Name: Side2
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16317,7 +15682,7 @@ GameObject:
   - 23: {fileID: 1139408155}
   m_Layer: 10
   m_Name: Side2
-  m_TagString: Untagged
+  m_TagString: 1stLane - platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -16393,7 +15758,7 @@ GameObject:
   - 23: {fileID: 1149902805}
   m_Layer: 11
   m_Name: Bottom
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -16469,7 +15834,7 @@ GameObject:
   - 23: {fileID: 1150095286}
   m_Layer: 10
   m_Name: Front
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -16545,7 +15910,7 @@ GameObject:
   - 23: {fileID: 1161039908}
   m_Layer: 11
   m_Name: Front
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -16621,7 +15986,7 @@ GameObject:
   - 23: {fileID: 1163948493}
   m_Layer: 10
   m_Name: Side1
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16757,7 +16122,7 @@ GameObject:
   - 23: {fileID: 1170419737}
   m_Layer: 10
   m_Name: Top
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16833,7 +16198,7 @@ GameObject:
   - 23: {fileID: 1172612117}
   m_Layer: 10
   m_Name: Back
-  m_TagString: Untagged
+  m_TagString: 1stLane - platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -16909,7 +16274,7 @@ GameObject:
   - 23: {fileID: 1177418303}
   m_Layer: 11
   m_Name: Front
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17061,7 +16426,7 @@ GameObject:
   - 23: {fileID: 1190820580}
   m_Layer: 11
   m_Name: Front
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17137,7 +16502,7 @@ GameObject:
   - 23: {fileID: 1193318309}
   m_Layer: 10
   m_Name: Side2
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17213,7 +16578,7 @@ GameObject:
   - 23: {fileID: 1200201271}
   m_Layer: 11
   m_Name: Top
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -17286,7 +16651,7 @@ GameObject:
   - 4: {fileID: 1202502906}
   m_Layer: 10
   m_Name: LanePart 4
-  m_TagString: floor
+  m_TagString: 1stLane - platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -17308,7 +16673,7 @@ Transform:
   - {fileID: 101974898}
   - {fileID: 416662008}
   m_Father: {fileID: 877754053}
-  m_RootOrder: 3
+  m_RootOrder: 1
 --- !u!1 &1202628674
 GameObject:
   m_ObjectHideFlags: 0
@@ -17322,7 +16687,7 @@ GameObject:
   - 23: {fileID: 1202628676}
   m_Layer: 10
   m_Name: Front
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -17398,7 +16763,7 @@ GameObject:
   - 23: {fileID: 1219234111}
   m_Layer: 10
   m_Name: Top
-  m_TagString: Untagged
+  m_TagString: 1stLane - platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -17474,7 +16839,7 @@ GameObject:
   - 23: {fileID: 1219833861}
   m_Layer: 10
   m_Name: Side1
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -17550,7 +16915,7 @@ GameObject:
   - 23: {fileID: 1222107016}
   m_Layer: 11
   m_Name: Bottom
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -17626,7 +16991,7 @@ GameObject:
   - 23: {fileID: 1230908439}
   m_Layer: 10
   m_Name: Front
-  m_TagString: Untagged
+  m_TagString: 1stLane - platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -17702,7 +17067,7 @@ GameObject:
   - 23: {fileID: 1237909557}
   m_Layer: 11
   m_Name: Front
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -17782,7 +17147,7 @@ GameObject:
   - 23: {fileID: 1241356028}
   m_Layer: 10
   m_Name: Side1
-  m_TagString: Untagged
+  m_TagString: 1stLane - platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -17845,34 +17210,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1241356026}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1242764104
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 150106, guid: 2ad98ac5b1742b646906a1d6a528edda, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1242764105}
-  m_Layer: 10
-  m_Name: LanePart 6
-  m_TagString: floor
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1242764105
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 474390, guid: 2ad98ac5b1742b646906a1d6a528edda, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1242764104}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 53.8699989, y: -1, z: -1.50999999}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1890233018}
-  m_Father: {fileID: 1099796402}
-  m_RootOrder: 1
 --- !u!1 &1258442181
 GameObject:
   m_ObjectHideFlags: 0
@@ -17886,7 +17223,7 @@ GameObject:
   - 23: {fileID: 1258442183}
   m_Layer: 10
   m_Name: Front
-  m_TagString: Untagged
+  m_TagString: 1stLane - platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -18030,7 +17367,7 @@ GameObject:
   - 23: {fileID: 1288598477}
   m_Layer: 10
   m_Name: Back
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -18106,7 +17443,7 @@ GameObject:
   - 23: {fileID: 1291674893}
   m_Layer: 10
   m_Name: Bottom
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -18179,7 +17516,7 @@ GameObject:
   - 4: {fileID: 1292501532}
   m_Layer: 11
   m_Name: 2ndLane
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18256,6 +17593,34 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 185030, guid: aab71a614d08b6846bd0f293c0b42ad5, type: 2}
+      propertyPath: m_TagString
+      value: 1stLane - platform
+      objectReference: {fileID: 0}
+    - target: {fileID: 159638, guid: aab71a614d08b6846bd0f293c0b42ad5, type: 2}
+      propertyPath: m_TagString
+      value: 1stLane - platform
+      objectReference: {fileID: 0}
+    - target: {fileID: 139618, guid: aab71a614d08b6846bd0f293c0b42ad5, type: 2}
+      propertyPath: m_TagString
+      value: 1stLane - platform
+      objectReference: {fileID: 0}
+    - target: {fileID: 141246, guid: aab71a614d08b6846bd0f293c0b42ad5, type: 2}
+      propertyPath: m_TagString
+      value: 1stLane - platform
+      objectReference: {fileID: 0}
+    - target: {fileID: 109866, guid: aab71a614d08b6846bd0f293c0b42ad5, type: 2}
+      propertyPath: m_TagString
+      value: 1stLane - platform
+      objectReference: {fileID: 0}
+    - target: {fileID: 106654, guid: aab71a614d08b6846bd0f293c0b42ad5, type: 2}
+      propertyPath: m_TagString
+      value: 1stLane - platform
+      objectReference: {fileID: 0}
+    - target: {fileID: 199408, guid: aab71a614d08b6846bd0f293c0b42ad5, type: 2}
+      propertyPath: m_TagString
+      value: 1stLane - platform
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aab71a614d08b6846bd0f293c0b42ad5, type: 2}
   m_IsPrefabParent: 0
@@ -18272,7 +17637,7 @@ GameObject:
   - 23: {fileID: 1295723645}
   m_Layer: 10
   m_Name: Top
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18348,7 +17713,7 @@ GameObject:
   - 23: {fileID: 1295878458}
   m_Layer: 10
   m_Name: Back
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18424,7 +17789,7 @@ GameObject:
   - 23: {fileID: 1296195870}
   m_Layer: 10
   m_Name: Side2
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -18504,7 +17869,7 @@ GameObject:
   - 23: {fileID: 1306446607}
   m_Layer: 10
   m_Name: Side2
-  m_TagString: Untagged
+  m_TagString: 1stLane - platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -18656,7 +18021,7 @@ GameObject:
   - 23: {fileID: 1320401404}
   m_Layer: 10
   m_Name: Side2
-  m_TagString: Untagged
+  m_TagString: 1stLane - platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -18732,7 +18097,7 @@ GameObject:
   - 23: {fileID: 1321374558}
   m_Layer: 10
   m_Name: Back
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -18808,7 +18173,7 @@ GameObject:
   - 23: {fileID: 1329377727}
   m_Layer: 10
   m_Name: Side1
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -18980,7 +18345,7 @@ GameObject:
   - 23: {fileID: 1344632218}
   m_Layer: 10
   m_Name: Side2
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19056,7 +18421,7 @@ GameObject:
   - 23: {fileID: 1346756565}
   m_Layer: 10
   m_Name: Back
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19119,82 +18484,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1346756563}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1348876554
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 125472, guid: 2ad98ac5b1742b646906a1d6a528edda, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1348876555}
-  - 33: {fileID: 1348876558}
-  - 64: {fileID: 1348876557}
-  - 23: {fileID: 1348876556}
-  m_Layer: 11
-  m_Name: Side1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1348876555
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 469324, guid: 2ad98ac5b1742b646906a1d6a528edda, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1348876554}
-  m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106709}
-  m_LocalPosition: {x: -5, y: 0, z: 2.5}
-  m_LocalScale: {x: 5, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1606617804}
-  m_RootOrder: 0
---- !u!23 &1348876556
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 2306240, guid: 2ad98ac5b1742b646906a1d6a528edda,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1348876554}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_Materials:
-  - {fileID: 2100000, guid: 94dfb7e528d95ca4e8f1eb6448dbb53b, type: 2}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
---- !u!64 &1348876557
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6411748, guid: 2ad98ac5b1742b646906a1d6a528edda,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1348876554}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 0
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!33 &1348876558
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 3360808, guid: 2ad98ac5b1742b646906a1d6a528edda,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1348876554}
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1350644052
 GameObject:
   m_ObjectHideFlags: 0
@@ -19205,7 +18494,7 @@ GameObject:
   - 4: {fileID: 1350644053}
   m_Layer: 10
   m_Name: LanePart 2
-  m_TagString: floor
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19227,7 +18516,7 @@ Transform:
   - {fileID: 414515085}
   - {fileID: 1027418868}
   m_Father: {fileID: 1869950732}
-  m_RootOrder: 5
+  m_RootOrder: 3
 --- !u!1 &1351494913
 GameObject:
   m_ObjectHideFlags: 0
@@ -19241,7 +18530,7 @@ GameObject:
   - 23: {fileID: 1351494915}
   m_Layer: 10
   m_Name: Top
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -19317,7 +18606,7 @@ GameObject:
   - 23: {fileID: 1363414101}
   m_Layer: 11
   m_Name: Side2
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -19393,7 +18682,7 @@ GameObject:
   - 23: {fileID: 1363677298}
   m_Layer: 10
   m_Name: Side2
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19546,7 +18835,7 @@ GameObject:
   - 23: {fileID: 1372298790}
   m_Layer: 10
   m_Name: Back
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19708,7 +18997,7 @@ GameObject:
   - 23: {fileID: 1383632174}
   m_Layer: 10
   m_Name: Side1
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -19814,7 +19103,7 @@ GameObject:
   - 23: {fileID: 1390921313}
   m_Layer: 10
   m_Name: Bottom
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19890,7 +19179,7 @@ GameObject:
   - 23: {fileID: 1392117449}
   m_Layer: 10
   m_Name: Top
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -19966,7 +19255,7 @@ GameObject:
   - 23: {fileID: 1395932281}
   m_Layer: 10
   m_Name: Back
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20042,7 +19331,7 @@ GameObject:
   - 23: {fileID: 1396396014}
   m_Layer: 11
   m_Name: Side1
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20257,7 +19546,7 @@ GameObject:
   - 4: {fileID: 1420639331}
   m_Layer: 10
   m_Name: Segment1
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20289,7 +19578,7 @@ GameObject:
   - 23: {fileID: 1421484222}
   m_Layer: 10
   m_Name: Side1
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20365,7 +19654,7 @@ GameObject:
   - 23: {fileID: 1424480144}
   m_Layer: 11
   m_Name: Front
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20438,7 +19727,7 @@ GameObject:
   - 4: {fileID: 1426654168}
   m_Layer: 10
   m_Name: Segment4
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20486,34 +19775,6 @@ Transform:
   - {fileID: 668113724}
   m_Father: {fileID: 1696003830}
   m_RootOrder: 0
---- !u!1 &1434048538
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 150106, guid: 2ad98ac5b1742b646906a1d6a528edda, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1434048539}
-  m_Layer: 10
-  m_Name: LanePart 6
-  m_TagString: floor
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1434048539
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 474390, guid: 2ad98ac5b1742b646906a1d6a528edda, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1434048538}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 53.8699989, y: -1, z: -1.50999999}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1113122398}
-  m_Father: {fileID: 824358300}
-  m_RootOrder: 1
 --- !u!1 &1437268525
 GameObject:
   m_ObjectHideFlags: 0
@@ -20524,7 +19785,7 @@ GameObject:
   - 4: {fileID: 1437268526}
   m_Layer: 11
   m_Name: Top
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20539,8 +19800,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1801612621}
-  - {fileID: 534545252}
   - {fileID: 1639977745}
   - {fileID: 762142693}
   - {fileID: 506394820}
@@ -20562,7 +19821,7 @@ GameObject:
   - 23: {fileID: 1441383783}
   m_Layer: 10
   m_Name: Front
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20638,7 +19897,7 @@ GameObject:
   - 23: {fileID: 1451308918}
   m_Layer: 10
   m_Name: Top
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20714,7 +19973,7 @@ GameObject:
   - 23: {fileID: 1454110847}
   m_Layer: 10
   m_Name: Top
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -20790,7 +20049,7 @@ GameObject:
   - 23: {fileID: 1458426243}
   m_Layer: 11
   m_Name: Bottom
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20866,7 +20125,7 @@ GameObject:
   - 23: {fileID: 1459760954}
   m_Layer: 10
   m_Name: Bottom
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -20942,7 +20201,7 @@ GameObject:
   - 23: {fileID: 1473741461}
   m_Layer: 10
   m_Name: Back
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21015,7 +20274,7 @@ GameObject:
   - 4: {fileID: 1477833337}
   m_Layer: 10
   m_Name: LanePart 5
-  m_TagString: floor
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -21037,7 +20296,7 @@ Transform:
   - {fileID: 173047294}
   - {fileID: 177795182}
   m_Father: {fileID: 2130333286}
-  m_RootOrder: 2
+  m_RootOrder: 0
 --- !u!1 &1478061963
 GameObject:
   m_ObjectHideFlags: 0
@@ -21170,7 +20429,7 @@ GameObject:
   - 23: {fileID: 1483558097}
   m_Layer: 10
   m_Name: Back
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21350,7 +20609,7 @@ GameObject:
   - 23: {fileID: 1490021562}
   m_Layer: 11
   m_Name: Top
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21426,7 +20685,7 @@ GameObject:
   - 23: {fileID: 1499149243}
   m_Layer: 10
   m_Name: Side1
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -21502,7 +20761,7 @@ GameObject:
   - 23: {fileID: 1507295141}
   m_Layer: 10
   m_Name: Bottom
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -21578,7 +20837,7 @@ GameObject:
   - 23: {fileID: 1508597400}
   m_Layer: 10
   m_Name: Side2
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21707,7 +20966,7 @@ GameObject:
   - 23: {fileID: 1519417158}
   m_Layer: 10
   m_Name: Back
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21783,7 +21042,7 @@ GameObject:
   - 23: {fileID: 1532039001}
   m_Layer: 10
   m_Name: Bottom
-  m_TagString: Untagged
+  m_TagString: 1stLane - platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -21859,7 +21118,7 @@ GameObject:
   - 23: {fileID: 1544664177}
   m_Layer: 11
   m_Name: Side2
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21935,7 +21194,7 @@ GameObject:
   - 23: {fileID: 1545806711}
   m_Layer: 10
   m_Name: Top
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -22011,7 +21270,7 @@ GameObject:
   - 23: {fileID: 1549769856}
   m_Layer: 10
   m_Name: Front
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22087,7 +21346,7 @@ GameObject:
   - 23: {fileID: 1553339489}
   m_Layer: 10
   m_Name: Side1
-  m_TagString: Untagged
+  m_TagString: 1stLane - platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -22160,7 +21419,7 @@ GameObject:
   - 4: {fileID: 1554961472}
   m_Layer: 10
   m_Name: LanePart 3
-  m_TagString: floor
+  m_TagString: 1stLane - platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -22182,7 +21441,7 @@ Transform:
   - {fileID: 1834225555}
   - {fileID: 1306446606}
   m_Father: {fileID: 877754053}
-  m_RootOrder: 4
+  m_RootOrder: 2
 --- !u!1 &1555246696
 GameObject:
   m_ObjectHideFlags: 0
@@ -22193,7 +21452,7 @@ GameObject:
   - 4: {fileID: 1555246697}
   m_Layer: 10
   m_Name: LanePart 4
-  m_TagString: floor
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22215,7 +21474,7 @@ Transform:
   - {fileID: 2085118207}
   - {fileID: 45789908}
   m_Father: {fileID: 1099796402}
-  m_RootOrder: 3
+  m_RootOrder: 1
 --- !u!1 &1556112237
 GameObject:
   m_ObjectHideFlags: 0
@@ -22226,7 +21485,7 @@ GameObject:
   - 4: {fileID: 1556112238}
   m_Layer: 10
   m_Name: LanePart 3
-  m_TagString: floor
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22248,7 +21507,7 @@ Transform:
   - {fileID: 1989280164}
   - {fileID: 1747035320}
   m_Father: {fileID: 824358300}
-  m_RootOrder: 4
+  m_RootOrder: 2
 --- !u!1 &1567682171
 GameObject:
   m_PrefabParentObject: {fileID: 166266, guid: bed7ed52c780a0a4d9da3340ab2f958b, type: 2}
@@ -22284,7 +21543,7 @@ GameObject:
   - 23: {fileID: 1567843550}
   m_Layer: 10
   m_Name: Top
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -22360,7 +21619,7 @@ GameObject:
   - 23: {fileID: 1570586232}
   m_Layer: 11
   m_Name: Side1
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -22436,7 +21695,7 @@ GameObject:
   - 23: {fileID: 1570750434}
   m_Layer: 10
   m_Name: Front
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22566,7 +21825,7 @@ GameObject:
   - 23: {fileID: 1575854130}
   m_Layer: 11
   m_Name: Side2
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -22754,6 +22013,34 @@ Prefab:
       propertyPath: endPoint.z
       value: -1.20000005
       objectReference: {fileID: 0}
+    - target: {fileID: 185030, guid: aab71a614d08b6846bd0f293c0b42ad5, type: 2}
+      propertyPath: m_TagString
+      value: 1stLane - platform
+      objectReference: {fileID: 0}
+    - target: {fileID: 159638, guid: aab71a614d08b6846bd0f293c0b42ad5, type: 2}
+      propertyPath: m_TagString
+      value: 1stLane - platform
+      objectReference: {fileID: 0}
+    - target: {fileID: 139618, guid: aab71a614d08b6846bd0f293c0b42ad5, type: 2}
+      propertyPath: m_TagString
+      value: 1stLane - platform
+      objectReference: {fileID: 0}
+    - target: {fileID: 141246, guid: aab71a614d08b6846bd0f293c0b42ad5, type: 2}
+      propertyPath: m_TagString
+      value: 1stLane - platform
+      objectReference: {fileID: 0}
+    - target: {fileID: 109866, guid: aab71a614d08b6846bd0f293c0b42ad5, type: 2}
+      propertyPath: m_TagString
+      value: 1stLane - platform
+      objectReference: {fileID: 0}
+    - target: {fileID: 106654, guid: aab71a614d08b6846bd0f293c0b42ad5, type: 2}
+      propertyPath: m_TagString
+      value: 1stLane - platform
+      objectReference: {fileID: 0}
+    - target: {fileID: 199408, guid: aab71a614d08b6846bd0f293c0b42ad5, type: 2}
+      propertyPath: m_TagString
+      value: 1stLane - platform
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aab71a614d08b6846bd0f293c0b42ad5, type: 2}
   m_IsPrefabParent: 0
@@ -22770,7 +22057,7 @@ GameObject:
   - 23: {fileID: 1592789510}
   m_Layer: 10
   m_Name: Top
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22922,7 +22209,7 @@ GameObject:
   - 23: {fileID: 1604944941}
   m_Layer: 10
   m_Name: Front
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22984,110 +22271,6 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1604944939}
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1606617803
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 150106, guid: 2ad98ac5b1742b646906a1d6a528edda, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1606617804}
-  m_Layer: 11
-  m_Name: LanePart 6
-  m_TagString: floor
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1606617804
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 474390, guid: 2ad98ac5b1742b646906a1d6a528edda, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1606617803}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 53.8699989, y: -1, z: -1.50999999}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1348876555}
-  m_Father: {fileID: 1662952173}
-  m_RootOrder: 1
---- !u!1 &1612327141
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 125472, guid: 2ad98ac5b1742b646906a1d6a528edda, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1612327142}
-  - 33: {fileID: 1612327145}
-  - 64: {fileID: 1612327144}
-  - 23: {fileID: 1612327143}
-  m_Layer: 10
-  m_Name: Side1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1612327142
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 469324, guid: 2ad98ac5b1742b646906a1d6a528edda, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1612327141}
-  m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106709}
-  m_LocalPosition: {x: -5, y: 0, z: 2.5}
-  m_LocalScale: {x: 5, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 500588690}
-  m_RootOrder: 0
---- !u!23 &1612327143
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 2306240, guid: 2ad98ac5b1742b646906a1d6a528edda,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1612327141}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_Materials:
-  - {fileID: 2100000, guid: 94dfb7e528d95ca4e8f1eb6448dbb53b, type: 2}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
---- !u!64 &1612327144
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6411748, guid: 2ad98ac5b1742b646906a1d6a528edda,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1612327141}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 0
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!33 &1612327145
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 3360808, guid: 2ad98ac5b1742b646906a1d6a528edda,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1612327141}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1623959991
 GameObject:
@@ -23178,7 +22361,7 @@ GameObject:
   - 23: {fileID: 1627442870}
   m_Layer: 10
   m_Name: Top
-  m_TagString: Untagged
+  m_TagString: 1stLane - platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -23251,7 +22434,7 @@ GameObject:
   - 4: {fileID: 1632774317}
   m_Layer: 11
   m_Name: LanePart 2
-  m_TagString: floor
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23273,7 +22456,7 @@ Transform:
   - {fileID: 1396396013}
   - {fileID: 769661572}
   m_Father: {fileID: 1662952173}
-  m_RootOrder: 5
+  m_RootOrder: 3
 --- !u!1 &1639977744
 GameObject:
   m_ObjectHideFlags: 0
@@ -23284,7 +22467,7 @@ GameObject:
   - 4: {fileID: 1639977745}
   m_Layer: 11
   m_Name: LanePart 5
-  m_TagString: floor
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -23306,7 +22489,7 @@ Transform:
   - {fileID: 2091130581}
   - {fileID: 2030765762}
   m_Father: {fileID: 1437268526}
-  m_RootOrder: 2
+  m_RootOrder: 0
 --- !u!1 &1641712446
 GameObject:
   m_ObjectHideFlags: 0
@@ -23320,7 +22503,7 @@ GameObject:
   - 23: {fileID: 1641712448}
   m_Layer: 10
   m_Name: Top
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23469,7 +22652,7 @@ GameObject:
   - 23: {fileID: 1642734531}
   m_Layer: 10
   m_Name: Top
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -23545,7 +22728,7 @@ GameObject:
   - 23: {fileID: 1643587931}
   m_Layer: 10
   m_Name: Front
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23621,7 +22804,7 @@ GameObject:
   - 23: {fileID: 1651844440}
   m_Layer: 11
   m_Name: Side2
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23910,7 +23093,7 @@ GameObject:
   - 4: {fileID: 1662952173}
   m_Layer: 11
   m_Name: Down
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23925,8 +23108,6 @@ Transform:
   m_LocalPosition: {x: -.00237846375, y: -1, z: -.0024844408}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 455026585}
-  - {fileID: 1606617804}
   - {fileID: 767134258}
   - {fileID: 745460566}
   - {fileID: 946444176}
@@ -24125,7 +23306,7 @@ GameObject:
   - 23: {fileID: 1666466538}
   m_Layer: 10
   m_Name: Front
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -24201,7 +23382,7 @@ GameObject:
   - 23: {fileID: 1670554830}
   m_Layer: 10
   m_Name: Side1
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24277,7 +23458,7 @@ GameObject:
   - 23: {fileID: 1676472108}
   m_Layer: 11
   m_Name: Top
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -24353,7 +23534,7 @@ GameObject:
   - 23: {fileID: 1684317063}
   m_Layer: 11
   m_Name: Back
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -24415,82 +23596,6 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1684317061}
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1690839395
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 125472, guid: 2ad98ac5b1742b646906a1d6a528edda, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1690839396}
-  - 33: {fileID: 1690839399}
-  - 64: {fileID: 1690839398}
-  - 23: {fileID: 1690839397}
-  m_Layer: 11
-  m_Name: Side1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
---- !u!4 &1690839396
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 469324, guid: 2ad98ac5b1742b646906a1d6a528edda, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1690839395}
-  m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106709}
-  m_LocalPosition: {x: -5, y: 0, z: 2.5}
-  m_LocalScale: {x: 5, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 534545252}
-  m_RootOrder: 0
---- !u!23 &1690839397
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 2306240, guid: 2ad98ac5b1742b646906a1d6a528edda,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1690839395}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_Materials:
-  - {fileID: 2100000, guid: 94dfb7e528d95ca4e8f1eb6448dbb53b, type: 2}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
---- !u!64 &1690839398
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6411748, guid: 2ad98ac5b1742b646906a1d6a528edda,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1690839395}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 0
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!33 &1690839399
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 3360808, guid: 2ad98ac5b1742b646906a1d6a528edda,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1690839395}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1696003829
 GameObject:
@@ -24566,7 +23671,7 @@ GameObject:
   - 23: {fileID: 1702125002}
   m_Layer: 10
   m_Name: Side2
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -24668,6 +23773,34 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 139560, guid: df5a433a0cff0024ebc42f9bd46edecd, type: 2}
+      propertyPath: m_TagString
+      value: 1stLane
+      objectReference: {fileID: 0}
+    - target: {fileID: 192058, guid: df5a433a0cff0024ebc42f9bd46edecd, type: 2}
+      propertyPath: m_TagString
+      value: 1stLane
+      objectReference: {fileID: 0}
+    - target: {fileID: 127544, guid: df5a433a0cff0024ebc42f9bd46edecd, type: 2}
+      propertyPath: m_TagString
+      value: 1stLane
+      objectReference: {fileID: 0}
+    - target: {fileID: 178538, guid: df5a433a0cff0024ebc42f9bd46edecd, type: 2}
+      propertyPath: m_TagString
+      value: 1stLane
+      objectReference: {fileID: 0}
+    - target: {fileID: 193292, guid: df5a433a0cff0024ebc42f9bd46edecd, type: 2}
+      propertyPath: m_TagString
+      value: 1stLane
+      objectReference: {fileID: 0}
+    - target: {fileID: 172024, guid: df5a433a0cff0024ebc42f9bd46edecd, type: 2}
+      propertyPath: m_TagString
+      value: 1stLane
+      objectReference: {fileID: 0}
+    - target: {fileID: 120806, guid: df5a433a0cff0024ebc42f9bd46edecd, type: 2}
+      propertyPath: m_TagString
+      value: 1stLane
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: df5a433a0cff0024ebc42f9bd46edecd, type: 2}
   m_IsPrefabParent: 0
@@ -24688,7 +23821,7 @@ GameObject:
   - 23: {fileID: 1740344468}
   m_Layer: 10
   m_Name: Top
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24764,7 +23897,7 @@ GameObject:
   - 23: {fileID: 1746885477}
   m_Layer: 10
   m_Name: Back
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -24840,7 +23973,7 @@ GameObject:
   - 23: {fileID: 1747035321}
   m_Layer: 10
   m_Name: Side2
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24913,7 +24046,7 @@ GameObject:
   - 4: {fileID: 1751446561}
   m_Layer: 10
   m_Name: LanePart
-  m_TagString: floor
+  m_TagString: 1stLane - platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -24935,7 +24068,7 @@ Transform:
   - {fileID: 1241356027}
   - {fileID: 1139408154}
   m_Father: {fileID: 877754053}
-  m_RootOrder: 7
+  m_RootOrder: 5
 --- !u!1 &1752040534
 GameObject:
   m_ObjectHideFlags: 0
@@ -24949,7 +24082,7 @@ GameObject:
   - 23: {fileID: 1752040536}
   m_Layer: 10
   m_Name: Side1
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25022,7 +24155,7 @@ GameObject:
   - 4: {fileID: 1757402927}
   m_Layer: 10
   m_Name: LanePart 3
-  m_TagString: floor
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25044,7 +24177,7 @@ Transform:
   - {fileID: 864667148}
   - {fileID: 1895014993}
   m_Father: {fileID: 1869950732}
-  m_RootOrder: 4
+  m_RootOrder: 2
 --- !u!1 &1759004434
 GameObject:
   m_ObjectHideFlags: 0
@@ -25058,7 +24191,7 @@ GameObject:
   - 23: {fileID: 1759004436}
   m_Layer: 10
   m_Name: Back
-  m_TagString: Untagged
+  m_TagString: 1stLane - platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -25138,7 +24271,7 @@ GameObject:
   - 23: {fileID: 1776301759}
   m_Layer: 10
   m_Name: Back
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25214,7 +24347,7 @@ GameObject:
   - 23: {fileID: 1779172683}
   m_Layer: 10
   m_Name: Front
-  m_TagString: Untagged
+  m_TagString: 1stLane - platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -25290,7 +24423,7 @@ GameObject:
   - 23: {fileID: 1782201370}
   m_Layer: 10
   m_Name: Side2
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25370,7 +24503,7 @@ GameObject:
   - 23: {fileID: 1787691450}
   m_Layer: 10
   m_Name: Back
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -25433,34 +24566,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1787691448}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1789004808
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 174836, guid: 2ad98ac5b1742b646906a1d6a528edda, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1789004809}
-  m_Layer: 10
-  m_Name: LanePart 7
-  m_TagString: floor
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
---- !u!4 &1789004809
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 479440, guid: 2ad98ac5b1742b646906a1d6a528edda, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1789004808}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 63.8700027, y: -1, z: -1.50999999}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 533902730}
-  m_Father: {fileID: 531895143}
-  m_RootOrder: 0
 --- !u!1 &1792633404
 GameObject:
   m_ObjectHideFlags: 0
@@ -25474,7 +24579,7 @@ GameObject:
   - 23: {fileID: 1792633406}
   m_Layer: 10
   m_Name: Side1
-  m_TagString: Untagged
+  m_TagString: 1stLane - platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -25537,61 +24642,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1792633404}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1801612620
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 174836, guid: 2ad98ac5b1742b646906a1d6a528edda, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1801612621}
-  m_Layer: 11
-  m_Name: LanePart 7
-  m_TagString: floor
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
---- !u!4 &1801612621
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 479440, guid: 2ad98ac5b1742b646906a1d6a528edda, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1801612620}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 63.8700027, y: -1, z: -1.50999999}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 532573621}
-  m_Father: {fileID: 1437268526}
-  m_RootOrder: 0
---- !u!1 &1803053910
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 174836, guid: 2ad98ac5b1742b646906a1d6a528edda, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1803053911}
-  m_Layer: 10
-  m_Name: LanePart 7
-  m_TagString: floor
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
---- !u!4 &1803053911
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 479440, guid: 2ad98ac5b1742b646906a1d6a528edda, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1803053910}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 63.8700027, y: -1, z: -1.50999999}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2130333286}
-  m_RootOrder: 0
 --- !u!1 &1807617907
 GameObject:
   m_ObjectHideFlags: 0
@@ -25605,7 +24655,7 @@ GameObject:
   - 23: {fileID: 1807617909}
   m_Layer: 10
   m_Name: Bottom
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25678,7 +24728,7 @@ GameObject:
   - 4: {fileID: 1831203200}
   m_Layer: 10
   m_Name: LanePart 3
-  m_TagString: floor
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -25700,35 +24750,7 @@ Transform:
   - {fileID: 1329377726}
   - {fileID: 2075148920}
   m_Father: {fileID: 2130333286}
-  m_RootOrder: 4
---- !u!1 &1833550899
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 150106, guid: 2ad98ac5b1742b646906a1d6a528edda, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1833550900}
-  m_Layer: 10
-  m_Name: LanePart 6
-  m_TagString: floor
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
---- !u!4 &1833550900
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 474390, guid: 2ad98ac5b1742b646906a1d6a528edda, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1833550899}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 53.8699989, y: -1, z: -1.50999999}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 640867212}
-  m_Father: {fileID: 2130333286}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!1 &1834225554
 GameObject:
   m_ObjectHideFlags: 0
@@ -25742,7 +24764,7 @@ GameObject:
   - 23: {fileID: 1834225556}
   m_Layer: 10
   m_Name: Side1
-  m_TagString: Untagged
+  m_TagString: 1stLane - platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -25818,7 +24840,7 @@ GameObject:
   - 23: {fileID: 1840810453}
   m_Layer: 10
   m_Name: Top
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -25894,7 +24916,7 @@ GameObject:
   - 23: {fileID: 1844198042}
   m_Layer: 10
   m_Name: Front
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -25970,7 +24992,7 @@ GameObject:
   - 23: {fileID: 1845044330}
   m_Layer: 10
   m_Name: Bottom
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -26043,7 +25065,7 @@ GameObject:
   - 4: {fileID: 1851454603}
   m_Layer: 10
   m_Name: LanePart 5
-  m_TagString: floor
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -26065,7 +25087,7 @@ Transform:
   - {fileID: 256487304}
   - {fileID: 1702125001}
   m_Father: {fileID: 531895143}
-  m_RootOrder: 2
+  m_RootOrder: 0
 --- !u!1 &1854066011
 GameObject:
   m_ObjectHideFlags: 0
@@ -26076,7 +25098,7 @@ GameObject:
   - 4: {fileID: 1854066012}
   m_Layer: 10
   m_Name: LanePart 1
-  m_TagString: floor
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -26098,7 +25120,7 @@ Transform:
   - {fileID: 1219833860}
   - {fileID: 236548671}
   m_Father: {fileID: 2130333286}
-  m_RootOrder: 6
+  m_RootOrder: 4
 --- !u!1 &1863992320
 GameObject:
   m_ObjectHideFlags: 0
@@ -26112,7 +25134,7 @@ GameObject:
   - 23: {fileID: 1863992322}
   m_Layer: 10
   m_Name: Top
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26185,7 +25207,7 @@ GameObject:
   - 4: {fileID: 1865397179}
   m_Layer: 11
   m_Name: Segment1
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26217,7 +25239,7 @@ GameObject:
   - 23: {fileID: 1869661198}
   m_Layer: 10
   m_Name: Back
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -26290,7 +25312,7 @@ GameObject:
   - 4: {fileID: 1869950732}
   m_Layer: 10
   m_Name: Down
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26305,8 +25327,6 @@ Transform:
   m_LocalPosition: {x: -.00237846375, y: -1, z: -.0024844408}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 276580963}
-  - {fileID: 500588690}
   - {fileID: 214998126}
   - {fileID: 338727725}
   - {fileID: 1757402927}
@@ -26321,82 +25341,6 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1333852787}
   m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
---- !u!1 &1890233017
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 125472, guid: 2ad98ac5b1742b646906a1d6a528edda, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1890233018}
-  - 33: {fileID: 1890233021}
-  - 64: {fileID: 1890233020}
-  - 23: {fileID: 1890233019}
-  m_Layer: 10
-  m_Name: Side1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1890233018
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 469324, guid: 2ad98ac5b1742b646906a1d6a528edda, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1890233017}
-  m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106709}
-  m_LocalPosition: {x: -5, y: 0, z: 2.5}
-  m_LocalScale: {x: 5, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1242764105}
-  m_RootOrder: 0
---- !u!23 &1890233019
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 2306240, guid: 2ad98ac5b1742b646906a1d6a528edda,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1890233017}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_Materials:
-  - {fileID: 2100000, guid: 94dfb7e528d95ca4e8f1eb6448dbb53b, type: 2}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
---- !u!64 &1890233020
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6411748, guid: 2ad98ac5b1742b646906a1d6a528edda,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1890233017}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 0
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!33 &1890233021
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 3360808, guid: 2ad98ac5b1742b646906a1d6a528edda,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1890233017}
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1894512339
 GameObject:
   m_ObjectHideFlags: 0
@@ -26410,7 +25354,7 @@ GameObject:
   - 23: {fileID: 1894512341}
   m_Layer: 10
   m_Name: Bottom
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26486,7 +25430,7 @@ GameObject:
   - 23: {fileID: 1895014994}
   m_Layer: 10
   m_Name: Side2
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26562,7 +25506,7 @@ GameObject:
   - 23: {fileID: 1896642833}
   m_Layer: 10
   m_Name: Side1
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26700,7 +25644,7 @@ GameObject:
   - 23: {fileID: 1903952285}
   m_Layer: 10
   m_Name: Side2
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26776,7 +25720,7 @@ GameObject:
   - 23: {fileID: 1906106586}
   m_Layer: 10
   m_Name: Front
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26852,7 +25796,7 @@ GameObject:
   - 23: {fileID: 1915410646}
   m_Layer: 10
   m_Name: Back
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26928,7 +25872,7 @@ GameObject:
   - 23: {fileID: 1931604533}
   m_Layer: 10
   m_Name: Front
-  m_TagString: Untagged
+  m_TagString: 1stLane - platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -27004,7 +25948,7 @@ GameObject:
   - 23: {fileID: 1934395696}
   m_Layer: 10
   m_Name: Side1
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -27080,7 +26024,7 @@ GameObject:
   - 23: {fileID: 1934593777}
   m_Layer: 10
   m_Name: Front
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27156,7 +26100,7 @@ GameObject:
   - 23: {fileID: 1937282386}
   m_Layer: 10
   m_Name: Top
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27232,7 +26176,7 @@ GameObject:
   - 23: {fileID: 1937603489}
   m_Layer: 10
   m_Name: Bottom
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -27313,7 +26257,7 @@ GameObject:
   - 23: {fileID: 1947374379}
   m_Layer: 10
   m_Name: Back
-  m_TagString: Untagged
+  m_TagString: 1stLane - platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -27386,7 +26330,7 @@ GameObject:
   - 4: {fileID: 1958095312}
   m_Layer: 10
   m_Name: LanePart 5
-  m_TagString: floor
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27408,7 +26352,7 @@ Transform:
   - {fileID: 733737622}
   - {fileID: 2136745688}
   m_Father: {fileID: 824358300}
-  m_RootOrder: 2
+  m_RootOrder: 0
 --- !u!1 &1964985609
 GameObject:
   m_ObjectHideFlags: 0
@@ -27422,7 +26366,7 @@ GameObject:
   - 23: {fileID: 1964985611}
   m_Layer: 10
   m_Name: Bottom
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -27498,7 +26442,7 @@ GameObject:
   - 23: {fileID: 1965555851}
   m_Layer: 11
   m_Name: Front
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27574,7 +26518,7 @@ GameObject:
   - 23: {fileID: 1981425016}
   m_Layer: 10
   m_Name: Back
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27696,7 +26640,7 @@ GameObject:
   - 23: {fileID: 1986270520}
   m_Layer: 10
   m_Name: Top
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27772,7 +26716,7 @@ GameObject:
   - 23: {fileID: 1989280165}
   m_Layer: 10
   m_Name: Side1
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27848,7 +26792,7 @@ GameObject:
   - 23: {fileID: 1991522528}
   m_Layer: 10
   m_Name: Side2
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27924,7 +26868,7 @@ GameObject:
   - 23: {fileID: 1996869571}
   m_Layer: 10
   m_Name: Back
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28038,6 +26982,34 @@ Prefab:
       propertyPath: m_Name
       value: Segment2
       objectReference: {fileID: 0}
+    - target: {fileID: 139560, guid: df5a433a0cff0024ebc42f9bd46edecd, type: 2}
+      propertyPath: m_TagString
+      value: 1stLane
+      objectReference: {fileID: 0}
+    - target: {fileID: 192058, guid: df5a433a0cff0024ebc42f9bd46edecd, type: 2}
+      propertyPath: m_TagString
+      value: 1stLane
+      objectReference: {fileID: 0}
+    - target: {fileID: 127544, guid: df5a433a0cff0024ebc42f9bd46edecd, type: 2}
+      propertyPath: m_TagString
+      value: 1stLane
+      objectReference: {fileID: 0}
+    - target: {fileID: 178538, guid: df5a433a0cff0024ebc42f9bd46edecd, type: 2}
+      propertyPath: m_TagString
+      value: 1stLane
+      objectReference: {fileID: 0}
+    - target: {fileID: 193292, guid: df5a433a0cff0024ebc42f9bd46edecd, type: 2}
+      propertyPath: m_TagString
+      value: 1stLane
+      objectReference: {fileID: 0}
+    - target: {fileID: 172024, guid: df5a433a0cff0024ebc42f9bd46edecd, type: 2}
+      propertyPath: m_TagString
+      value: 1stLane
+      objectReference: {fileID: 0}
+    - target: {fileID: 120806, guid: df5a433a0cff0024ebc42f9bd46edecd, type: 2}
+      propertyPath: m_TagString
+      value: 1stLane
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: df5a433a0cff0024ebc42f9bd46edecd, type: 2}
   m_IsPrefabParent: 0
@@ -28054,7 +27026,7 @@ GameObject:
   - 23: {fileID: 2002929499}
   m_Layer: 11
   m_Name: Side1
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28127,7 +27099,7 @@ GameObject:
   - 4: {fileID: 2006606330}
   m_Layer: 10
   m_Name: LanePart 2
-  m_TagString: floor
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -28149,7 +27121,7 @@ Transform:
   - {fileID: 1934395695}
   - {fileID: 15833843}
   m_Father: {fileID: 2130333286}
-  m_RootOrder: 5
+  m_RootOrder: 3
 --- !u!1 &2010057306
 GameObject:
   m_ObjectHideFlags: 0
@@ -28236,7 +27208,7 @@ GameObject:
   - 4: {fileID: 2011077707}
   m_Layer: 11
   m_Name: LanePart
-  m_TagString: floor
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28258,7 +27230,7 @@ Transform:
   - {fileID: 887751389}
   - {fileID: 1138658801}
   m_Father: {fileID: 1662952173}
-  m_RootOrder: 7
+  m_RootOrder: 5
 --- !u!1 &2018103895
 GameObject:
   m_ObjectHideFlags: 0
@@ -28325,7 +27297,7 @@ GameObject:
   - 23: {fileID: 2030765763}
   m_Layer: 11
   m_Name: Side2
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -28398,7 +27370,7 @@ GameObject:
   - 4: {fileID: 2033550681}
   m_Layer: 10
   m_Name: LanePart 2
-  m_TagString: floor
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28420,7 +27392,7 @@ Transform:
   - {fileID: 1121443687}
   - {fileID: 567664619}
   m_Father: {fileID: 824358300}
-  m_RootOrder: 5
+  m_RootOrder: 3
 --- !u!1 &2036097625
 GameObject:
   m_ObjectHideFlags: 0
@@ -28434,7 +27406,7 @@ GameObject:
   - 23: {fileID: 2036097627}
   m_Layer: 10
   m_Name: Front
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28510,7 +27482,7 @@ GameObject:
   - 23: {fileID: 2047958968}
   m_Layer: 10
   m_Name: Bottom
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28586,7 +27558,7 @@ GameObject:
   - 23: {fileID: 2048014526}
   m_Layer: 11
   m_Name: Top
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28649,34 +27621,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2048014524}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &2051445602
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 150106, guid: 2ad98ac5b1742b646906a1d6a528edda, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 2051445603}
-  m_Layer: 10
-  m_Name: LanePart 6
-  m_TagString: floor
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
---- !u!4 &2051445603
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 474390, guid: 2ad98ac5b1742b646906a1d6a528edda, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2051445602}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 53.8699989, y: -1, z: -1.50999999}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 453014191}
-  m_Father: {fileID: 877754053}
-  m_RootOrder: 1
 --- !u!1001 &2055953274
 Prefab:
   m_ObjectHideFlags: 0
@@ -28728,6 +27672,34 @@ Prefab:
       propertyPath: speed
       value: 3.20000005
       objectReference: {fileID: 0}
+    - target: {fileID: 185030, guid: aab71a614d08b6846bd0f293c0b42ad5, type: 2}
+      propertyPath: m_TagString
+      value: 1stLane - platform
+      objectReference: {fileID: 0}
+    - target: {fileID: 109866, guid: aab71a614d08b6846bd0f293c0b42ad5, type: 2}
+      propertyPath: m_TagString
+      value: 1stLane - platform
+      objectReference: {fileID: 0}
+    - target: {fileID: 159638, guid: aab71a614d08b6846bd0f293c0b42ad5, type: 2}
+      propertyPath: m_TagString
+      value: 1stLane - platform
+      objectReference: {fileID: 0}
+    - target: {fileID: 139618, guid: aab71a614d08b6846bd0f293c0b42ad5, type: 2}
+      propertyPath: m_TagString
+      value: 1stLane - platform
+      objectReference: {fileID: 0}
+    - target: {fileID: 141246, guid: aab71a614d08b6846bd0f293c0b42ad5, type: 2}
+      propertyPath: m_TagString
+      value: 1stLane - platform
+      objectReference: {fileID: 0}
+    - target: {fileID: 106654, guid: aab71a614d08b6846bd0f293c0b42ad5, type: 2}
+      propertyPath: m_TagString
+      value: 1stLane - platform
+      objectReference: {fileID: 0}
+    - target: {fileID: 199408, guid: aab71a614d08b6846bd0f293c0b42ad5, type: 2}
+      propertyPath: m_TagString
+      value: 1stLane - platform
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aab71a614d08b6846bd0f293c0b42ad5, type: 2}
   m_IsPrefabParent: 0
@@ -28744,7 +27716,7 @@ GameObject:
   - 23: {fileID: 2058287577}
   m_Layer: 10
   m_Name: Top
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -28820,7 +27792,7 @@ GameObject:
   - 23: {fileID: 2059177445}
   m_Layer: 11
   m_Name: Side2
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28896,7 +27868,7 @@ GameObject:
   - 23: {fileID: 2062141317}
   m_Layer: 10
   m_Name: Side2
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29391,7 +28363,7 @@ GameObject:
   - 4: {fileID: 2069553456}
   m_Layer: 11
   m_Name: LanePart 1
-  m_TagString: floor
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -29413,7 +28385,7 @@ Transform:
   - {fileID: 352832537}
   - {fileID: 125728372}
   m_Father: {fileID: 1437268526}
-  m_RootOrder: 6
+  m_RootOrder: 4
 --- !u!1 &2075148919
 GameObject:
   m_ObjectHideFlags: 0
@@ -29427,7 +28399,7 @@ GameObject:
   - 23: {fileID: 2075148921}
   m_Layer: 10
   m_Name: Side2
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -29503,7 +28475,7 @@ GameObject:
   - 23: {fileID: 2076731014}
   m_Layer: 11
   m_Name: Side2
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -29579,7 +28551,7 @@ GameObject:
   - 23: {fileID: 2085118208}
   m_Layer: 10
   m_Name: Side1
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29655,7 +28627,7 @@ GameObject:
   - 23: {fileID: 2085632218}
   m_Layer: 10
   m_Name: Top
-  m_TagString: Untagged
+  m_TagString: 1stLane - platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -29731,7 +28703,7 @@ GameObject:
   - 23: {fileID: 2089176522}
   m_Layer: 10
   m_Name: Bottom
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29807,7 +28779,7 @@ GameObject:
   - 23: {fileID: 2091130582}
   m_Layer: 11
   m_Name: Side1
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -29953,7 +28925,7 @@ GameObject:
   - 23: {fileID: 2100702550}
   m_Layer: 10
   m_Name: Bottom
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -30029,7 +29001,7 @@ GameObject:
   - 23: {fileID: 2105985271}
   m_Layer: 10
   m_Name: Bottom
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30105,7 +29077,7 @@ GameObject:
   - 23: {fileID: 2107749667}
   m_Layer: 11
   m_Name: Back
-  m_TagString: Untagged
+  m_TagString: 2ndLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -30259,7 +29231,7 @@ GameObject:
   - 4: {fileID: 2130333286}
   m_Layer: 10
   m_Name: Top
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30274,8 +29246,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1803053911}
-  - {fileID: 1833550900}
   - {fileID: 1477833337}
   - {fileID: 972862021}
   - {fileID: 1831203200}
@@ -30297,7 +29267,7 @@ GameObject:
   - 23: {fileID: 2131392493}
   m_Layer: 10
   m_Name: Front
-  m_TagString: Untagged
+  m_TagString: 1stLane - platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -30370,7 +29340,7 @@ GameObject:
   - 4: {fileID: 2136059085}
   m_Layer: 10
   m_Name: LanePart 4
-  m_TagString: floor
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -30392,7 +29362,7 @@ Transform:
   - {fileID: 1383632173}
   - {fileID: 545709754}
   m_Father: {fileID: 531895143}
-  m_RootOrder: 3
+  m_RootOrder: 1
 --- !u!1 &2136745687
 GameObject:
   m_ObjectHideFlags: 0
@@ -30406,7 +29376,7 @@ GameObject:
   - 23: {fileID: 2136745689}
   m_Layer: 10
   m_Name: Side2
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30479,7 +29449,7 @@ GameObject:
   - 4: {fileID: 2137226230}
   m_Layer: 10
   m_Name: Segment3
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30515,7 +29485,7 @@ GameObject:
   - 23: {fileID: 2142635979}
   m_Layer: 10
   m_Name: Back
-  m_TagString: Untagged
+  m_TagString: 1stLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
