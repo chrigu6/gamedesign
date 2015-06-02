@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeBetweenAttacks: .5
-  attackDamage: 10
+  attackDamage: 256
   player: {fileID: 166266, guid: bed7ed52c780a0a4d9da3340ab2f958b, type: 2}
 --- !u!135 &13504148
 SphereCollider:

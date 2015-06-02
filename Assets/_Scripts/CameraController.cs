@@ -83,7 +83,7 @@ public class CameraController : MonoBehaviour {
 				(aboveCamera.GetComponent (typeof(AudioListener)) as AudioListener).enabled = aboveCamera.enabled;
 			}
 
-			if (Input.GetButtonDown ("SwitchPlayer") && switchingCamAllowed) {
+			if (Input.GetButtonDown ("SwitchPlayer") && switchingPlayerAllowed) {
 				player1.GetComponent<PlayerController> ().changeState ();
 				player2.GetComponent<PlayerController> ().changeState ();
 

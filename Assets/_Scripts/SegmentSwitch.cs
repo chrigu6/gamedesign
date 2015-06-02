@@ -7,7 +7,8 @@ public class SegmentSwitch : MonoBehaviour {
 	public Material deactivatedMat;
 	public Transform objectToMove;
 	private Vector3 startPoint;
-	public Vector3 endPoint;
+	public Vector3 offSet;
+	private Vector3 endPoint;
 	public bool canMoveTwice;
 	public float speed;
 
@@ -20,12 +21,14 @@ public class SegmentSwitch : MonoBehaviour {
 	void Awake() 
 	{
 		this.startPoint = this.objectToMove.position;
+		this.endPoint = this.startPoint + offSet;
 		player = GameObject.Find ("Cameras").GetComponent<CameraController> ().activePlayer;
 		audio = GetComponent<AudioSource> ();
 	}
 
 	void OnTriggerStay(Collider other)
 	{
+		player = GameObject.Find ("Cameras").GetComponent<CameraController> ().activePlayer;
 		if (other.gameObject == player) 
 		{
 			if(Input.GetButton("Action") && (!this.activated || this.canMoveTwice) && running < 1)
@@ -63,7 +66,7 @@ public class SegmentSwitch : MonoBehaviour {
 			if(activated){
 				while (i < 1.0f) {
 					i += Time.deltaTime * rate;
-					this.objectToMove.transform.localPosition = Vector3.Lerp(currentPosition, this.endPoint, i);
+					this.objectToMove.transform.localPosition = Vector3.Lerp(this.startPoint, this.endPoint, i);
 					this.running--;
 					yield return null;
 				}
@@ -71,7 +74,7 @@ public class SegmentSwitch : MonoBehaviour {
 			else{
 				while (i < 1.0f) {
 					i += Time.deltaTime * rate;
-					this.objectToMove.localPosition = Vector3.Lerp(currentPosition, this.startPoint, i);
+					this.objectToMove.localPosition = Vector3.Lerp(this.endPoint, this.startPoint, i);
 					this.running--;
 					yield return null;
 				}

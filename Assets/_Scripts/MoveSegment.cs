@@ -2,7 +2,8 @@
 using System.Collections;
 
 public class MoveSegment : MonoBehaviour {
-	public Vector3 endPoint;
+	public Vector3 offSet;
+	private Vector3 endPoint;
 	public float speed;
 
 	
@@ -10,6 +11,11 @@ public class MoveSegment : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
+	}
+
+	void Awake()
+	{
+		this.endPoint = this.transform.position + offSet;
 	}
 
 	IEnumerator Start()

@@ -17,6 +17,7 @@ public class LaserSwitchDeactivation : MonoBehaviour {
 
 	void OnTriggerStay(Collider other)
 	{
+		player = GameObject.Find ("Cameras").GetComponent<CameraController> ().activePlayer;
 		if (other.gameObject == player) 
 		{
 			if(Input.GetButton("Action"))
