@@ -1,20 +1,21 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class LaserSwitchDeactivation : MonoBehaviour {
+public class ComplexLaserSwitch : MonoBehaviour {
 
-	public GameObject laser;
-	public Material unlockedMat;
-
+	public Material activatedMat;
+	public Material deactivatedMat;
+	public GameObject[] laser;
+	private bool activated = false;
 	private GameObject player;
 	private AudioSource audio;
-
+	
 	void Awake() 
 	{
 		player = GameObject.Find ("Cameras").GetComponent<CameraController> ().activePlayer;
 		audio = GetComponent<AudioSource> ();
 	}
-
+	
 	void OnTriggerStay(Collider other)
 	{
 		player = GameObject.Find ("Cameras").GetComponent<CameraController> ().activePlayer;
@@ -22,17 +23,24 @@ public class LaserSwitchDeactivation : MonoBehaviour {
 		{
 			if(Input.GetButton("Action"))
 			{
-				LaserDeactivation(this.laser);
+				this.activated = !this.activated;
+				LaserDeactivation();
 			}
 		}
 	}
-
-	void LaserDeactivation(GameObject laser)
+	
+	void LaserDeactivation()
 	{
-		laser.SetActive (false);
-
 		Renderer switchButton = GetComponent<Renderer> ();
-		switchButton.material = unlockedMat;
+		if (this.activated) {
+			switchButton.material = activatedMat;
+		} else {
+				switchButton.material = deactivatedMat;
+
+		}
+		foreach (GameObject o in this.laser) {
+		o.SetActive (!o.activeSelf);
+	}
 		audio.Play ();
 	} 
 }
