@@ -11,15 +11,21 @@ public class EnemyHealth : MonoBehaviour {
 	AudioSource enemyAudio;
 	ParticleSystem hitParticles;
 	SphereCollider sphereCollider;
+	public GameObject player;
+	
 	public PlayerScore playerScore;
+	public int currentScoreNow;
 	
 	public bool isDead;
 	bool isSinking;
+	
 	
 	void Awake (){
 		enemyAudio = GetComponent <AudioSource> ();
 		hitParticles = GetComponent <ParticleSystem> ();
 		sphereCollider = GetComponent <SphereCollider> ();
+		
+		player = GameObject.Find("Cameras").GetComponent<CameraController>().activePlayer;
 		
 		currentHealth = startingHealth;
 	}
@@ -28,6 +34,11 @@ public class EnemyHealth : MonoBehaviour {
 	void Update () {
 		if (isSinking) {
 			transform.Translate (Vector3.up * sinkSpeed * Time.deltaTime);
+			
+			if (player.transform.position.y > 15 && playerScore.currentScore < currentScoreNow + 100) {
+				playerScore.AddScore (1);
+				playerScore.PlayScoreSound();
+			}
 		}
 	}
 	
@@ -45,7 +56,8 @@ public class EnemyHealth : MonoBehaviour {
 		
 		// Player is dead
 		if (currentHealth <= 0 && !isDead) {
-			Death ();
+			StartCoroutine (DelayDeath ());
+			currentScoreNow = playerScore.currentScore;
 		}
 		
 	}
@@ -71,5 +83,12 @@ public class EnemyHealth : MonoBehaviour {
 		isSinking = true;
 		// Destroy the object after 2 seconds
 		Destroy (gameObject, 10f);
+	}
+	
+	IEnumerator DelayDeath()
+	{
+		float timeToWait = 0.8f;
+		yield return new WaitForSeconds(timeToWait);
+		Death ();
 	}
 }

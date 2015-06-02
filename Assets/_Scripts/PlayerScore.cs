@@ -4,23 +4,23 @@ using System.Collections;
 
 public class PlayerScore : MonoBehaviour {
 	public int startingScore;
-	int currentScore;
+	public int currentScore;
 	
 	int amount;
 	bool scoreAdded = false;
 	string scoreText = "Score: 0";
 	
 	Text guiScore;
-
+	
 	public AudioClip scoreClip;
 	AudioSource scoreAudio;
-
+	
 	public AudioClip healthClip;
 	AudioSource healthAudio;
-
+	
 	public AudioClip ammoClip;
 	AudioSource ammoAudio;
-
+	
 	
 	
 	
@@ -32,9 +32,9 @@ public class PlayerScore : MonoBehaviour {
 		scoreAudio = GetComponent <AudioSource> ();
 		healthAudio = GetComponent <AudioSource> ();
 		ammoAudio = GetComponent <AudioSource> ();
-
-
-
+		
+		
+		
 	}
 	
 	// Update is called once per frame
@@ -50,23 +50,24 @@ public class PlayerScore : MonoBehaviour {
 		currentScore += amount;
 		scoreText = "Score: " + currentScore.ToString ();
 		guiScore.text = scoreText;
+		
 		//			playerAudio.Play();
 	}
-
+	
 	public void PlayScoreSound(){
 		
 		scoreAudio.clip = scoreClip;
 		scoreAudio.Play ();
-	
+		
 	}
-
+	
 	public void PlayHealthSound(){
 		
 		healthAudio.clip = healthClip;
 		healthAudio.Play ();
 		
 	}
-
+	
 	public void PlayAmmoSound(){
 		
 		ammoAudio.clip = ammoClip;
