@@ -52,13 +52,15 @@ public class PlayerController : MonoBehaviour {
 	public Transform shotSpawn;
 	public float fireRate;
 	public float bulletSpeed;
-	public float ammo = 10;
 	private float nextFire;
 	public GameObject shot;
+	private PlayerAmmo activePlayerAmmo;
 
 	//Cameras
 	public Camera frontCamera;
 	public Camera aboveCamera;
+	private CameraController cameraController;
+	private GameObject activePlayer;
 
 	//Die
 	public GameObject deathParticles;
@@ -91,6 +93,8 @@ public class PlayerController : MonoBehaviour {
 
 		shootableMask = LayerMask.GetMask ("Shootable");
 		shootingMask = LayerMask.GetMask ("ShootingQuad");
+
+		cameraController = GameObject.Find ("Cameras").GetComponent<CameraController> ();
 
 		gunLine = GetComponent <LineRenderer> ();
 		gunAudio = GetComponent<AudioSource> ();
@@ -137,7 +141,10 @@ public class PlayerController : MonoBehaviour {
 			this.shootingQuad.transform.position = this.transform.position +  new Vector3(0,0,shootingQuadoffset);
 		}
 
-		if (ammo <= 0) {
+		activePlayer = cameraController.activePlayer;
+		activePlayerAmmo = activePlayer.GetComponent<PlayerAmmo> ();
+
+		if (activePlayerAmmo.currentAmmo <= 0) {
 			this.canShoot = false;
 		}
 
@@ -207,7 +214,7 @@ public class PlayerController : MonoBehaviour {
 
 	void ShotEffects(){
 		timer = 0f;
-		ammo -= 1;
+		activePlayerAmmo.reduceAmmo (1);
 		gunLight.enabled = true;
 		//gunLine.enabled = true;
 		//gunLine.SetPosition (0, rightHand.position);

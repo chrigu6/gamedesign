@@ -14567,19 +14567,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22439078, guid: 5b1d9ec1b0faf04489146de1ca0ad7d2, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22439078, guid: 5b1d9ec1b0faf04489146de1ca0ad7d2, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 169696, guid: 5b1d9ec1b0faf04489146de1ca0ad7d2, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 22414936, guid: 5b1d9ec1b0faf04489146de1ca0ad7d2, type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: -605.200012
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5b1d9ec1b0faf04489146de1ca0ad7d2, type: 2}
@@ -16364,6 +16356,10 @@ Prefab:
       propertyPath: damageImage
       value: 
       objectReference: {fileID: 1333852788}
+    - target: {fileID: 11424854, guid: bed7ed52c780a0a4d9da3340ab2f958b, type: 2}
+      propertyPath: startingAmmo
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bed7ed52c780a0a4d9da3340ab2f958b, type: 2}
   m_IsPrefabParent: 0

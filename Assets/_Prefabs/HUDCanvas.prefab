@@ -67,7 +67,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &144430
 GameObject:
   m_ObjectHideFlags: 1
@@ -249,7 +249,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: 'Ammo: '
 --- !u!114 &11419476
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -641,7 +641,7 @@ RectTransform:
   m_RootOrder: 3
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -514, y: 90}
+  m_AnchoredPosition: {x: -605.200012, y: 90}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: .5, y: .5}
 --- !u!224 &22439078
