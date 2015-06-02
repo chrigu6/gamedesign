@@ -11,7 +11,7 @@ public class LaserSwitchDeactivation : MonoBehaviour {
 
 	void Awake() 
 	{
-		player = GameObject.FindGameObjectWithTag ("Player1");
+		player = GameObject.Find ("Cameras").GetComponent<CameraController> ().activePlayer;
 		audio = GetComponent<AudioSource> ();
 	}
 

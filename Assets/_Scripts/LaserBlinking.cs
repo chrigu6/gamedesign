@@ -12,8 +12,7 @@ public class LaserBlinking : MonoBehaviour {
 	private bool playerInRange;
 
 	private Renderer renderer;
-	private GameObject player1;
-	private GameObject player2;
+	private GameObject player;
 	private PlayerHealth playerHealth;
 	private Light light;
 
@@ -21,13 +20,13 @@ public class LaserBlinking : MonoBehaviour {
 	void Awake()
 	{
 		renderer = GetComponent<Renderer> ();
-		player1 = GameObject.FindGameObjectWithTag ("Player1");
-		player2 = GameObject.FindGameObjectWithTag ("Player2");
+		player = GameObject.Find ("Cameras").GetComponent<CameraController> ().activePlayer;
 		light = GetComponent<Light> ();
 	}
 
 	void Update()
 	{
+		player = GameObject.Find ("Cameras").GetComponent<CameraController> ().activePlayer;
 		timer += Time.deltaTime;
 		damageTimer += Time.deltaTime;
 
@@ -56,21 +55,16 @@ public class LaserBlinking : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other)
 	{
-		if(other.gameObject == player1 || other.gameObject == player2)
+		if(other.gameObject == player)
 		{
-			if(other.gameObject == player1){
-				playerHealth = player1.GetComponent<PlayerHealth>();
-			}
-			else {
-				playerHealth = player2.GetComponent<PlayerHealth>();
-			}
+			playerHealth = player.GetComponent<PlayerHealth>();
 			playerInRange = true;
 		}
 	}
 	
 	void OnTriggerExit(Collider other)
 	{
-		if (other.gameObject == player1 || other.gameObject == player2) 
+		if (other.gameObject == player) 
 		{
 			playerInRange = false;	
 		}
