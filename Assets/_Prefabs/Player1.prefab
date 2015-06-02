@@ -849,6 +849,7 @@ GameObject:
   - 120: {fileID: 12075886}
   - 108: {fileID: 10803496}
   - 114: {fileID: 11480564}
+  - 114: {fileID: 11424854}
   m_Layer: 8
   m_Name: Player1
   m_TagString: Player1
@@ -2873,6 +2874,18 @@ Light:
   m_ShadowRadius: 0
   m_ShadowAngle: 0
   m_AreaSize: {x: 1, y: 1}
+--- !u!114 &11424854
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 166266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61bb0865d95d644dbbb87b48885b9083, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentAmmo: 0
 --- !u!114 &11437404
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2926,7 +2939,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingScore: 0
-  coinClip: {fileID: 8300000, guid: 11bba9a06aaff0146945ba3e80cc6ae1, type: 3}
+  scoreClip: {fileID: 8300000, guid: bc86120b823ba5f48a4ee701725a9853, type: 3}
+  healthClip: {fileID: 8300000, guid: 734cb781ed70c304c8865de7257f3040, type: 3}
+  ammoClip: {fileID: 8300000, guid: 4f11d0d64e5f3614c9218bccf5bdb410, type: 3}
 --- !u!114 &11480624
 MonoBehaviour:
   m_ObjectHideFlags: 1

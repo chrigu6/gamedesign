@@ -1,0 +1,22 @@
+-------------------------
+Alien Artifacts Kit (Lite)
+by MobileJuze Pty Ltd
+www.mobilejuze.com.au
+-------------------------
+
+LICENSE INFORMATION
+
+Concept & Story
+by MobileJuze Pty Ltd
+Please refer to the primary license related to the download and/or purchase of this asset package.
+
+Code & Build
+by MobileJuze Pty Ltd
+Please refer to the primary license related to the download and/or purchase of this asset package.
+
+Design, Modelling, Luminosity Textures & UV Mapping
+by MobileJuze Pty Ltd
+Please refer to the primary license related to the download and/or purchase of this asset package.
+
+"Clamped" and "Repeat" Textures
+The textures in the folder "Clamped" and "Repeat" are licensed under Creative Commons CC BY-SA 3.0 (see https://creativecommons.org/licenses/by-sa/3.0/). This notice must accompany any redistribution of these texures. They have been derived from the patterns on http://subtlepatterns.com - "Crisp Paper Ruffles" by "Trish", "Escheresque" by "Jan Meeus", "Grey Washed Wall" by "Sagive SEO", "Honey I’m subtle" by "Alex M. Balling", "Retina Wood" by "Atle Mo", "Shattered" by "Luuk van Baars", "Subtle White Feathers" by "Viahorizon",  "Triangular" by Dax Kieran.

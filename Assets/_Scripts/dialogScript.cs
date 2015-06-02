@@ -13,13 +13,18 @@ public class dialogScript : MonoBehaviour {
 	private int counter = 0;
 	string dialog;
 	object[] dialogLines;
+	
 
 	// Use this for initialization
 	void Start () {
+
 		this.dialog = File.ReadAllText(Application.dataPath+ "/Dialog/" + this.gameObject.name + ".txt");
 		this.text = dialogCanvas.GetComponentInChildren<Text> ();
 		this.formatDialog ();
 		this.dialogCanvas.enabled = false;
+
+
+
 	}
 
 	private void formatDialog (){
@@ -67,6 +72,8 @@ public class dialogScript : MonoBehaviour {
 			}
 			this.cameras.GetComponent<CameraController>().EndDialog();
 			this.dialogCanvas.enabled = false;
+
+
 			
 		}
 		yield return 0;

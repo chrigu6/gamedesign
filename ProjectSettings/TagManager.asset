@@ -24,6 +24,9 @@ TagManager:
   - FriendlyBullet
   - terminal2
   - terminal3
+  - LifeCoin
+  - ScoreCoin
+  - AmmoCoin
   layers:
   - Default
   - TransparentFX

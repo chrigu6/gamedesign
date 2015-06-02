@@ -12,8 +12,15 @@ public class PlayerScore : MonoBehaviour {
 	
 	Text guiScore;
 
-	public AudioClip coinClip;
-	AudioSource coinAudio;
+	public AudioClip scoreClip;
+	AudioSource scoreAudio;
+
+	public AudioClip healthClip;
+	AudioSource healthAudio;
+
+	public AudioClip ammoClip;
+	AudioSource ammoAudio;
+
 	
 	
 	
@@ -22,7 +29,11 @@ public class PlayerScore : MonoBehaviour {
 		currentScore = startingScore;
 		guiScore = GameObject.Find("Score").GetComponent<Text> ();
 		guiScore.text = scoreText;
-		coinAudio = GetComponent <AudioSource> ();
+		scoreAudio = GetComponent <AudioSource> ();
+		healthAudio = GetComponent <AudioSource> ();
+		ammoAudio = GetComponent <AudioSource> ();
+
+
 
 	}
 	
@@ -42,11 +53,25 @@ public class PlayerScore : MonoBehaviour {
 		//			playerAudio.Play();
 	}
 
-	public void PlayCoinSound(){
+	public void PlayScoreSound(){
 		
-		coinAudio.clip = coinClip;
-		coinAudio.Play ();
+		scoreAudio.clip = scoreClip;
+		scoreAudio.Play ();
 	
+	}
+
+	public void PlayHealthSound(){
+		
+		healthAudio.clip = healthClip;
+		healthAudio.Play ();
+		
+	}
+
+	public void PlayAmmoSound(){
+		
+		ammoAudio.clip = ammoClip;
+		ammoAudio.Play ();
+		
 	}
 	
 	

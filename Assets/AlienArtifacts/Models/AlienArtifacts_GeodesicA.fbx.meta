@@ -1,0 +1,109 @@
+fileFormatVersion: 2
+guid: 4a574c73f20a04259b79d8124ef558e0
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: AlienArtifacts_Barth
+    100002: AlienArtifacts_DiPyramid
+    100004: //RootNode
+    100006: AlienArtifacts_GeodesicA
+    100008: AlienArtifacts_Infinity
+    100010: AlienArtifacts_Tetra
+    100012: Default_Camera
+    100014: Directional
+    100016: Main Lamp Luminosity
+    100018: Main Lamp Luminosity.001
+    100020: Main Lamp.000
+    100022: Main Lamp.002
+    100024: Main Lamp.OLD
+    100026: Main Lamp.TEST
+    400000: AlienArtifacts_Barth
+    400002: AlienArtifacts_DiPyramid
+    400004: AlienArtifacts_GeodesicA
+    400006: //RootNode
+    400008: AlienArtifacts_Infinity
+    400010: AlienArtifacts_Tetra
+    400012: Default_Camera
+    400014: Directional
+    400016: Main Lamp Luminosity
+    400018: Main Lamp Luminosity.001
+    400020: Main Lamp.000
+    400022: Main Lamp.002
+    400024: Main Lamp.OLD
+    400026: Main Lamp.TEST
+    2300000: AlienArtifacts_Barth
+    2300002: AlienArtifacts_DiPyramid
+    2300004: AlienArtifacts_GeodesicA
+    2300006: AlienArtifacts_Infinity
+    2300008: AlienArtifacts_Tetra
+    2300010: //RootNode
+    3300000: AlienArtifacts_Barth
+    3300002: AlienArtifacts_DiPyramid
+    3300004: AlienArtifacts_GeodesicA
+    3300006: AlienArtifacts_Infinity
+    3300008: AlienArtifacts_Tetra
+    3300010: //RootNode
+    4300000: AlienArtifacts_GeodesicA
+    4300002: AlienArtifacts_Infinity
+    4300004: AlienArtifacts_DiPyramid
+    4300006: AlienArtifacts_Barth
+    4300008: AlienArtifacts_Tetra
+    9500000: //RootNode
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 5
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

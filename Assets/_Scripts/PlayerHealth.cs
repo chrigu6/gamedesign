@@ -61,6 +61,7 @@ public class PlayerHealth : MonoBehaviour
             currentHealth += amount;
             healthSlider.fillAmount = currentHealth / maxHealth;
             playerAudio.Play();
+			healed = false;
         }
     }
 	

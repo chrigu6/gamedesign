@@ -3,7 +3,11 @@ using System.Collections;
 
 public class CoinPickup : MonoBehaviour {
 	public int scoreValue = 10;
+	public int healthValue = 10;
+	public int ammoValue = 10;
 	public PlayerScore playerScore;
+	public PlayerHealth playerHealth;
+	public PlayerAmmo playerAmmo;
 
 	public ParticleSystem particleEffect;
 
@@ -20,15 +24,37 @@ public class CoinPickup : MonoBehaviour {
 	void OnTriggerEnter(Collider other){
 		// check if collider's tag contains "Player"
 		if (other.tag.Contains("Player")) {
-			playerScore.AddScore (scoreValue);
 
-			playerScore.PlayCoinSound();
+			if(this.tag.Equals("LifeCoin")){
+				Debug.Log("Hell yea lifecoin");
+				playerHealth.AddHealth (healthValue);
+				
+				playerScore.PlayHealthSound();
 
-			particleEffect.Play();
+			}
 
-			this.GetComponent<MeshRenderer>().enabled = false;
-			this.GetComponent<BoxCollider>().enabled = false;
-			Destroy (gameObject, 3f);
+			if(this.tag.Equals("ScoreCoin")){
+				Debug.Log("Hell yea ScoreCoin");
+
+				playerScore.AddScore (scoreValue);
+				
+				playerScore.PlayScoreSound();
+			}
+
+			if(this.tag.Equals("AmmoCoin")){
+				Debug.Log("Hell yea AmmoCoin");
+
+				playerAmmo.AddAmmo (ammoValue);
+				
+				playerScore.PlayAmmoSound();
+			}
+
+
+				particleEffect.Play();
+
+				this.GetComponent<MeshRenderer>().enabled = false;
+				this.GetComponent<BoxCollider>().enabled = false;
+				Destroy (gameObject, 3f);
 
 
 		}
