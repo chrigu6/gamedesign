@@ -18,7 +18,7 @@ TagManager:
   - cameraController
   - 1stLane - platform
   - DialogCollider
-  - CheckPoint
+  - CheckPointP1
   - Coin
   - EnemyBullet
   - FriendlyBullet
@@ -27,6 +27,8 @@ TagManager:
   - LifeCoin
   - ScoreCoin
   - AmmoCoin
+  - platform
+  - CheckPointP2
   layers:
   - Default
   - TransparentFX

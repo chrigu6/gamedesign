@@ -2,21 +2,21 @@
 using System.Collections;
 
 public class PlayerController : MonoBehaviour {
-
-
+	
+	
 	//General state
 	bool isActive = false;
 	private int currentLayer;
 	public bool changeLane;
 	private Animator anim;
 	private HashIDs hash;
-
+	
 	//Movement
 	Rigidbody playerRigidbody;
 	public float speed;
 	public float turnSmoothing = 15f;
 	public float speedDampTime = 0.1f;
-
+	
 	//Jumping
 	public AudioClip jumpClip;
 	public AudioClip landedClip;
@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour {
 	public Transform groundCheck;
 	float groundRadius = 0.2f;
 	public LayerMask whatIsGround;
-
+	
 	//Shooting
 	public bool canShoot = false;
 	public GameObject shootingQuad;
@@ -55,29 +55,29 @@ public class PlayerController : MonoBehaviour {
 	private float nextFire;
 	public GameObject shot;
 	private PlayerAmmo activePlayerAmmo;
-
+	
 	//Cameras
 	public Camera frontCamera;
 	public Camera aboveCamera;
 	private CameraController cameraController;
 	private GameObject activePlayer;
-
+	
 	//Die
 	public GameObject deathParticles;
 	private PlayerHealth health;
 	public AudioClip deathClip;
 	private Vector3 spawn;
-
-
+	
+	
 	//Terminal
 	private bool atTerminal = false;
 	private bool activateTerminal = false;
 	private string terminalName = "";
-
+	
 	//Health
-
-
-
+	
+	
+	
 	// Use this for initialization
 	void Start () {
 		spawn = transform.position;
@@ -85,34 +85,34 @@ public class PlayerController : MonoBehaviour {
 		playerRigidbody = GetComponent<Rigidbody> ();
 		playerRigidbody.transform.Rotate (0, 270, 0);
 	}
-
+	
 	void Awake() {
-
+		
 		anim = GetComponent<Animator> ();
 		hash = GameObject.FindGameObjectWithTag ("GameController").GetComponent<HashIDs> ();
-
+		
 		shootableMask = LayerMask.GetMask ("Shootable");
 		shootingMask = LayerMask.GetMask ("ShootingQuad");
-
+		
 		cameraController = GameObject.Find ("Cameras").GetComponent<CameraController> ();
-
+		
 		gunLine = GetComponent <LineRenderer> ();
 		gunAudio = GetComponent<AudioSource> ();
 		gunLight = GetComponent<Light> ();
 		this.currentLayer = 1;
 	}
-
+	
 	
 	// Update is called once per frame
 	void FixedUpdate () {
 		float h = Input.GetAxisRaw ("Horizontal");
-	
+		
 		float v = Input.GetAxisRaw ("Vertical");
 		if (isActive) {
 			Move (h, v);
 		}
-
-
+		
+		
 		if (frontCamera.enabled) {
 			playerRigidbody.constraints = RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
 		} else {
@@ -130,28 +130,28 @@ public class PlayerController : MonoBehaviour {
 		}
 		*/
 	}
-		
-
+	
+	
 	void Update()
 	{
 		timer += Time.deltaTime;
 		//float shot = anim.GetFloat (hash.shotFloat);
-
+		
 		if (this.isActive) {
 			this.shootingQuad.transform.position = this.transform.position +  new Vector3(0,0,shootingQuadoffset);
 		}
-
+		
 		activePlayer = cameraController.activePlayer;
 		activePlayerAmmo = activePlayer.GetComponent<PlayerAmmo> ();
-
+		
 		if (activePlayerAmmo.currentAmmo <= 0) {
 			this.canShoot = false;
 		}
-
+		
 		/*if (shot < 0.5f) {
 			laserShotLine.enabled = false;
 		}*/
-
+		
 		Collider[] ground = Physics.OverlapSphere (groundCheck.position, groundRadius, whatIsGround);
 		if (ground.Length > 0) {
 			if(!this.grounded)
@@ -166,19 +166,19 @@ public class PlayerController : MonoBehaviour {
 		if (transform.position.y < -9) {
 			Die ();
 		}
-
+		
 		if (isActive) {
-
+			
 			if (Input.GetButtonDown ("Jump") && this.grounded) {
 				GetComponent<Rigidbody> ().AddForce (new Vector3 (0, jumpForce, 0));
 				AudioSource.PlayClipAtPoint(this.jumpClip, transform.position, 0.3f);
 			}
-
+			
 			if (frontCamera.enabled && Input.GetButton ("Fire2") && Time.time > nextFire && this.canShoot) {
 				//anim.SetBool(hash.shotClicked, true);
 				Vector3 shotPosition = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 				Vector3 playerToMouse = shotPosition - rightHand.position;
-
+				
 				if((transform.forward.x > 0 && playerToMouse.x > 0) || (transform.forward.x < 0 && playerToMouse.x < 0))
 				{
 					nextFire = Time.time + fireRate;
@@ -186,20 +186,20 @@ public class PlayerController : MonoBehaviour {
 				}
 				//anim.SetBool(hash.shotClicked, false);
 			}
-
+			
 			if(this.atTerminal && Input.GetButtonDown("Action"))
 			{
 				this.activateTerminal = true;
 			}
-
+			
 		}
-
+		
 		if (timer >= timeBetweenBullets * effectsDisplayTime) {
 			DisableEffects();
 		}
 		//laserShotLight.intensity = Mathf.Lerp (laserShotLight.intensity, 0f, fadeSpeed * Time.deltaTime);
 	}
-
+	
 	/*void OnAnimatorIK (int layerIndex)
 	{
 		// Cache the current value of the AimWeight curve.
@@ -211,7 +211,7 @@ public class PlayerController : MonoBehaviour {
 		// Set the weight of the IK compared to animation to that of the curve.
 		anim.SetIKPositionWeight(AvatarIKGoal.RightHand, aimWeight);
 	}*/
-
+	
 	void ShotEffects(){
 		timer = 0f;
 		activePlayerAmmo.reduceAmmo (1);
@@ -219,19 +219,19 @@ public class PlayerController : MonoBehaviour {
 		//gunLine.enabled = true;
 		//gunLine.SetPosition (0, rightHand.position);
 		//shootRay.origin = rightHand.position;
-
+		
 		Ray camRay = Camera.main.ScreenPointToRay (Input.mousePosition);
 		RaycastHit floorHit;
-
+		
 		shotPosition = Input.mousePosition;
 		shotPosition = Camera.main.ScreenToWorldPoint (shotPosition);
 		shotPosition.z = transform.position.z;
-
+		
 		AudioSource.PlayClipAtPoint (shotClip, rightHand.position, 0.3f);
-
+		
 		enemyRay.origin = rightHand.position;
 		enemyRay.direction = shotPosition;
-
+		
 		if(Physics.Raycast(enemyRay, out shootHit, range, shootableMask)){
 			EnemyHealth enemyHealth = shootHit.collider.GetComponent <EnemyHealth>();
 			// if there is a enemyHealth script component, take damage and draw a line
@@ -240,8 +240,8 @@ public class PlayerController : MonoBehaviour {
 				// draw the line
 			}
 		}
-		 
-
+		
+		
 		if(Physics.Raycast(camRay, out floorHit, range, this.shootingMask))
 		{
 			//Debug.Log (floorHit.point);
@@ -256,7 +256,7 @@ public class PlayerController : MonoBehaviour {
 				angle = angle *-1;
 			}
 			//shootRay.direction = playerToMouse;
-
+			
 			//gunLine.SetPosition(1,shootRay.origin + shootRay.direction * range);
 			//Quaternion rotation = 
 			//rotation = rightHand.rotation * rotation;
@@ -264,35 +264,35 @@ public class PlayerController : MonoBehaviour {
 			o.GetComponent<Mover>().setRange(this.range);
 			o.GetComponent<Mover>().setOrigin(this.rightHand.position);
 		}
-
-
+		
+		
 	}
-
+	
 	void DisableEffects()
 	{
 		//gunLine.enabled = false;
 		gunLight.enabled = false;
 	}
-
+	
 	void Move (float h, float v)
 	{
 		if (h != 0f || v != 0f) {
 			anim.SetFloat (hash.speedFloat, 5.5f, speedDampTime, Time.deltaTime);
 			if (frontCamera.enabled) {
 				Rotating (h, v);
-
+				
 			} else {
 				Rotating (v, -h);
 			}
-
-
+			
+			
 		} else {
 			anim.SetFloat(hash.speedFloat, 0f);
 		} 
 	}
-
-
-
+	
+	
+	
 	void OnTriggerEnter(Collider other)
 	{
 		if (isActive) {
@@ -300,14 +300,14 @@ public class PlayerController : MonoBehaviour {
 				this.atTerminal = true;
 				this.terminalName = other.gameObject.tag;
 			}
-
+			
 			if (other.gameObject.tag == "DialogCollider")
 			{
 				StartCoroutine(other.gameObject.GetComponent<dialogScript>().dialogCollision());
 			}
 		}
 	}
-
+	
 	void OnTriggerExit(Collider other)
 	{
 		if (isActive) {
@@ -317,18 +317,18 @@ public class PlayerController : MonoBehaviour {
 			}
 		}
 	}
-
-
-
+	
+	
+	
 	void OnCollisionEnter(Collision colide)
 	{
 		if (isActive) {
-					if (colide.gameObject.tag.Contains ("platform")) {
+			if (colide.gameObject.tag.Contains ("platform")) {
 				transform.parent = colide.transform;
 			}
 		}
 	}
-
+	
 	void OnCollisionExit(Collision colide)
 	{
 		if (isActive) {
@@ -337,7 +337,7 @@ public class PlayerController : MonoBehaviour {
 			}
 		}
 	}
-
+	
 	void Rotating(float horizontal, float vertical)
 	{
 		Vector3 targetDirection = new Vector3 (horizontal, 0f, vertical);
@@ -345,24 +345,33 @@ public class PlayerController : MonoBehaviour {
 		Quaternion newRotation = Quaternion.Lerp (playerRigidbody.rotation, targetRotation, turnSmoothing * Time.deltaTime);
 		playerRigidbody.MoveRotation (newRotation); 
 	}
-//
+	//
 	public void Die()
 	{
-//		StartCoroutine (waitOneSecond());
+		//		StartCoroutine (waitOneSecond());
 		// respawn at latest checkpoint
 		AudioSource.PlayClipAtPoint (this.deathClip, this.transform.position, 0.5f);
-		transform.position = CheckPoint.ReachedPoint + new Vector3(0,3,0);
+		
+		if (gameObject.tag.Contains ("Player1")) {
+			transform.position = CheckPoint.ReachedPointP1 + new Vector3 (0, 3, 2.5f);
+		}
+		
+		if (gameObject.tag.Contains ("Player2")) {
+			transform.position = CheckPoint.ReachedPointP2 + new Vector3 (0, 3, 2.5f);
+		}
+		
+		
 		this.health.AddHealth (1024);
 		this.health.alive();
-//		Instantiate(deathParticles, transform.position, Quaternion.identity);
+		//		Instantiate(deathParticles, transform.position, Quaternion.identity);
 	}
-
+	
 	public void changeState(){
 		this.isActive = !this.isActive;
 		this.Move (0f,0f);
 	}
-
-
+	
+	
 	private int getLayer(string LayerName){
 		if (LayerName.Contains ("1stLane"))
 			return 1;
@@ -370,44 +379,44 @@ public class PlayerController : MonoBehaviour {
 			return 2;
 		if (LayerName.Contains ("3dLane"))
 			return 3;
-
+		
 		return this.currentLayer;
 	}
-
+	
 	public int getLayerNumber()
 	{
 		return this.currentLayer;
 	}
-
+	
 	public void abort(){
 		this.activateTerminal = false;
 	}
-
+	
 	public bool getTerminalState()
 	{
 		return this.activateTerminal;
 	}
-
+	
 	public string getTerminalName()
 	{
 		return this.terminalName;
 	}
-
+	
 	public bool isPlayerActive()
 	{
 		return this.isActive;
 	}
-
+	
 	public void enableShooting()
 	{
 		this.canShoot = true;
 	}
-
+	
 	public void disableShooting()
 	{
 		this.canShoot = false;
 	}
-
+	
 	IEnumerator waitOneSecond() {
 		yield return new WaitForSeconds(1);
 	}
