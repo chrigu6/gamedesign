@@ -137,9 +137,10 @@ GameObject:
   - 120: {fileID: 12036684}
   - 108: {fileID: 10825496}
   - 114: {fileID: 11457236}
+  - 114: {fileID: 11480422}
   m_Layer: 8
   m_Name: Player2
-  m_TagString: Player1
+  m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2008,8 +2009,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 107688}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: -1.62920685e-07}
-  m_LocalPosition: {x: 0, y: .50999999, z: .779999971}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalPosition: {x: 229.639999, y: -5.32999992, z: 142.940002}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 406518}
   - {fileID: 455370}
@@ -2644,7 +2645,7 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .5
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -2950,26 +2951,31 @@ MonoBehaviour:
   speed: 6
   turnSmoothing: 15
   speedDampTime: .100000001
-  jumpForce: 650
+  jumpClip: {fileID: 8300000, guid: a084b988fa69fe34994047e472f1a708, type: 3}
+  landedClip: {fileID: 8300000, guid: 5e2afb0f3d20b594e903d880e568f2bf, type: 3}
+  jumpForce: 800
   groundCheck: {fileID: 466862}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 15360
   canShoot: 1
-  shootingQuad: {fileID: 0}
+  shootingQuad: {fileID: 131992, guid: 0b1fe401671ab864f81d5e9b5f902895, type: 2}
+  shootingQuadoffset: 5
   shotClip: {fileID: 8300000, guid: 40e20cabe27ea0c44aedb8059a504a68, type: 3}
   flashIntensity: 3
   fadeSpeed: 10
   damagePerShot: 20
   timeBetweenBullets: .150000006
-  range: 100
-  rightHand: {fileID: 450086}
-  frontCamera: {fileID: 0}
-  aboveCamera: {fileID: 0}
-  deathParticles: {fileID: 110578, guid: 64be425dfc9f54723b0b72ad94aba7e4, type: 2}
+  range: 50
+  rightHand: {fileID: 497244}
   shotSpawn: {fileID: 464152}
   fireRate: .25
   bulletSpeed: 1
+  shot: {fileID: 115946, guid: c4c187a8628af8c43a0964be7b8a395d, type: 2}
+  frontCamera: {fileID: 0}
+  aboveCamera: {fileID: 0}
+  deathParticles: {fileID: 110578, guid: 64be425dfc9f54723b0b72ad94aba7e4, type: 2}
+  deathClip: {fileID: 8300000, guid: 1efb117dd2434514aa392eb096723d35, type: 3}
 --- !u!114 &11457236
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2982,6 +2988,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingScore: 0
+  scoreClip: {fileID: 8300000, guid: bc86120b823ba5f48a4ee701725a9853, type: 3}
+  healthClip: {fileID: 8300000, guid: 734cb781ed70c304c8865de7257f3040, type: 3}
+  ammoClip: {fileID: 8300000, guid: 4f11d0d64e5f3614c9218bccf5bdb410, type: 3}
 --- !u!114 &11458934
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2995,12 +3004,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingHealth: 1024
   maxHealth: 1024
-  currentHealth: 0
+  currentHealth: 1024
   healthSlider: {fileID: 0}
   damageImage: {fileID: 0}
-  deathClip: {fileID: 8300000, guid: 2d07eba8eab06cb45898cb11da4a54e2, type: 3}
+  deathClip: {fileID: 8300000, guid: 1efb117dd2434514aa392eb096723d35, type: 3}
   flashSpeed: 5
   flashColour: {r: 1, g: 0, b: 0, a: 255}
+--- !u!114 &11480422
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 107688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61bb0865d95d644dbbb87b48885b9083, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingAmmo: 10
+  currentAmmo: 0
 --- !u!120 &12036684
 LineRenderer:
   m_ObjectHideFlags: 1
