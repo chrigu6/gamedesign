@@ -364,7 +364,6 @@ public class PlayerController : MonoBehaviour {
 
 
 	private int getLayer(string LayerName){
-		Debug.Log (LayerName);
 		if (LayerName.Contains ("1stLane"))
 			return 1;
 		if (LayerName.Contains ("2ndLane"))
