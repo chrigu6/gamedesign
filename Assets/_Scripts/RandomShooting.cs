@@ -40,7 +40,7 @@ public class RandomShooting : MonoBehaviour {
 				direction = minShot;
 			}
 		}
-		shotSpawn.rotation = Quaternion.Euler (direction, 90, -90);
+		shotSpawn.rotation = Quaternion.Euler (0, 0, direction);
 		Instantiate (shot, shotSpawn.position, shotSpawn.rotation);
 	}
 }
