@@ -29015,6 +29015,10 @@ Prefab:
       propertyPath: aboveCamera
       value: 
       objectReference: {fileID: 1947031007}
+    - target: {fileID: 11418914, guid: ca9d967768529114c89cdb78daafb271, type: 2}
+      propertyPath: shootingQuad
+      value: 
+      objectReference: {fileID: 432505442}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ca9d967768529114c89cdb78daafb271, type: 2}
   m_IsPrefabParent: 0
