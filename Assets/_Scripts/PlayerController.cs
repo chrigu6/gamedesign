@@ -336,10 +336,15 @@ public class PlayerController : MonoBehaviour {
 	{
 		if (isActive) {
 			if (colide.gameObject.tag.Contains ("platform")) {
-				transform.parent = colide.transform;
+				// DIRTY
+				speed = 12;
+//				transform.parent = transform.Find("MovingPlatformChild").transform;
+
 			}
-			if (colide.gameObject.tag.Contains ("platform") == false) {
+			if ((colide.gameObject.tag.Contains ("platform")) == false) {
 				transform.parent = null;
+				speed = 6;
+
 			}
 		}
 	}
@@ -349,6 +354,8 @@ public class PlayerController : MonoBehaviour {
 		if (isActive) {
 			if (colide.gameObject.tag.Contains ("platform")) {
 				transform.parent = null;
+				speed = 6;
+
 			}
 		}
 	}
