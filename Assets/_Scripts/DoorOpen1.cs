@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class DoorOpen : MonoBehaviour {
+public class DoorOpen1 : MonoBehaviour {
 
 	public GameObject player;
 	public GameObject door;
@@ -25,14 +25,7 @@ public class DoorOpen : MonoBehaviour {
 			playerInRange = true;
 			// Rotate the lamp, wait 2 secs, then open the door
 			lamp.GetComponent<Animation>().Play("RotateLamp");
-
-			if (other.gameObject.tag.Contains("Player2")){
 			StartCoroutine(Wait(2.5f));
-			}
-
-			if (other.gameObject.tag.Contains("Player1")){
-			StartCoroutine(Wait1(2.5f));
-			}
 
 			playerAudio.Play ();
 
@@ -42,15 +35,8 @@ public class DoorOpen : MonoBehaviour {
 	public IEnumerator Wait(float delayInSecs)
 	{
 		yield return new WaitForSeconds(delayInSecs);
-		door.GetComponent<Animation>().Play("DoorOpen");
-
-	}
-
-	public IEnumerator Wait1(float delayInSecs)
-	{
-		yield return new WaitForSeconds(delayInSecs);
 		door.GetComponent<Animation>().Play("DoorOpen1");
-		
+
 	}
 
 

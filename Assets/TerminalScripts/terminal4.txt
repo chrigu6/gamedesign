@@ -1,0 +1,42 @@
+<wL>
+Incoming message!
+<s>
+fax
+<fC>
+
+
+Ready
+
+<w>
+Establishing connection
+www.google.translate.com
+#eng
+<s>
+modem
+<wL>
+Connected . . .
+Ready
+<fC>
+3
+<w>
+Start translation
+<m>
+10
+<w>
+
+5
+<w>
+
+JACK! I think...
+
+I think I can help you access this part of the system!
+<fC>
+5
+<w>
+
+
+To do so, I need to go to the end of my lane.
+This will hopefully unlock the access to the lower layers of the ring...
+
+<end>
+</end>

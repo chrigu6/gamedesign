@@ -7,7 +7,7 @@ calling the
 "left-mouse"-function.
 But take care, 
 you dont have endless
-memory-access for attacs.
+memory-access for attacks.
 <wL>
 
 Memory access granted!
