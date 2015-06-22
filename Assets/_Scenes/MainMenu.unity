@@ -87,11 +87,11 @@ NavMeshSettings:
     cellSize: .166666672
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &121773362
+--- !u!1 &121773362 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 146288, guid: 15525b6ca0f745c4cbbcca46c855f881, type: 2}
   m_PrefabInternal: {fileID: 1771260635}
---- !u!4 &121773363
+--- !u!4 &121773363 stripped
 Transform:
   m_PrefabParentObject: {fileID: 408974, guid: 15525b6ca0f745c4cbbcca46c855f881, type: 2}
   m_PrefabInternal: {fileID: 1771260635}
@@ -318,11 +318,11 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
---- !u!1 &769204962
+--- !u!1 &769204962 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 151558, guid: 15525b6ca0f745c4cbbcca46c855f881, type: 2}
   m_PrefabInternal: {fileID: 1771260635}
---- !u!1 &1245311391
+--- !u!1 &1245311391 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 151154, guid: 15525b6ca0f745c4cbbcca46c855f881, type: 2}
   m_PrefabInternal: {fileID: 1771260635}
@@ -351,7 +351,7 @@ MonoBehaviour:
   maxNumberOfLines: 20
   movieQuad: {fileID: 484635581}
   terminalCanvas: {fileID: 769204962}
---- !u!114 &1765438474
+--- !u!114 &1765438474 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11403400, guid: 15525b6ca0f745c4cbbcca46c855f881,
     type: 2}
@@ -442,6 +442,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 8236156, guid: 15525b6ca0f745c4cbbcca46c855f881, type: 2}
       propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8236156, guid: 15525b6ca0f745c4cbbcca46c855f881, type: 2}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:

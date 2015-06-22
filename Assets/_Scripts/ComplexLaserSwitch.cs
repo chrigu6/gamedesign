@@ -21,7 +21,7 @@ public class ComplexLaserSwitch : MonoBehaviour {
 		player = GameObject.Find ("Cameras").GetComponent<CameraController> ().activePlayer;
 		if (other.gameObject == player) 
 		{
-			if(Input.GetButton("Action"))
+			if(Input.GetButtonDown("Action"))
 			{
 				this.activated = !this.activated;
 				LaserDeactivation();

@@ -89,7 +89,7 @@ public class dialogScript : MonoBehaviour {
 		this.busy = true;
 		this.text.text = this.dialogLines [this.counter] as string;
 
-		if (Input.GetButton ("Submit")) {
+		if (Input.GetButtonDown ("Submit")) {
 			counter ++;
 		}
 

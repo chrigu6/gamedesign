@@ -31,7 +31,7 @@ public class SegmentSwitch : MonoBehaviour {
 		player = GameObject.Find ("Cameras").GetComponent<CameraController> ().activePlayer;
 		if (other.gameObject == player) 
 		{
-			if(Input.GetButton("Action") && (!this.activated || this.canMoveTwice) && running < 1)
+			if(Input.GetButtonDown("Action") && (!this.activated || this.canMoveTwice) && running < 1)
 			{
 				this.running++;
 				activated = !activated;

@@ -10,6 +10,7 @@ public abstract class abstractTerminalScript : MonoBehaviour {
 	protected bool isWriting = false;
 	protected bool cursorVisible = false;
 	protected bool busy = false;
+	protected bool click = true;
 	
 	public float cursorSpeed;
 	public float letterPause = 0;
@@ -178,10 +179,24 @@ public abstract class abstractTerminalScript : MonoBehaviour {
 			StartCoroutine (end(body));
 			yield return 0;
 			break;
+		case "<mute>":
+			StartCoroutine (mute());
+			yield return 0;
+			break;
 		default:
 			yield return 0;
 			break;
 		}
+	}
+
+	protected IEnumerator mute()
+	{
+		while (busy) {
+			yield return 0;
+		}
+		this.click = false;
+		this.busy = false;
+		yield return 0;
 	}
 
 	protected void enableCameraSwitch ()
@@ -235,14 +250,16 @@ public abstract class abstractTerminalScript : MonoBehaviour {
 			charPerLines++;
 			char currentLetter = letter;
 			
-
+				
 				terminalAudio.clip = this.keys[Random.Range(0,5)];
 				//Debug.Log(terminalAudio.clip);
-				if(!terminalAudio.isPlaying)
+			if(this.click)
+			{	
+			if(!terminalAudio.isPlaying)
 			{		this.terminalAudio.mute = false;
 					terminalAudio.Play ();
 			}
-
+			}
 			
 			
 			//If the textline is to long, start a new one

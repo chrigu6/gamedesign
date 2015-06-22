@@ -149,42 +149,6 @@ public class introTerminalScript : abstractTerminalScript {
 		Application.LoadLevel ("level1");
 	}
 
-	new protected IEnumerator TypeText ()
-	{
-		StopCoroutine (ShowCursorWriting ());
-		this.cleanCursor ();
-		foreach (char letter in chars) {
-			this.cleanCursor();
-			i++;
-			this.gameObject.GetComponent<Text> ().text += letter;
-			charPerLines++;
-			char currentLetter = letter;
-
-			
-			
-			
-			//If the textline is to long, start a new one
-			if(charPerLines%this.lineLength == 0 && !(i ==0))
-			{
-				this.gameObject.GetComponent<Text> ().text += '\n';
-				currentLetter = '\n';
-			}
-			
-			//Count tfhe number of lines if the number of lines reach the bottom of the textfield, start to wrap the lines
-			if (currentLetter == '\n')
-			{
-				charPerLines = 0;
-				if(this.getNumberOfLines()>this.maxNumberOfLines)
-				{
-					wrapLines();
-				}
-			}
-			//Debug.Log (letterPause);
-			yield return new WaitForSeconds(letterPause);
-		}
-		this.busy = false;
-		yield return 0;
-	}
 
 	override protected IEnumerator scriptInput(string body)
 	{		
